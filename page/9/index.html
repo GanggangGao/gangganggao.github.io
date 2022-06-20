@@ -165,7 +165,7 @@
             
   
     
-<article id="post-有必要了解手机定位几种实现方式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-汇编基础（五）状态寄存器 、条件码标识位" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
     
@@ -173,23 +173,22 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/有必要了解手机定位几种实现方式/">有必要了解手机定位几种实现方式</a>
+      <a class="article-title" href="/2018/07/31/汇编基础（五）状态寄存器 、条件码标识位/">汇编基础（五）状态寄存器 、条件码标识位</a>
     </h1>
   
 
         
-        <a href="/2018/07/30/有必要了解手机定位几种实现方式/" class="archive-article-date">
-  	<time datetime="2018-07-30T11:49:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
+        <a href="/2018/07/31/汇编基础（五）状态寄存器 、条件码标识位/" class="archive-article-date">
+  	<time datetime="2018-07-31T10:13:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>以前写项目的时候用到了定位的模块，对于定位只是一个模糊的概念，就是复制粘贴没有深入的去了解，最近又重新写一个定位相关的项目，目前来说全面的了解一下手机定位，是有必要的。
-</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/7980283-6f38ad0ee05f2ce4?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br>
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在<a href="https://www.jianshu.com/p/fcd1b421a709" target="_blank" rel="noopener">汇编基础（二）CPU寄存器</a>已经说到过寄存器，作为一个刚学习汇编的人来说，有可能会在后面在补充很多以前所缺乏的知识，我会在我学习完以后在好好梳理一下以前的内容<br>
         
-          <a class="article-more-a" href="/2018/07/30/有必要了解手机定位几种实现方式/#more">more >></a>
+          <a class="article-more-a" href="/2018/07/31/汇编基础（五）状态寄存器 、条件码标识位/#more">more >></a>
         
       
 
@@ -205,7 +204,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/有必要了解手机定位几种实现方式/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/07/31/汇编基础（五）状态寄存器 、条件码标识位/">展开全文 >></a>
         </p>
       
 
@@ -241,7 +240,7 @@
 
   
     
-<article id="post-iOS Objective-C为什么属性（property）同时重写setter、getter方法会报错？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-汇编基础（四）函数&amp;返回值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
     
@@ -249,23 +248,25 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/iOS Objective-C为什么属性（property）同时重写setter、getter方法会报错？/">iOS Objective-C为什么属性（property）同时重写setter、getter方法会报错？</a>
+      <a class="article-title" href="/2018/07/31/汇编基础（四）函数&返回值/">汇编基础（四）函数&amp;返回值</a>
     </h1>
   
 
         
-        <a href="/2018/07/30/iOS Objective-C为什么属性（property）同时重写setter、getter方法会报错？/" class="archive-article-date">
-  	<time datetime="2018-07-30T11:49:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
+        <a href="/2018/07/31/汇编基础（四）函数&返回值/" class="archive-article-date">
+  	<time datetime="2018-07-31T10:13:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><pre><code>在开发当中，遇到定义了一个属性，需要同时重构它的setter、getter方法，有的时候会报错，上代码：
-</code></pre>
+        <h4 id="bl和ret指令"><a href="#bl和ret指令" class="headerlink" title="bl和ret指令"></a>bl和ret指令</h4><h6 id="bl标号"><a href="#bl标号" class="headerlink" title="bl标号"></a>bl标号</h6><ul>
+<li>将下一条指令的地址放入lr(x30)寄存器</li>
+<li>转到标号处执行指令<blockquote>
+<p>注意：当我们遇到bl指令的时候，是跳转指令，跳转之后我们是怎么回来的？怎么回到bl下面的指令？遇到bl后，CPU会将下一个指令的内存地址存到lr寄存器当中。</p>
         
-          <a class="article-more-a" href="/2018/07/30/iOS Objective-C为什么属性（property）同时重写setter、getter方法会报错？/#more">more >></a>
+          <a class="article-more-a" href="/2018/07/31/汇编基础（四）函数&返回值/#more">more >></a>
         
       
 
@@ -281,7 +282,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/iOS Objective-C为什么属性（property）同时重写setter、getter方法会报错？/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/07/31/汇编基础（四）函数&返回值/">展开全文 >></a>
         </p>
       
 
@@ -317,7 +318,7 @@
 
   
     
-<article id="post-本地新建项目夹，push到远程git：! [rejected] master -&gt; master (fetch first),fatal- refusing to merge unrelated histories, ! [rejected] master -&gt; master (non-fast-forward)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-汇编基础（十）编译器优化、多线程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
     
@@ -325,24 +326,22 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/本地新建项目夹，push到远程git：! [rejected] master -> master (fetch first),fatal- refusing to merge unrelated histories, ! [rejected] master -> master (non-fast-forward)/">本地新建项目夹，push到远程git：! [rejected] master -&gt; master (fetch first),fatal- refusing to merge unrelated histories, ! [rejected] master -&gt; master (non-fast-forward)</a>
+      <a class="article-title" href="/2018/07/31/汇编基础（十）编译器优化、多线程/">汇编基础（十）编译器优化、多线程</a>
     </h1>
   
 
         
-        <a href="/2018/07/30/本地新建项目夹，push到远程git：! [rejected] master -> master (fetch first),fatal- refusing to merge unrelated histories, ! [rejected] master -> master (non-fast-forward)/" class="archive-article-date">
-  	<time datetime="2018-07-30T11:48:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
+        <a href="/2018/07/31/汇编基础（十）编译器优化、多线程/" class="archive-article-date">
+  	<time datetime="2018-07-31T10:12:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="在自己创建一个新的代码仓库，然后本地创建了一个项目夹，我们需要将文件的文件夹里面的内容上传到git，遇到一些错误信息。"><a href="#在自己创建一个新的代码仓库，然后本地创建了一个项目夹，我们需要将文件的文件夹里面的内容上传到git，遇到一些错误信息。" class="headerlink" title="在自己创建一个新的代码仓库，然后本地创建了一个项目夹，我们需要将文件的文件夹里面的内容上传到git，遇到一些错误信息。"></a>在自己创建一个新的代码仓库，然后本地创建了一个项目夹，我们需要将文件的文件夹里面的内容上传到git，遇到一些错误信息。</h2><h3 id="1-首先创建仓库"><a href="#1-首先创建仓库" class="headerlink" title="1.首先创建仓库:"></a>1.首先创建仓库:</h3><p><img src="http://upload-images.jianshu.io/upload_images/7980283-e2325a6715fcbfaf?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<pre><code>创建一个名字为gittest的仓库，在本地电脑创建一个gittest的项目夹用终端进入输入命令：
-</code></pre>
+        <h1 id="编译器的优化"><a href="#编译器的优化" class="headerlink" title="编译器的优化"></a>编译器的优化</h1><p>有的时候你不得不佩服，开发编译器的这堆人，很牛逼，比如说平时写的代码，肯定里面有一堆没有使用过的代码，比方说定义一个局部变量，整个类里面并没有调用它，那么编译器在编译的时候会将没用过的代码也编译到汇编当中吗<br>
         
-          <a class="article-more-a" href="/2018/07/30/本地新建项目夹，push到远程git：! [rejected] master -> master (fetch first),fatal- refusing to merge unrelated histories, ! [rejected] master -> master (non-fast-forward)/#more">more >></a>
+          <a class="article-more-a" href="/2018/07/31/汇编基础（十）编译器优化、多线程/#more">more >></a>
         
       
 
@@ -358,7 +357,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/本地新建项目夹，push到远程git：! [rejected] master -> master (fetch first),fatal- refusing to merge unrelated histories, ! [rejected] master -> master (non-fast-forward)/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/07/31/汇编基础（十）编译器优化、多线程/">展开全文 >></a>
         </p>
       
 
@@ -394,7 +393,7 @@
 
   
     
-<article id="post-iPhone定位服务    " class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-汇编基础（三）堆栈操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
     
@@ -402,24 +401,22 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/iPhone定位服务    /">iPhone定位服务</a>
+      <a class="article-title" href="/2018/07/31/汇编基础（三）堆栈操作/">汇编基础（三）堆栈操作</a>
     </h1>
   
 
         
-        <a href="/2018/07/30/iPhone定位服务    /" class="archive-article-date">
-  	<time datetime="2018-07-30T11:47:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
+        <a href="/2018/07/31/汇编基础（三）堆栈操作/" class="archive-article-date">
+  	<time datetime="2018-07-31T10:12:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>互联网已成为当今世界不可缺少的一部分，它使整个地球成为一个可以互通的网络村，定位服务在其中起到了非常重要的作用,只要跟位置相关的内容处处都离不开定位服务，定位服务在iOS上面是怎么实现的？*(自己挖个坑，详细了解一下定位服务的应用范围等等)已埋👉[详情](https://www.jianshu.com/p/78746283e876)*
-</code></pre><h1 id="iPhone定位服务"><a href="#iPhone定位服务" class="headerlink" title="iPhone定位服务"></a>iPhone定位服务</h1><pre><code>在iOS中定位功能是用Core  Location框架来进行操作的，首先创建一个[CLLocationManager](https://developer.apple.com/documentation/corelocation/cllocationmanager)，通过这个管理者进行定位服务。
-</code></pre><hr>
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>当大家写程序的时候要压栈，比方说iOS里面push，pop界面的时候也就是说压栈出栈，还有当大家创建变量的时候，在栈分配空间，或者在堆分配空间，怎么分配的？带着疑问哥么开始学习了。<br>
         
-          <a class="article-more-a" href="/2018/07/30/iPhone定位服务    /#more">more >></a>
+          <a class="article-more-a" href="/2018/07/31/汇编基础（三）堆栈操作/#more">more >></a>
         
       
 
@@ -435,7 +432,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/iPhone定位服务    /">展开全文 >></a>
+          <a class="article-more-a" href="/2018/07/31/汇编基础（三）堆栈操作/">展开全文 >></a>
         </p>
       
 
@@ -471,7 +468,7 @@
 
   
     
-<article id="post-CLLocationManagerDelegate协议详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-汇编基础（七）Ida分析Ipa中的MachO文件，得到汇编，还原高级代码、简单版" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
     
@@ -479,23 +476,27 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/CLLocationManagerDelegate协议详解/">CLLocationManagerDelegate协议详解</a>
+      <a class="article-title" href="/2018/07/31/汇编基础（七）Ida分析Ipa中的MachO文件，得到汇编，还原高级代码、简单版/">汇编基础（七）Ida分析Ipa中的MachO文件，得到汇编，还原高级代码、简单版</a>
     </h1>
   
 
         
-        <a href="/2018/07/30/CLLocationManagerDelegate协议详解/" class="archive-article-date">
-  	<time datetime="2018-07-30T11:46:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
+        <a href="/2018/07/31/汇编基础（七）Ida分析Ipa中的MachO文件，得到汇编，还原高级代码、简单版/" class="archive-article-date">
+  	<time datetime="2018-07-31T10:12:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://upload-images.jianshu.io/upload_images/7980283-d54cfc9774f7b538?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<h3 id="CLLocationManagerDelegate协议详解"><a href="#CLLocationManagerDelegate协议详解" class="headerlink" title="CLLocationManagerDelegate协议详解"></a>CLLocationManagerDelegate协议详解</h3><h3 id="代理方法："><a href="#代理方法：" class="headerlink" title="代理方法："></a>代理方法：</h3>
+        <h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><ul>
+<li>首先我们准备一个工程</li>
+<li>添加一些简单的函数调用，最基本的运算</li>
+<li>Bulid得到一个app包</li>
+<li>将app包里面的MachO文件放入到ida中分析汇编（ida去网上找资源）</li>
+<li>初步的将汇编还原成高级代码
         
-          <a class="article-more-a" href="/2018/07/30/CLLocationManagerDelegate协议详解/#more">more >></a>
+          <a class="article-more-a" href="/2018/07/31/汇编基础（七）Ida分析Ipa中的MachO文件，得到汇编，还原高级代码、简单版/#more">more >></a>
         
       
 
@@ -511,7 +512,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/CLLocationManagerDelegate协议详解/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/07/31/汇编基础（七）Ida分析Ipa中的MachO文件，得到汇编，还原高级代码、简单版/">展开全文 >></a>
         </p>
       
 
@@ -547,7 +548,7 @@
 
   
     
-<article id="post-CLAuthorizationStatus详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-汇编基础（六）内存分配区" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
     
@@ -555,181 +556,29 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/CLAuthorizationStatus详解/">CLAuthorizationStatus详解</a>
+      <a class="article-title" href="/2018/07/31/汇编基础（六）内存分配区/">汇编基础（六）内存分配区</a>
     </h1>
   
 
         
-        <a href="/2018/07/30/CLAuthorizationStatus详解/" class="archive-article-date">
-  	<time datetime="2018-07-30T11:45:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
+        <a href="/2018/07/31/汇编基础（六）内存分配区/" class="archive-article-date">
+  	<time datetime="2018-07-31T10:12:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://upload-images.jianshu.io/upload_images/7980283-899087eb931ad02d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<h1 id="CLAuthorizationStatus"><a href="#CLAuthorizationStatus" class="headerlink" title="CLAuthorizationStatus"></a>CLAuthorizationStatus</h1><h4 id="告诉开发者App是否被授权使用定位服务，枚举："><a href="#告诉开发者App是否被授权使用定位服务，枚举：" class="headerlink" title="告诉开发者App是否被授权使用定位服务，枚举："></a>告诉开发者App是否被授权使用定位服务，枚举：</h4><pre><code>[kCLAuthorizationStatusNotDetermined](https://developer.apple.com/documentation/corelocation/clauthorizationstatus/kclauthorizationstatusnotdetermined?language=objc)  //用户没有选择是否要使用定位服务（弹框没选择，或者根本没有弹框）
-</code></pre>
-        
-          <a class="article-more-a" href="/2018/07/30/CLAuthorizationStatus详解/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/CLAuthorizationStatus详解/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-NSLocale 本地区域化 - Swift" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/NSLocale 本地区域化 - Swift/">NSLocale 本地区域化 - Swift</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/30/NSLocale 本地区域化 - Swift/" class="archive-article-date">
-  	<time datetime="2018-07-30T11:41:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>围绕着[NSLocale 区域化 - Objective-C](https://www.jianshu.com/p/38318cfbf986) 这篇来介绍一下 Swift 版本NSLocale的内容，并且会给出一些与Objective-C的一些不同之处。  Swift4.0版本
-</code></pre><h1 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h1><p><a href="https://developer.apple.com/documentation/foundation/nslocale" target="_blank" rel="noopener">    public init(localeIdentifier string: String)</a><br>
-        
-          <a class="article-more-a" href="/2018/07/30/NSLocale 本地区域化 - Swift/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/NSLocale 本地区域化 - Swift/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-NSLocale 本地区域化 - Objective-C" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/NSLocale 本地区域化 - Objective-C/">NSLocale 本地区域化 - Objective-C</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/30/NSLocale 本地区域化 - Objective-C/" class="archive-article-date">
-  	<time datetime="2018-07-30T11:41:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h1><hr>
-<pre><code>有的时候在项目当中会使用到本地区域化的一些内容，还有可能需要使用别的区域的一些标识、属性、或者这个标识所对应的展示的内容（NSString等等），大概的了解还是有必要的。
-</code></pre><h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><ul>
-<li><a href="https://developer.apple.com/documentation/foundation/nslocale/1414217-initwithlocaleidentifier?language=objc" target="_blank" rel="noopener">initWithLocaleIdentifier</a>                实例方式创建</li>
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在汇编当中不光光需要了解一些寄存器，汇编代码，也需要了解一下内存是怎么分区域的</p>
+<h2 id="列表："><a href="#列表：" class="headerlink" title="列表："></a>列表：</h2><ul>
+<li>代码区 特点：可读、可写、可执行</li>
+<li>栈区域 放参数和局部变量</li>
+<li>堆区域 动态申请、可读可写</li>
+<li>全局     可读可写</li>
+<li>常量     可读<br>以上都是在编译器中完成的，编译器规定的。<br>在汇编当中这些都是可读、可写的，因为汇编直接修改的是地址中的值</li>
 </ul>
-<ul>
-<li><p><a href="https://developer.apple.com/documentation/foundation/nslocale/1488627-localewithlocaleidentifier?language=objc" target="_blank" rel="noopener">localeWithLocaleIdentifier:</a>         类方式创建</p>
         
-          <a class="article-more-a" href="/2018/07/30/NSLocale 本地区域化 - Objective-C/#more">more >></a>
+          <a class="article-more-a" href="/2018/07/31/汇编基础（六）内存分配区/#more">more >></a>
         
       
 
@@ -745,7 +594,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/NSLocale 本地区域化 - Objective-C/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/07/31/汇编基础（六）内存分配区/">展开全文 >></a>
         </p>
       
 
@@ -781,7 +630,7 @@
 
   
     
-<article id="post-volatitle关键字" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-汇编基础（九）switch汇编分析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
     
@@ -789,23 +638,24 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/volatitle关键字/">volatitle关键字</a>
+      <a class="article-title" href="/2018/07/31/汇编基础（九）switch汇编分析/">汇编基础（九）switch汇编分析</a>
     </h1>
   
 
         
-        <a href="/2018/07/30/volatitle关键字/" class="archive-article-date">
-  	<time datetime="2018-07-30T11:40:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
+        <a href="/2018/07/31/汇编基础（九）switch汇编分析/" class="archive-article-date">
+  	<time datetime="2018-07-31T10:12:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在写程序的过程当中，创建一个单例，然后static volatile 实例的时候volatile这个关键字的含义有点不知其含义。</p>
-<p>总的来说告诉编译器这个volatile修饰的变量是易变的，当需要读取这个变量的值时，应该从内存中读取，而不是从寄存器中读取。<br>
+        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-5f8eaddf4bb52e10.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
+<p>#引言<br>最近工作比较忙，没怎么去研究汇编的内容，这么多天，感觉有点生疏，有的时候累死累活很晚才回来，还要在学习别的东西，在写一些总结，力不从心，就算是强迫自己去写去学习，我认为效率也是低下的。这种情况，既影响了第二天的工作，学习的时候也不会太过专注，只为一味的应付了事，学习是一个枯燥、兴趣使向、有目的性的</p>
+<p>一些概念上的内容，其实光看光听、光说不练，基本上也就相当于拍脑袋做事情，正儿八经的研究应该是：构思-&gt;过程-&gt;验证 往往复复每次都会有新的体会<br>
         
-          <a class="article-more-a" href="/2018/07/30/volatitle关键字/#more">more >></a>
+          <a class="article-more-a" href="/2018/07/31/汇编基础（九）switch汇编分析/#more">more >></a>
         
       
 
@@ -821,7 +671,159 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/volatitle关键字/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/07/31/汇编基础（九）switch汇编分析/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
+<article id="post-汇编基础（二）CPU寄存器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/31/汇编基础（二）CPU寄存器/">汇编基础（二）CPU寄存器</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/31/汇编基础（二）CPU寄存器/" class="archive-article-date">
+  	<time datetime="2018-07-31T10:12:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##引言</p>
+<p>####概念<br><strong>CPU是什么？</strong><br>CPU是中央处理器，中央处理器（CPU，Central Processing Unit）是一块超大规模的<a href="https://baike.baidu.com/item/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF" target="_blank" rel="noopener">集成电路</a>，是一台计算机的运算核心（Core）和控制核心（ Control Unit）。它的功能主要是解释计算机<a href="https://baike.baidu.com/item/%E6%8C%87%E4%BB%A4" target="_blank" rel="noopener">指令</a>以及处理计算机软件中的数据。<br><strong>寄存器是什么？</strong><br><a href="https://baike.baidu.com/item/%E5%AF%84%E5%AD%98%E5%99%A8" target="_blank" rel="noopener">寄存器</a>是<a href="https://baike.baidu.com/item/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8" target="_blank" rel="noopener">中央处理器</a>内的组成部分。寄存器是有限存贮容量的高速存贮部件，它们可用来暂存<a href="https://baike.baidu.com/item/%E6%8C%87%E4%BB%A4" target="_blank" rel="noopener">指令</a>、<a href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE/33305" target="_blank" rel="noopener">数据</a>和<a href="https://baike.baidu.com/item/%E5%9C%B0%E5%9D%80/80420" target="_blank" rel="noopener">地址</a>。<br>
+        
+          <a class="article-more-a" href="/2018/07/31/汇编基础（二）CPU寄存器/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/31/汇编基础（二）CPU寄存器/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
+<article id="post-汇编基础（八） if、循环的汇编识别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/31/汇编基础（八） if、循环的汇编识别/">汇编基础（八） if、循环的汇编识别</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/31/汇编基础（八） if、循环的汇编识别/" class="archive-article-date">
+  	<time datetime="2018-07-31T10:12:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h1><p>验证if、循环、switch在汇编当中是怎么表示的</p>
+<h2 id="if-的汇编"><a href="#if-的汇编" class="headerlink" title="if 的汇编"></a>if 的汇编</h2><h3 id="新建的工程-源代码"><a href="#新建的工程-源代码" class="headerlink" title="新建的工程 源代码"></a>新建的工程 源代码</h3>
+        
+          <a class="article-more-a" href="/2018/07/31/汇编基础（八） if、循环的汇编识别/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/31/汇编基础（八） if、循环的汇编识别/">展开全文 >></a>
         </p>
       
 
@@ -865,13 +867,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/**为什么向nil对象发送消息的时候，不会崩溃？向一个实例对象发送消息的时候没找到相关的方法会抛出cash？**/">为什么向nil对象发送消息的时候，不会崩溃？向一个实例对象发送消息的时候没找到相关的方法会抛出cash？</a>
+      <a class="article-title" href="/2018/07/31/**为什么向nil对象发送消息的时候，不会崩溃？向一个实例对象发送消息的时候没找到相关的方法会抛出cash？**/">为什么向nil对象发送消息的时候，不会崩溃？向一个实例对象发送消息的时候没找到相关的方法会抛出cash？</a>
     </h1>
   
 
         
-        <a href="/2018/07/30/**为什么向nil对象发送消息的时候，不会崩溃？向一个实例对象发送消息的时候没找到相关的方法会抛出cash？**/" class="archive-article-date">
-  	<time datetime="2018-07-30T11:39:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
+        <a href="/2018/07/31/**为什么向nil对象发送消息的时候，不会崩溃？向一个实例对象发送消息的时候没找到相关的方法会抛出cash？**/" class="archive-article-date">
+  	<time datetime="2018-07-31T10:12:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
 </a>
         
       </header>
@@ -883,7 +885,7 @@
 当self为空的时候直接返回的空，并不会抛出cash.
 </code></pre><h2 id="2-而为什么向实例对象发送消息的时候，实例对象没有找到method时会抛出cash"><a href="#2-而为什么向实例对象发送消息的时候，实例对象没有找到method时会抛出cash" class="headerlink" title="2.而为什么向实例对象发送消息的时候，实例对象没有找到method时会抛出cash."></a>2.而为什么向实例对象发送消息的时候，实例对象没有找到method时会抛出cash.</h2>
         
-          <a class="article-more-a" href="/2018/07/30/**为什么向nil对象发送消息的时候，不会崩溃？向一个实例对象发送消息的时候没找到相关的方法会抛出cash？**/#more">more >></a>
+          <a class="article-more-a" href="/2018/07/31/**为什么向nil对象发送消息的时候，不会崩溃？向一个实例对象发送消息的时候没找到相关的方法会抛出cash？**/#more">more >></a>
         
       
 
@@ -899,7 +901,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/**为什么向nil对象发送消息的时候，不会崩溃？向一个实例对象发送消息的时候没找到相关的方法会抛出cash？**/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/07/31/**为什么向nil对象发送消息的时候，不会崩溃？向一个实例对象发送消息的时候没找到相关的方法会抛出cash？**/">展开全文 >></a>
         </p>
       
 
@@ -1023,6 +1025,74 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AFNetworking</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Reactive Cocoa</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SDWebImageView</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">AsyncDisPlayKit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">UItableview相关</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">数据源同步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">事件传递和视图响应</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">图像显示原理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">分类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">关联对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Extension</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">KVC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Block</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">对象、类对象、元类对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">消息传递机制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">消息转发</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">消息传递</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
              
@@ -1055,15 +1125,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RunLoop</a>
+                <a href="javascript:void(0)" class="js-tag color4">ARC</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Objective-C</a>
+                <a href="javascript:void(0)" class="js-tag color4">MRC</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">事件循环</a>
+                <a href="javascript:void(0)" class="js-tag color2">内存管理方案</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1079,15 +1149,55 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RunLoop</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Objective-C</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">事件循环</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">UDP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">字符串反转算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">链表反转算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">有序数组合并</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">排序算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小知识</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Runtime</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">消息转发</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1111,119 +1221,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">经验笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">生活杂记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AFNetworking</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Reactive Cocoa</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SDWebImageView</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">AsyncDisPlayKit</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">分类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">关联对象</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Extension</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">KVC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">对象、类对象、元类对象</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">消息传递机制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">消息传递</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Block</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">字符串反转算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">链表反转算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">有序数组合并</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">排序算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">UItableview相关</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">数据源同步</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">事件传递和视图响应</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">图像显示原理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网络</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">UDP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ARC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MRC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">内存管理方案</a>
+                <a href="javascript:void(0)" class="js-tag color5">经验笔记</a>
               </li>
             
             <div class="clearfix"></div>
