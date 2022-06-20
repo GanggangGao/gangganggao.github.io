@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
-  <title>Archives | Struggle3g‘s Blog</title>
+  <title>跟我一起用Hexo + Git创建个人主页 | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Coding yourself">
-<meta name="keywords" content="iOS,客户端,流媒体,iot,程序猿,程序员,程序猿,devepoer,开源,代码,code,黑客,破解,砸壳,html,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Struggle3g‘s Blog">
-<meta property="og:url" content="https://www.struggle3g.com/archives/page/10/index.html">
+  <meta name="description" content="#引言 ##什么是HexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 超快的渲染速度、丰富的插件支持、一件部署到Github Pages 如果你厌烦了csdn、简书、博客园..等等，那么来创建自己的个人网站 ##描述安装所在环境Mac,hexo+git 建站 ##必备  Node.js git">
+<meta name="keywords" content="Hexo,git,个人主页">
+<meta property="og:type" content="article">
+<meta property="og:title" content="跟我一起用Hexo + Git创建个人主页">
+<meta property="og:url" content="https://www.struggle3g.com/2020/03/24/如何使用Hexo + Git创建个人主页/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="Coding yourself">
+<meta property="og:description" content="#引言 ##什么是HexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 超快的渲染速度、丰富的插件支持、一件部署到Github Pages 如果你厌烦了csdn、简书、博客园..等等，那么来创建自己的个人网站 ##描述安装所在环境Mac,hexo+git 建站 ##必备  Node.js git">
 <meta property="og:locale" content="ch">
+<meta property="og:updated_time" content="2022-06-20T18:51:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Struggle3g‘s Blog">
-<meta name="twitter:description" content="Coding yourself">
+<meta name="twitter:title" content="跟我一起用Hexo + Git创建个人主页">
+<meta name="twitter:description" content="#引言 ##什么是HexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 超快的渲染速度、丰富的插件支持、一件部署到Github Pages 如果你厌烦了csdn、简书、博客园..等等，那么来创建自己的个人网站 ##描述安装所在环境Mac,hexo+git 建站 ##必备  Node.js git">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
   
@@ -163,241 +164,205 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-  
+<article id="post-如何使用Hexo + Git创建个人主页" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      跟我一起用Hexo + Git创建个人主页
+    </h1>
+  
+
+        
+        <a href="/2020/03/24/如何使用Hexo + Git创建个人主页/" class="archive-article-date">
+  	<time datetime="2020-03-24T14:10:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-24</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#引言</p>
+<p>##什么是Hexo<br>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<p>超快的渲染速度、丰富的插件支持、一件部署到Github Pages</p>
+<p>如果你厌烦了csdn、简书、博客园..等等，那么来创建自己的<code>个人网站</code></p>
+<p>##描述<br><strong>安装所在环境Mac</strong>,<strong>hexo+git 建站</strong></p>
+<p>##必备</p>
+<ul>
+<li>Node.js</li>
+<li>git</li>
+</ul>
+<p>##操作步骤</p>
+<h3 id="一-下载Node管理工具nvm"><a href="#一-下载Node管理工具nvm" class="headerlink" title="一. 下载Node管理工具nvm"></a>一. 下载<code>Node</code>管理工具<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a></h3><ul>
+<li><p>使用cURL安装</p>
+<blockquote>
+<p>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh</a> | bash</p>
+</blockquote>
+</li>
+<li><p>使用Wget安装</p>
+<pre><code>&gt; wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+</code></pre></li>
+</ul>
+<h3 id="二-安装Node管理工具nvm"><a href="#二-安装Node管理工具nvm" class="headerlink" title="二. 安装Node管理工具nvm"></a>二. 安装<code>Node</code>管理工具<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a></h3><blockquote>
+<p>nvm install stable</p>
+</blockquote>
+<ul>
+<li><p><strong>问题</strong></p>
+<ul>
+<li><figure class="highlight plain"><figcaption><span>not found```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">需要在你的shell环境中`source ~/.bashrc`</span><br><span class="line">	</span><br><span class="line">		- zsh .zshrc</span><br><span class="line">		- bash .bash_profile</span><br><span class="line">	- nvm安装的时候下载缓慢、超时</span><br><span class="line">	需要更换源地址  在`~/.bashrc` 添加</span><br><span class="line">	&gt; export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- 安装成功</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>$ nvm install stable</p>
+<p>Downloading and installing node v10.3.0…<br>Downloading <a href="https://npm.taobao.org/mirrors/node/v10.3.0/node-v10.3.0-darwin-x64.tar.gz.." target="_blank" rel="noopener">https://npm.taobao.org/mirrors/node/v10.3.0/node-v10.3.0-darwin-x64.tar.gz..</a>.</p>
+<p>######################################################################## 100.0%<br>Computing checksum with shasum -a 256<br>Checksums matched!<br>Now using node v10.3.0 (npm v6.1.0)<br>Creating default alias: default -&gt; stable (-&gt; v10.3.0)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 三. 安装Hexo</span><br><span class="line"></span><br><span class="line">&gt; $ npm install -g hexo-cli</span><br><span class="line"></span><br><span class="line">**安装成功**</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">[fsevents] Success: &quot;路径&quot; already installed</span><br><span class="line">Pass --update-binary to reinstall or --build-from-source to recompile</span><br><span class="line">+ hexo-cli@1.1.0</span><br><span class="line">added 171 packages from 369 contributors in 10.607s</span><br></pre></td></tr></table></figure></p>
+
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/31/iOS 深、浅拷贝的认知（一）/" class="archive-article-date">
-  	<time datetime="2018-07-31T10:14:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/31/iOS 深、浅拷贝的认知（一）/">iOS 深、浅拷贝的认知（一）</a>
-    </h1>
-  
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人主页</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+
+<!--MOB SHARE BEGIN-->
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.struggle3g.com/2020/03/24/如何使用Hexo + Git创建个人主页/" alt="二维码">
+     
+    </div>
+
+</div>
+
+<div class="mask js-mask"></div>
+<!--MOB SHARE END-->
+
+
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/31/iOS  深、浅拷贝的那些奇葩的事（四）/" class="archive-article-date">
-  	<time datetime="2018-07-31T10:14:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/27/如何在Centos 7搭建ftp服务器/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何在Centos7搭建ftp图片服务器</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/31/iOS  深、浅拷贝的那些奇葩的事（四）/">iOS  深、浅拷贝的那些奇葩的事（四）</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/31/HSB:HSL、RGB他们的纯色/" class="archive-article-date">
-  	<time datetime="2018-07-31T10:13:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/31/HSB:HSL、RGB他们的纯色/">HSB/HSL、RGB他们的纯色</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/31/debugserver error- failed to attach to process named- "" unable to start the exception thread  Exiting./" class="archive-article-date">
-  	<time datetime="2018-07-31T10:13:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/31/debugserver error- failed to attach to process named- "" unable to start the exception thread  Exiting./">debugserver error- failed to attach to process named- &#34;&#34; unable to start the exception thread  Exiting.</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/31/Cycript（二）非越狱调试、修改App中UI的数据/" class="archive-article-date">
-  	<time datetime="2018-07-31T10:13:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/31/Cycript（二）非越狱调试、修改App中UI的数据/">Cycript（二）非越狱调试、修改App中UI的数据</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/31/Cycript （一）配置环境/" class="archive-article-date">
-  	<time datetime="2018-07-31T10:13:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/31/Cycript （一）配置环境/">Cycript （一）配置环境</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/31/CLLocationManagerDelegate协议详解/" class="archive-article-date">
-  	<time datetime="2018-07-31T10:13:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/31/CLLocationManagerDelegate协议详解/">CLLocationManagerDelegate协议详解</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/31/CLAuthorizationStatus详解/" class="archive-article-date">
-  	<time datetime="2018-07-31T10:13:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/31/CLAuthorizationStatus详解/">CLAuthorizationStatus详解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/9/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/8/">8</a><a class="page-number" href="/archives/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/archives/page/11/">11</a><a class="page-number" href="/archives/page/12/">12</a><a class="extend next" rel="next" href="/archives/page/11/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -412,8 +377,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

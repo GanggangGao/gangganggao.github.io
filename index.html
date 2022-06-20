@@ -165,6 +165,132 @@
             
   
     
+<article id="post-如何使用Hexo + Git创建个人主页" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/24/如何使用Hexo + Git创建个人主页/">跟我一起用Hexo + Git创建个人主页</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/24/如何使用Hexo + Git创建个人主页/" class="archive-article-date">
+  	<time datetime="2020-03-24T14:10:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#引言</p>
+<p>##什么是Hexo<br>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<p>超快的渲染速度、丰富的插件支持、一件部署到Github Pages</p>
+<p>如果你厌烦了csdn、简书、博客园..等等，那么来创建自己的<code>个人网站</code></p>
+<p>##描述<br><strong>安装所在环境Mac</strong>,<strong>hexo+git 建站</strong></p>
+<p>##必备</p>
+<ul>
+<li>Node.js</li>
+<li>git</li>
+</ul>
+<p>##操作步骤</p>
+<h3 id="一-下载Node管理工具nvm"><a href="#一-下载Node管理工具nvm" class="headerlink" title="一. 下载Node管理工具nvm"></a>一. 下载<code>Node</code>管理工具<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a></h3><ul>
+<li><p>使用cURL安装</p>
+<blockquote>
+<p>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh</a> | bash</p>
+</blockquote>
+</li>
+<li><p>使用Wget安装</p>
+<pre><code>&gt; wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+</code></pre></li>
+</ul>
+<h3 id="二-安装Node管理工具nvm"><a href="#二-安装Node管理工具nvm" class="headerlink" title="二. 安装Node管理工具nvm"></a>二. 安装<code>Node</code>管理工具<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a></h3><blockquote>
+<p>nvm install stable</p>
+</blockquote>
+<ul>
+<li><p><strong>问题</strong></p>
+<ul>
+<li><figure class="highlight plain"><figcaption><span>not found```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">需要在你的shell环境中`source ~/.bashrc`</span><br><span class="line">	</span><br><span class="line">		- zsh .zshrc</span><br><span class="line">		- bash .bash_profile</span><br><span class="line">	- nvm安装的时候下载缓慢、超时</span><br><span class="line">	需要更换源地址  在`~/.bashrc` 添加</span><br><span class="line">	&gt; export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- 安装成功</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>$ nvm install stable</p>
+<p>Downloading and installing node v10.3.0…<br>Downloading <a href="https://npm.taobao.org/mirrors/node/v10.3.0/node-v10.3.0-darwin-x64.tar.gz.." target="_blank" rel="noopener">https://npm.taobao.org/mirrors/node/v10.3.0/node-v10.3.0-darwin-x64.tar.gz..</a>.</p>
+<p>######################################################################## 100.0%<br>Computing checksum with shasum -a 256<br>Checksums matched!<br>Now using node v10.3.0 (npm v6.1.0)<br>Creating default alias: default -&gt; stable (-&gt; v10.3.0)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 三. 安装Hexo</span><br><span class="line"></span><br><span class="line">&gt; $ npm install -g hexo-cli</span><br><span class="line"></span><br><span class="line">**安装成功**</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">[fsevents] Success: &quot;路径&quot; already installed</span><br><span class="line">Pass --update-binary to reinstall or --build-from-source to recompile</span><br><span class="line">+ hexo-cli@1.1.0</span><br><span class="line">added 171 packages from 369 contributors in 10.607s</span><br></pre></td></tr></table></figure></p>
+
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人主页</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/24/如何使用Hexo + Git创建个人主页/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
 <article id="post-如何在Centos 7搭建ftp服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -1072,104 +1198,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/09/06/iOS晋级知识汇总(六)框架和架构/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-iOS晋级知识汇总(五)设计模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/03/iOS晋级知识汇总(五)设计模式/">iOS晋级知识汇总(六)设计模式</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/03/iOS晋级知识汇总(五)设计模式/" class="archive-article-date">
-  	<time datetime="2019-09-03T14:45:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h2 id="六大设计原则"><a href="#六大设计原则" class="headerlink" title="六大设计原则"></a>六大设计原则</h2>
-        
-          <a class="article-more-a" href="/2019/09/03/iOS晋级知识汇总(五)设计模式/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">六大原则</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">责任链</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">桥接</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/03/iOS晋级知识汇总(五)设计模式/">展开全文 >></a>
         </p>
       
 
