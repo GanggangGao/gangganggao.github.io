@@ -190,102 +190,9 @@
 <p>##什么是Hexo<br>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 <p>超快的渲染速度、丰富的插件支持、一件部署到Github Pages</p>
 <p>如果你厌烦了csdn、简书、博客园..等等，那么来创建自己的<code>个人网站</code></p>
-<p>##描述<br><strong>安装所在环境Mac</strong>,<strong>hexo+git 建站</strong></p>
-<p>##必备</p>
-<ul>
-<li>Node.js</li>
-<li>git</li>
-</ul>
-<p>##操作步骤</p>
-<h3 id="一-下载Node管理工具nvm"><a href="#一-下载Node管理工具nvm" class="headerlink" title="一. 下载Node管理工具nvm"></a>一. 下载<code>Node</code>管理工具<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a></h3><ul>
-<li><p>使用cURL安装</p>
-<blockquote>
-<p>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh</a> | bash</p>
-</blockquote>
-</li>
-<li><p>使用Wget安装</p>
-<pre><code>&gt; wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-</code></pre></li>
-</ul>
-<h3 id="二-安装Node管理工具nvm"><a href="#二-安装Node管理工具nvm" class="headerlink" title="二. 安装Node管理工具nvm"></a>二. 安装<code>Node</code>管理工具<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a></h3><blockquote>
-<p>nvm install stable</p>
-</blockquote>
-<ul>
-<li><p><strong>问题</strong></p>
-<ul>
-<li><figure class="highlight plain"><figcaption><span>not found```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">需要在你的shell环境中`source ~/.bashrc`</span><br><span class="line">	</span><br><span class="line">		- zsh .zshrc</span><br><span class="line">		- bash .bash_profile</span><br><span class="line">	- nvm安装的时候下载缓慢、超时</span><br><span class="line">	需要更换源地址  在`~/.bashrc` 添加</span><br><span class="line">	&gt; export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- 安装成功</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<p>$ nvm install stable</p>
-<p>Downloading and installing node v10.3.0…<br>Downloading <a href="https://npm.taobao.org/mirrors/node/v10.3.0/node-v10.3.0-darwin-x64.tar.gz.." target="_blank" rel="noopener">https://npm.taobao.org/mirrors/node/v10.3.0/node-v10.3.0-darwin-x64.tar.gz..</a>.</p>
-<p>######################################################################## 100.0%<br>Computing checksum with shasum -a 256<br>Checksums matched!<br>Now using node v10.3.0 (npm v6.1.0)<br>Creating default alias: default -&gt; stable (-&gt; v10.3.0)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 三. 安装Hexo</span><br><span class="line"></span><br><span class="line">&gt; $ npm install -g hexo-cli</span><br><span class="line"></span><br><span class="line">**安装成功**</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">[fsevents] Success: &quot;路径&quot; already installed</span><br><span class="line">Pass --update-binary to reinstall or --build-from-source to recompile</span><br><span class="line">+ hexo-cli@1.1.0</span><br><span class="line">added 171 packages from 369 contributors in 10.607s</span><br></pre></td></tr></table></figure></p>
-<h3 id="四-建站"><a href="#四-建站" class="headerlink" title="四. 建站"></a>四. 建站</h3><p><strong>1. 输入命令建站</strong></p>
-<p><code>$ hexo init 路径&lt;folder&gt;</code></p>
-<p><code>$ cd 路径&lt;folder&gt;</code></p>
-<p><code>$ npm install</code></p>
-<p><strong>2. 目录的结构</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-<p><strong>3. 目录介绍</strong></p>
-<ul>
-<li>_config.yml<pre><code>网站的`配置`信息，具体介绍请到官网查看[戳我](https://hexo.io/zh-cn/docs/configuration.html)
-</code></pre></li>
-<li>package.json<br>  应用程序的信息。<a href="http://embeddedjs.com" target="_blank" rel="noopener">EJS</a>, <a href="http://learnboost.github.io/stylus/" target="_blank" rel="noopener">Stylus</a> 和 <a href="https://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a> renderer 已默认安装，您可以自由移除。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">package.json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;hexo-site&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;0.0.0&quot;,</span><br><span class="line">  &quot;private&quot;: true,</span><br><span class="line">  &quot;hexo&quot;: &#123;</span><br><span class="line">    &quot;version&quot;: &quot;&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;hexo&quot;: &quot;^3.0.0&quot;,</span><br><span class="line">    &quot;hexo-generator-archive&quot;: &quot;^0.1.0&quot;,</span><br><span class="line">    &quot;hexo-generator-category&quot;: &quot;^0.1.0&quot;,</span><br><span class="line">    &quot;hexo-generator-index&quot;: &quot;^0.1.0&quot;,</span><br><span class="line">    &quot;hexo-generator-tag&quot;: &quot;^0.1.0&quot;,</span><br><span class="line">    &quot;hexo-renderer-ejs&quot;: &quot;^0.1.0&quot;,</span><br><span class="line">    &quot;hexo-renderer-stylus&quot;: &quot;^0.2.0&quot;,</span><br><span class="line">    &quot;hexo-renderer-marked&quot;: &quot;^0.2.4&quot;,</span><br><span class="line">    &quot;hexo-server&quot;: &quot;^0.1.2&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>4. scaffolds</strong></p>
-<ul>
-<li><a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="noopener">模版</a> 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</li>
-<li>Hexo的模板是指在新建的markdown文件中默认填充的内容。例如，如果您修改scaffold/post.md中的Front-matter内容，那么每次新建一篇文章时都会包含这个修改。</li>
-</ul>
-<p><strong>5. themes</strong></p>
-<ul>
-<li>主题 文件夹。Hexo 会根据主题来生成静态页面。</li>
-</ul>
-<h3 id="五-部署"><a href="#五-部署" class="headerlink" title="五. 部署"></a>五. 部署</h3><p><strong>1. 安装hexo-deployer-git</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p><strong>2. 修改配置</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: &lt;repository url&gt;</span><br><span class="line">  branch: [branch]</span><br><span class="line">  message: [message]</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>repo</td>
-<td>库（Repository）地址</td>
-</tr>
-<tr>
-<td>branch</td>
-<td>分支名称。如果您使用的是 GitHub 或 GitCafe 的话，程序会尝试自动检测</td>
-</tr>
-<tr>
-<td>message</td>
-<td>自定义提交信息 </td>
-</tr>
-</tbody>
-</table>
-<p><strong>注意</strong><br>添加git <code>repo</code>的时候需要创建一个<code>yourname.github.io</code>仓库， 访问的时候直接访问<a href="https://yourname.github.io" target="_blank" rel="noopener">https://yourname.github.io</a> 就能够直接访问你的个人博客</p>
-<p><strong>3. 生成静态文件</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line"></span><br><span class="line">#简写</span><br><span class="line">$ hexo g</span><br><span class="line"></span><br><span class="line">#Hexo 能够监视文件变动并立即重新生成静态文件，</span><br><span class="line">#在生成时会比对文件的 SHA1 checksum，只有变动的文件才会写入。</span><br><span class="line">$ hexo generate --watch</span><br></pre></td></tr></table></figure>
-<p><strong>4. 部署网站</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>可以将生成静态文件跟部署命令合并</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate --deploy</span><br><span class="line">$ hexo deploy --generate</span><br><span class="line"></span><br><span class="line">#简写</span><br><span class="line">$ hexo g -d</span><br><span class="line">$ hexo d -g</span><br></pre></td></tr></table></figure>
-<p>###六. 成功以后设置github pages</p>
-<ul>
-<li>选择你的博客仓库 -&gt; Settings</li>
-</ul>
-<p>图片</p>
-<ul>
-<li>选择github pages主题随便选择一个，就会出现一个网址，这个网址就是你的博客地址了</li>
-</ul>
-<p>##总结<br>至此你的个人博客网站完成</p>
-
+        
+          <a class="article-more-a" href="/2020/03/24/如何使用Hexo + Git创建个人主页/#more">more >></a>
+        
       
 
 
@@ -377,54 +284,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h2><h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h3><p><a href="https://nginx.org/en/download.html" target="_blank" rel="noopener">下载地址</a>，选择<code>Stable version</code>下面的<code>nginx-xxx</code><br>或者直接使用命令下载 <code>wget http://nginx.org/download/nginx-1.20.1.tar.gz</code></p>
-<h3 id="2-解压"><a href="#2-解压" class="headerlink" title="2. 解压"></a>2. 解压</h3><p><code>tar -zvxf nginx-xxx.tar.gz</code></p>
-<h3 id="3-安装依赖库"><a href="#3-安装依赖库" class="headerlink" title="3. 安装依赖库"></a>3. 安装依赖库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc gcc-c++</span><br><span class="line">yum -y install zlib-devel</span><br></pre></td></tr></table></figure>
-<h3 id="4-预编译"><a href="#4-预编译" class="headerlink" title="4. 预编译"></a>4. 预编译</h3><p>进入到解压后的目录，<code>./configure --prefix=/opt/nginx</code></p>
-<h4 id="出现错误"><a href="#出现错误" class="headerlink" title="出现错误"></a>出现错误</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./configure: error: the HTTP rewrite module requires the PCRE library.</span><br><span class="line">You can either disable the module by using --without-http_rewrite_module</span><br><span class="line">option, or install the PCRE library into the system, or build the PCRE library</span><br><span class="line">statically from the source with nginx by using --with-pcre=&lt;path&gt; option.</span><br></pre></td></tr></table></figure>
-<p><code>yum -y install pcre-devel</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">./configure: error: the HTTP cache module requires md5 functions</span><br><span class="line">from OpenSSL library.   You can either disable the module by using</span><br><span class="line">--without-http-cache option, or install the OpenSSL library into the system,</span><br><span class="line">or build the OpenSSL library statically from the source with nginx by using</span><br><span class="line">--with-http_ssl_module --with-openssl=&lt;path&gt; options.</span><br></pre></td></tr></table></figure>
-<p><code>yum -y install openssl openssl-devel</code></p>
-<h3 id="5-编译"><a href="#5-编译" class="headerlink" title="5. 编译"></a>5. 编译</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
-<p>如果出现错误<code>未找到命令  (-bash: make: command not found)</code></p>
-<p><code>yum -y install make autoconf</code></p>
-<h3 id="6-安装"><a href="#6-安装" class="headerlink" title="6. 安装"></a>6. 安装</h3><p>在解压目录下安装：<code>make install</code><br>安装完之后，会生成<code>/opt/nginx/</code>目录</p>
-<h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><p>安装结束后进入<code>/opt/nginx/sbin</code></p>
-<p>然后启动 ./nginx 这条命令</p>
-<p>验证配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nginx -t -c /opt/nginx/conf/nginx.conf</span><br><span class="line">或者</span><br><span class="line">cd  /opt/nginx/sbin</span><br><span class="line">./nginx -t</span><br></pre></td></tr></table></figure>
-<h4 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">查询nginx主进程号</span><br><span class="line">ps -ef | grep nginx</span><br><span class="line">从容停止   kill -QUIT 主进程号</span><br><span class="line">快速停止   kill -TERM 主进程号</span><br><span class="line">强制停止   kill -9 nginx</span><br></pre></td></tr></table></figure>
-<h4 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h4><p>查看启动状态 <code>ps -ef |grep nginx</code><br><code>kill -HUP 主进程号或进程号文件路径</code><br>或者使用<br><code>cd /opt/nginx/sbin
-./nginx -s reload</code></p>
-<p>然后通过浏览器打开你的ip地址<br>如果有显示welcome那就是成功了。</p>
-<p>如果还是打不开那么需要关闭centos7的防火墙</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service</span><br><span class="line">systemctl disable firewalld.service</span><br></pre></td></tr></table></figure>
-<h2 id="安装vsftpd"><a href="#安装vsftpd" class="headerlink" title="安装vsftpd"></a>安装vsftpd</h2><h3 id="1-检查时候安装了vsftpd"><a href="#1-检查时候安装了vsftpd" class="headerlink" title="1. 检查时候安装了vsftpd"></a>1. 检查时候安装了vsftpd</h3><p>检查是否安装了<code>vsftpd</code>，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep ftp</span><br></pre></td></tr></table></figure>
-<p>如果有就卸载，命令如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -e --nodeps vsftpd-3.0.2-29.el7_9.x86_64（上个命令查看到的）</span><br></pre></td></tr></table></figure>
-<h3 id="2-通过yum安装vsftpd"><a href="#2-通过yum安装vsftpd" class="headerlink" title="2. 通过yum安装vsftpd"></a>2. 通过yum安装vsftpd</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y vsftpd</span><br></pre></td></tr></table></figure>
-<p>出现如下代码说明安装成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Running transaction</span><br><span class="line">  正在安装    : vsftpd-3.0.2-29.el7_9.x86_64                                1/1</span><br><span class="line">  验证中      : vsftpd-3.0.2-29.el7_9.x86_64                                1/1</span><br><span class="line"></span><br><span class="line">已安装:</span><br><span class="line">  vsftpd.x86_64 0:3.0.2-29.el7_9</span><br><span class="line"></span><br><span class="line">完毕！</span><br></pre></td></tr></table></figure>
-<h3 id="3-自动启动"><a href="#3-自动启动" class="headerlink" title="3. 自动启动"></a>3. 自动启动</h3><h4 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable vsftpd.service</span><br></pre></td></tr></table></figure>
-<h4 id="开启vsftpd服务"><a href="#开启vsftpd服务" class="headerlink" title="开启vsftpd服务"></a>开启vsftpd服务</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start vsftpd.service</span><br></pre></td></tr></table></figure>
-<h4 id="查看vsftpd状态"><a href="#查看vsftpd状态" class="headerlink" title="查看vsftpd状态"></a>查看vsftpd状态</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status vsftpd.service</span><br></pre></td></tr></table></figure>
-<p>通过<code>viper ftp</code> 软件进行<code>ftp</code>进行通信。</p>
-<h3 id="4-创建ftp用户"><a href="#4-创建ftp用户" class="headerlink" title="4. 创建ftp用户"></a>4. 创建ftp用户</h3><h4 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd -d /home/ftp(这是你创建用户的目录) ftpuser(这个就是你的账户名字)</span><br></pre></td></tr></table></figure>
-<h4 id="添加用户密码"><a href="#添加用户密码" class="headerlink" title="添加用户密码"></a>添加用户密码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd ftpuser（需要输入2次密码）</span><br></pre></td></tr></table></figure>
-<h4 id="更改目录的权限，"><a href="#更改目录的权限，" class="headerlink" title="更改目录的权限，"></a>更改目录的权限，</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chmod ftpuser /home/ftp</span><br><span class="line">或者</span><br><span class="line">chmod 777 /home/ftp</span><br></pre></td></tr></table></figure>
-<h4 id="修改selinux配置文件（vi-etc-selinux-config）"><a href="#修改selinux配置文件（vi-etc-selinux-config）" class="headerlink" title="修改selinux配置文件（vi /etc/selinux/config）"></a>修改selinux配置文件（vi /etc/selinux/config）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SEliNUX=Disabled</span><br></pre></td></tr></table></figure>
-<h4 id="修改iptables配置文件（vi-etc-sysconfig-iptables）"><a href="#修改iptables配置文件（vi-etc-sysconfig-iptables）" class="headerlink" title="修改iptables配置文件（vi /etc/sysconfig/iptables）"></a>修改iptables配置文件（vi /etc/sysconfig/iptables）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">*filter</span><br><span class="line">:input ACCEPT [0:0]</span><br><span class="line">:FORWARD ACCEPT [0:0]</span><br><span class="line">:OUTPUT ACCEPT [0:0]</span><br><span class="line">-A input -m state --state RELATED,ESTABliSHED -j ACCEPT</span><br><span class="line">-A input -p icmp -j ACCEPT</span><br><span class="line">-A input -i lo -j ACCEPT</span><br><span class="line">-A input -p tcp -m state --state NEW -m tcp --dport 21 -j ACCEPT</span><br><span class="line">-A input -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT</span><br><span class="line">-A input -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT</span><br><span class="line">-A input -p tcp -m state --state NEW -m tcp --dport 3306 -j ACCEPT</span><br><span class="line">-A input -p tcp --dport 30000:31000 -j ACCEPT</span><br><span class="line">-A input -j REJECT --reject-with icmp-host-prohibited</span><br><span class="line">-A FORWARD -j REJECT --reject-with icmp-host-prohibited</span><br><span class="line">COMMIT</span><br></pre></td></tr></table></figure>
-<p>或者直接关闭你的防火墙。上面有写到</p>
-<p>重启iptables      systemctl restart iptables.service</p>
-<h2 id="如何将图片展示出来。"><a href="#如何将图片展示出来。" class="headerlink" title="如何将图片展示出来。"></a>如何将图片展示出来。</h2><p>需要将你的图片放入到<code>vsftpd</code>创建的账户目录地下，比如说上述的<code>/home/ftp</code>这个目录，<br>然后在浏览器中直接打开<code>/home/ftp/(你的图片路径)</code></p>
-<p>也可以在nginx中的配置文件中修改你的root目录<br>比如<code>vim /opt/nginx/conf/nginx.conf</code>然后在server中添加如下代码</p>
-<pre><code>location /images {
-    root /home/liam1/;
-    autoindex on;
-}
-</code></pre><p>root则是将images映射到<code>/home/liam1/images/</code>，也就是说你如果想要访问这里面的静态资源，那么在浏览器中需要这么输入 <code>http://youtip/images/你的资源路径</code>，images == /home/liam1/images/</p>
-<p>autoindex on便是打开浏览功能。<br>至此你在浏览器中可以打开你的图片、视频、html等资源</p>
-
+        
+          <a class="article-more-a" href="/2020/02/27/如何在Centos 7搭建ftp服务器/#more">more >></a>
+        
       
 
 
@@ -517,16 +379,9 @@
       
         <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><a href="https://github.com/realm/SwiftLint" target="_blank" rel="noopener">SwiftLint</a> 是 <a href="https://realm.io" target="_blank" rel="noopener">Realm</a> 推出的一款 Swift 代码规范检查工具。</p>
 <p>该工具基于<a href="https://github.com/github/swift-style-guide" target="_blank" rel="noopener">swift代码规范</a>进行代码检查，在Xcode中执行编译时，会自动运行检查，不符合规范的代码会给予警告或者错误，可以对规则进行自定义，在需要对Codeing进行规则约束时相当的方便。</p>
-<h2 id="SwiftLint的安装"><a href="#SwiftLint的安装" class="headerlink" title="SwiftLint的安装"></a>SwiftLint的安装</h2><p>在多项目中，不同项目使用不同的版本那么使用CocoaPods进行安装最好，其他的安装方式有brew、pak、编译源代码可直接去官网进行查看<a href="https://github.com/realm/SwiftLint" target="_blank" rel="noopener">SwiftLint</a> 。</p>
-<h3 id="1-CocoaPods安装"><a href="#1-CocoaPods安装" class="headerlink" title="1. CocoaPods安装"></a>1. CocoaPods安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod &quot;SwiftLint&quot;</span><br></pre></td></tr></table></figure>
-<p>使用命令<code>pod install</code>安装即可。</p>
-<h3 id="2-配置Xcode"><a href="#2-配置Xcode" class="headerlink" title="2. 配置Xcode"></a>2. 配置Xcode</h3><p>在Xcode的<code>Build Phases</code>中新建一个<code>Run Script Phase</code>配置项，添加如下代码:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;$&#123;PODS_ROOT&#125;/SwiftLint/swiftlint&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="3-SwiftLint规则"><a href="#3-SwiftLint规则" class="headerlink" title="3. SwiftLint规则"></a>3. SwiftLint规则</h3><p>安装、配置完成如何进行自定义规则？ 需要在你的工程主目录添加<code>.swiftlint.yml</code>文件，通过pod安装，(Command+Shift+.可显示隐藏文件)可以查看到这个文件，如果没有需要手动创建，打开该文件创建你的规则吧，</p>
-<h4 id="例子代码如下："><a href="#例子代码如下：" class="headerlink" title="例子代码如下："></a>例子代码如下：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">disabled_rules: # rule identifiers to exclude from running</span><br><span class="line">  - trailing_whitespace</span><br><span class="line">  - cyclomatic_complexity</span><br><span class="line">  - unused_closure_parameter</span><br><span class="line">  - line_length</span><br><span class="line">  - empty_enum_arguments</span><br><span class="line">  - function_body_length</span><br><span class="line">  - nesting</span><br><span class="line">  - type_body_length</span><br><span class="line">  - file_length</span><br><span class="line">  - identifier_name</span><br><span class="line">  - type_name</span><br><span class="line">  - large_tuple</span><br><span class="line">  - function_parameter_count</span><br><span class="line"></span><br><span class="line">excluded: # paths to ignore during linting. Takes precedence over `included`.</span><br><span class="line">  - Carthage</span><br><span class="line">  - Pods</span><br><span class="line"></span><br><span class="line">force_cast: warning # implicitly</span><br><span class="line">force_try:</span><br><span class="line">  severity: warning # explicitly</span><br><span class="line">  warning level</span><br><span class="line"></span><br><span class="line">line_length:</span><br><span class="line">  warning: 200</span><br><span class="line">  ignores_function_declarations: true</span><br><span class="line">  ignores_comments: true</span><br><span class="line">  </span><br><span class="line">type_body_length:</span><br><span class="line">  - 300 # warning</span><br><span class="line">  - 400 # error</span><br><span class="line">file_length:</span><br><span class="line">  warning: 500</span><br><span class="line">  error: 1200</span><br><span class="line">identifier_name:</span><br><span class="line">  min_length: # only min_length</span><br><span class="line">    error: 1 # only error</span><br><span class="line">  excluded: # excluded via string array</span><br><span class="line">    - id</span><br></pre></td></tr></table></figure>
-<h4 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">disabled_rules：禁用指定的规则</span><br><span class="line">opt_in_rules：启动指定的规则</span><br><span class="line">whitelist_rules：白名单规则，不能和上面两项混用</span><br><span class="line">included：希望Lint检索的路径，SwiftLint会扫描该路径下的所有.swift后缀的文件</span><br><span class="line">excluded: 希望不要检索的路径,SwiftLint会无视掉该路径下的文件，一般比如Pods、Carthage或者一些三方库</span><br></pre></td></tr></table></figure>
-<h3 id="4-SwiftLint-规则文档"><a href="#4-SwiftLint-规则文档" class="headerlink" title="4. SwiftLint 规则文档"></a>4. SwiftLint 规则文档</h3><p><a href="https://realm.github.io/SwiftLint/" target="_blank" rel="noopener">官方规则文档</a><br><a href="https://cloud.tencent.com/developer/article/1617958" target="_blank" rel="noopener">腾讯云翻译规则文档</a></p>
-
+        
+          <a class="article-more-a" href="/2019/12/03/如何使用SwiftLint？/#more">more >></a>
+        
       
 
 

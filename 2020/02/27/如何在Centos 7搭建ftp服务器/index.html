@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
   <title>如何在Centos7搭建ftp图片服务器 | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装nginx1. 下载下载地址，选择Stable version下面的nginx-xxx或者直接使用命令下载 wget http://nginx.org/download/nginx-1.20.1.tar.gz 2. 解压tar -zvxf nginx-xxx.tar.gz 3. 安装依赖库12yum -y install gcc gcc-c++yum -y install zlib-devel">
+  <meta name="description" content="安装nginx1. 下载下载地址，选择Stable version下面的nginx-xxx或者直接使用命令下载 wget http://nginx.org/download/nginx-1.20.1.tar.gz">
 <meta name="keywords" content="ftp,nginx,image server">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何在Centos7搭建ftp图片服务器">
 <meta property="og:url" content="https://www.struggle3g.com/2020/02/27/如何在Centos 7搭建ftp服务器/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="安装nginx1. 下载下载地址，选择Stable version下面的nginx-xxx或者直接使用命令下载 wget http://nginx.org/download/nginx-1.20.1.tar.gz 2. 解压tar -zvxf nginx-xxx.tar.gz 3. 安装依赖库12yum -y install gcc gcc-c++yum -y install zlib-devel">
+<meta property="og:description" content="安装nginx1. 下载下载地址，选择Stable version下面的nginx-xxx或者直接使用命令下载 wget http://nginx.org/download/nginx-1.20.1.tar.gz">
 <meta property="og:locale" content="ch">
-<meta property="og:updated_time" content="2022-06-20T17:36:06.000Z">
+<meta property="og:updated_time" content="2022-06-20T18:59:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何在Centos7搭建ftp图片服务器">
-<meta name="twitter:description" content="安装nginx1. 下载下载地址，选择Stable version下面的nginx-xxx或者直接使用命令下载 wget http://nginx.org/download/nginx-1.20.1.tar.gz 2. 解压tar -zvxf nginx-xxx.tar.gz 3. 安装依赖库12yum -y install gcc gcc-c++yum -y install zlib-devel">
+<meta name="twitter:description" content="安装nginx1. 下载下载地址，选择Stable version下面的nginx-xxx或者直接使用命令下载 wget http://nginx.org/download/nginx-1.20.1.tar.gz">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
   
@@ -186,6 +186,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h2><h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h3><p><a href="https://nginx.org/en/download.html" target="_blank" rel="noopener">下载地址</a>，选择<code>Stable version</code>下面的<code>nginx-xxx</code><br>或者直接使用命令下载 <code>wget http://nginx.org/download/nginx-1.20.1.tar.gz</code></p>
+<a id="more"></a>
 <h3 id="2-解压"><a href="#2-解压" class="headerlink" title="2. 解压"></a>2. 解压</h3><p><code>tar -zvxf nginx-xxx.tar.gz</code></p>
 <h3 id="3-安装依赖库"><a href="#3-安装依赖库" class="headerlink" title="3. 安装依赖库"></a>3. 安装依赖库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc gcc-c++</span><br><span class="line">yum -y install zlib-devel</span><br></pre></td></tr></table></figure>
 <h3 id="4-预编译"><a href="#4-预编译" class="headerlink" title="4. 预编译"></a>4. 预编译</h3><p>进入到解压后的目录，<code>./configure --prefix=/opt/nginx</code></p>
