@@ -304,6 +304,104 @@
 
   
     
+<article id="post-如何使用SwiftLint？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/03/如何使用SwiftLint？/">如何使用SwiftLint？</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/03/如何使用SwiftLint？/" class="archive-article-date">
+  	<time datetime="2019-12-03T14:13:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><a href="https://github.com/realm/SwiftLint" target="_blank" rel="noopener">SwiftLint</a> 是 <a href="https://realm.io" target="_blank" rel="noopener">Realm</a> 推出的一款 Swift 代码规范检查工具。</p>
+<p>该工具基于<a href="https://github.com/github/swift-style-guide" target="_blank" rel="noopener">swift代码规范</a>进行代码检查，在Xcode中执行编译时，会自动运行检查，不符合规范的代码会给予警告或者错误，可以对规则进行自定义，在需要对Codeing进行规则约束时相当的方便。</p>
+<h2 id="SwiftLint的安装"><a href="#SwiftLint的安装" class="headerlink" title="SwiftLint的安装"></a>SwiftLint的安装</h2><p>在多项目中，不同项目使用不同的版本那么使用CocoaPods进行安装最好，其他的安装方式有brew、pak、编译源代码可直接去官网进行查看<a href="https://github.com/realm/SwiftLint" target="_blank" rel="noopener">SwiftLint</a> 。</p>
+<h3 id="1-CocoaPods安装"><a href="#1-CocoaPods安装" class="headerlink" title="1. CocoaPods安装"></a>1. CocoaPods安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod &quot;SwiftLint&quot;</span><br></pre></td></tr></table></figure>
+<p>使用命令<code>pod install</code>安装即可。</p>
+<h3 id="2-配置Xcode"><a href="#2-配置Xcode" class="headerlink" title="2. 配置Xcode"></a>2. 配置Xcode</h3><p>在Xcode的<code>Build Phases</code>中新建一个<code>Run Script Phase</code>配置项，添加如下代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;$&#123;PODS_ROOT&#125;/SwiftLint/swiftlint&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="3-SwiftLint规则"><a href="#3-SwiftLint规则" class="headerlink" title="3. SwiftLint规则"></a>3. SwiftLint规则</h3><p>安装、配置完成如何进行自定义规则？ 需要在你的工程主目录添加<code>.swiftlint.yml</code>文件，通过pod安装，(Command+Shift+.可显示隐藏文件)可以查看到这个文件，如果没有需要手动创建，打开该文件创建你的规则吧，</p>
+<h4 id="例子代码如下："><a href="#例子代码如下：" class="headerlink" title="例子代码如下："></a>例子代码如下：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">disabled_rules: # rule identifiers to exclude from running</span><br><span class="line">  - trailing_whitespace</span><br><span class="line">  - cyclomatic_complexity</span><br><span class="line">  - unused_closure_parameter</span><br><span class="line">  - line_length</span><br><span class="line">  - empty_enum_arguments</span><br><span class="line">  - function_body_length</span><br><span class="line">  - nesting</span><br><span class="line">  - type_body_length</span><br><span class="line">  - file_length</span><br><span class="line">  - identifier_name</span><br><span class="line">  - type_name</span><br><span class="line">  - large_tuple</span><br><span class="line">  - function_parameter_count</span><br><span class="line"></span><br><span class="line">excluded: # paths to ignore during linting. Takes precedence over `included`.</span><br><span class="line">  - Carthage</span><br><span class="line">  - Pods</span><br><span class="line"></span><br><span class="line">force_cast: warning # implicitly</span><br><span class="line">force_try:</span><br><span class="line">  severity: warning # explicitly</span><br><span class="line">  warning level</span><br><span class="line"></span><br><span class="line">line_length:</span><br><span class="line">  warning: 200</span><br><span class="line">  ignores_function_declarations: true</span><br><span class="line">  ignores_comments: true</span><br><span class="line">  </span><br><span class="line">type_body_length:</span><br><span class="line">  - 300 # warning</span><br><span class="line">  - 400 # error</span><br><span class="line">file_length:</span><br><span class="line">  warning: 500</span><br><span class="line">  error: 1200</span><br><span class="line">identifier_name:</span><br><span class="line">  min_length: # only min_length</span><br><span class="line">    error: 1 # only error</span><br><span class="line">  excluded: # excluded via string array</span><br><span class="line">    - id</span><br></pre></td></tr></table></figure>
+<h4 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">disabled_rules：禁用指定的规则</span><br><span class="line">opt_in_rules：启动指定的规则</span><br><span class="line">whitelist_rules：白名单规则，不能和上面两项混用</span><br><span class="line">included：希望Lint检索的路径，SwiftLint会扫描该路径下的所有.swift后缀的文件</span><br><span class="line">excluded: 希望不要检索的路径,SwiftLint会无视掉该路径下的文件，一般比如Pods、Carthage或者一些三方库</span><br></pre></td></tr></table></figure>
+<h3 id="4-SwiftLint-规则文档"><a href="#4-SwiftLint-规则文档" class="headerlink" title="4. SwiftLint 规则文档"></a>4. SwiftLint 规则文档</h3><p><a href="https://realm.github.io/SwiftLint/" target="_blank" rel="noopener">官方规则文档</a><br><a href="https://cloud.tencent.com/developer/article/1617958" target="_blank" rel="noopener">腾讯云翻译规则文档</a></p>
+
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Swift</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SwiftLint</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/03/如何使用SwiftLint？/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
 <article id="post-iOS晋级知识汇总(十二)网络" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -1072,104 +1170,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/09/03/iOS晋级知识汇总(五)设计模式/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-iOS晋级知识汇总(四)算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/28/iOS晋级知识汇总(四)算法/">iOS晋级知识汇总(四)算法</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/28/iOS晋级知识汇总(四)算法/" class="archive-article-date">
-  	<time datetime="2019-08-28T15:27:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-4ee9bc9777e16ab5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="一般算法.png"></p>
-        
-          <a class="article-more-a" href="/2019/08/28/iOS晋级知识汇总(四)算法/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">字符串反转算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">链表反转算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">有序数组合并</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">排序算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/28/iOS晋级知识汇总(四)算法/">展开全文 >></a>
         </p>
       
 
