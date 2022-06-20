@@ -165,6 +165,145 @@
             
   
     
+<article id="post-如何在Centos 7搭建ftp服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/27/如何在Centos 7搭建ftp服务器/">如何在Centos7搭建ftp图片服务器</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/27/如何在Centos 7搭建ftp服务器/" class="archive-article-date">
+  	<time datetime="2020-02-27T13:17:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h2><h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h3><p><a href="https://nginx.org/en/download.html" target="_blank" rel="noopener">下载地址</a>，选择<code>Stable version</code>下面的<code>nginx-xxx</code><br>或者直接使用命令下载 <code>wget http://nginx.org/download/nginx-1.20.1.tar.gz</code></p>
+<h3 id="2-解压"><a href="#2-解压" class="headerlink" title="2. 解压"></a>2. 解压</h3><p><code>tar -zvxf nginx-xxx.tar.gz</code></p>
+<h3 id="3-安装依赖库"><a href="#3-安装依赖库" class="headerlink" title="3. 安装依赖库"></a>3. 安装依赖库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc gcc-c++</span><br><span class="line">yum -y install zlib-devel</span><br></pre></td></tr></table></figure>
+<h3 id="4-预编译"><a href="#4-预编译" class="headerlink" title="4. 预编译"></a>4. 预编译</h3><p>进入到解压后的目录，<code>./configure --prefix=/opt/nginx</code></p>
+<h4 id="出现错误"><a href="#出现错误" class="headerlink" title="出现错误"></a>出现错误</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./configure: error: the HTTP rewrite module requires the PCRE library.</span><br><span class="line">You can either disable the module by using --without-http_rewrite_module</span><br><span class="line">option, or install the PCRE library into the system, or build the PCRE library</span><br><span class="line">statically from the source with nginx by using --with-pcre=&lt;path&gt; option.</span><br></pre></td></tr></table></figure>
+<p><code>yum -y install pcre-devel</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">./configure: error: the HTTP cache module requires md5 functions</span><br><span class="line">from OpenSSL library.   You can either disable the module by using</span><br><span class="line">--without-http-cache option, or install the OpenSSL library into the system,</span><br><span class="line">or build the OpenSSL library statically from the source with nginx by using</span><br><span class="line">--with-http_ssl_module --with-openssl=&lt;path&gt; options.</span><br></pre></td></tr></table></figure>
+<p><code>yum -y install openssl openssl-devel</code></p>
+<h3 id="5-编译"><a href="#5-编译" class="headerlink" title="5. 编译"></a>5. 编译</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
+<p>如果出现错误<code>未找到命令  (-bash: make: command not found)</code></p>
+<p><code>yum -y install make autoconf</code></p>
+<h3 id="6-安装"><a href="#6-安装" class="headerlink" title="6. 安装"></a>6. 安装</h3><p>在解压目录下安装：<code>make install</code><br>安装完之后，会生成<code>/opt/nginx/</code>目录</p>
+<h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><p>安装结束后进入<code>/opt/nginx/sbin</code></p>
+<p>然后启动 ./nginx 这条命令</p>
+<p>验证配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nginx -t -c /opt/nginx/conf/nginx.conf</span><br><span class="line">或者</span><br><span class="line">cd  /opt/nginx/sbin</span><br><span class="line">./nginx -t</span><br></pre></td></tr></table></figure>
+<h4 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">查询nginx主进程号</span><br><span class="line">ps -ef | grep nginx</span><br><span class="line">从容停止   kill -QUIT 主进程号</span><br><span class="line">快速停止   kill -TERM 主进程号</span><br><span class="line">强制停止   kill -9 nginx</span><br></pre></td></tr></table></figure>
+<h4 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h4><p>查看启动状态 <code>ps -ef |grep nginx</code><br><code>kill -HUP 主进程号或进程号文件路径</code><br>或者使用<br><code>cd /opt/nginx/sbin
+./nginx -s reload</code></p>
+<p>然后通过浏览器打开你的ip地址<br>如果有显示welcome那就是成功了。</p>
+<p>如果还是打不开那么需要关闭centos7的防火墙</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service</span><br><span class="line">systemctl disable firewalld.service</span><br></pre></td></tr></table></figure>
+<h2 id="安装vsftpd"><a href="#安装vsftpd" class="headerlink" title="安装vsftpd"></a>安装vsftpd</h2><h3 id="1-检查时候安装了vsftpd"><a href="#1-检查时候安装了vsftpd" class="headerlink" title="1. 检查时候安装了vsftpd"></a>1. 检查时候安装了vsftpd</h3><p>检查是否安装了<code>vsftpd</code>，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep ftp</span><br></pre></td></tr></table></figure>
+<p>如果有就卸载，命令如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -e --nodeps vsftpd-3.0.2-29.el7_9.x86_64（上个命令查看到的）</span><br></pre></td></tr></table></figure>
+<h3 id="2-通过yum安装vsftpd"><a href="#2-通过yum安装vsftpd" class="headerlink" title="2. 通过yum安装vsftpd"></a>2. 通过yum安装vsftpd</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y vsftpd</span><br></pre></td></tr></table></figure>
+<p>出现如下代码说明安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Running transaction</span><br><span class="line">  正在安装    : vsftpd-3.0.2-29.el7_9.x86_64                                1/1</span><br><span class="line">  验证中      : vsftpd-3.0.2-29.el7_9.x86_64                                1/1</span><br><span class="line"></span><br><span class="line">已安装:</span><br><span class="line">  vsftpd.x86_64 0:3.0.2-29.el7_9</span><br><span class="line"></span><br><span class="line">完毕！</span><br></pre></td></tr></table></figure>
+<h3 id="3-自动启动"><a href="#3-自动启动" class="headerlink" title="3. 自动启动"></a>3. 自动启动</h3><h4 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable vsftpd.service</span><br></pre></td></tr></table></figure>
+<h4 id="开启vsftpd服务"><a href="#开启vsftpd服务" class="headerlink" title="开启vsftpd服务"></a>开启vsftpd服务</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start vsftpd.service</span><br></pre></td></tr></table></figure>
+<h4 id="查看vsftpd状态"><a href="#查看vsftpd状态" class="headerlink" title="查看vsftpd状态"></a>查看vsftpd状态</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status vsftpd.service</span><br></pre></td></tr></table></figure>
+<p>通过<code>viper ftp</code> 软件进行<code>ftp</code>进行通信。</p>
+<h3 id="4-创建ftp用户"><a href="#4-创建ftp用户" class="headerlink" title="4. 创建ftp用户"></a>4. 创建ftp用户</h3><h4 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd -d /home/ftp(这是你创建用户的目录) ftpuser(这个就是你的账户名字)</span><br></pre></td></tr></table></figure>
+<h4 id="添加用户密码"><a href="#添加用户密码" class="headerlink" title="添加用户密码"></a>添加用户密码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd ftpuser（需要输入2次密码）</span><br></pre></td></tr></table></figure>
+<h4 id="更改目录的权限，"><a href="#更改目录的权限，" class="headerlink" title="更改目录的权限，"></a>更改目录的权限，</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chmod ftpuser /home/ftp</span><br><span class="line">或者</span><br><span class="line">chmod 777 /home/ftp</span><br></pre></td></tr></table></figure>
+<h4 id="修改selinux配置文件（vi-etc-selinux-config）"><a href="#修改selinux配置文件（vi-etc-selinux-config）" class="headerlink" title="修改selinux配置文件（vi /etc/selinux/config）"></a>修改selinux配置文件（vi /etc/selinux/config）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SEliNUX=Disabled</span><br></pre></td></tr></table></figure>
+<h4 id="修改iptables配置文件（vi-etc-sysconfig-iptables）"><a href="#修改iptables配置文件（vi-etc-sysconfig-iptables）" class="headerlink" title="修改iptables配置文件（vi /etc/sysconfig/iptables）"></a>修改iptables配置文件（vi /etc/sysconfig/iptables）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">*filter</span><br><span class="line">:input ACCEPT [0:0]</span><br><span class="line">:FORWARD ACCEPT [0:0]</span><br><span class="line">:OUTPUT ACCEPT [0:0]</span><br><span class="line">-A input -m state --state RELATED,ESTABliSHED -j ACCEPT</span><br><span class="line">-A input -p icmp -j ACCEPT</span><br><span class="line">-A input -i lo -j ACCEPT</span><br><span class="line">-A input -p tcp -m state --state NEW -m tcp --dport 21 -j ACCEPT</span><br><span class="line">-A input -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT</span><br><span class="line">-A input -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT</span><br><span class="line">-A input -p tcp -m state --state NEW -m tcp --dport 3306 -j ACCEPT</span><br><span class="line">-A input -p tcp --dport 30000:31000 -j ACCEPT</span><br><span class="line">-A input -j REJECT --reject-with icmp-host-prohibited</span><br><span class="line">-A FORWARD -j REJECT --reject-with icmp-host-prohibited</span><br><span class="line">COMMIT</span><br></pre></td></tr></table></figure>
+<p>或者直接关闭你的防火墙。上面有写到</p>
+<p>重启iptables      systemctl restart iptables.service</p>
+<h2 id="如何将图片展示出来。"><a href="#如何将图片展示出来。" class="headerlink" title="如何将图片展示出来。"></a>如何将图片展示出来。</h2><p>需要将你的图片放入到<code>vsftpd</code>创建的账户目录地下，比如说上述的<code>/home/ftp</code>这个目录，<br>然后在浏览器中直接打开<code>/home/ftp/(你的图片路径)</code></p>
+<p>也可以在nginx中的配置文件中修改你的root目录<br>比如<code>vim /opt/nginx/conf/nginx.conf</code>然后在server中添加如下代码</p>
+<pre><code>location /images {
+    root /home/liam1/;
+    autoindex on;
+}
+</code></pre><p>root则是将images映射到<code>/home/liam1/images/</code>，也就是说你如果想要访问这里面的静态资源，那么在浏览器中需要这么输入 <code>http://youtip/images/你的资源路径</code>，images == /home/liam1/images/</p>
+<p>autoindex on便是打开浏览功能。<br>至此你在浏览器中可以打开你的图片、视频、html等资源</p>
+
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ftp</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nginx</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">image server</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/27/如何在Centos 7搭建ftp服务器/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
 <article id="post-iOS晋级知识汇总(十二)网络" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -1065,111 +1204,9 @@
 
 
   
-    
-<article id="post-iOS晋级知识汇总(三)语言特性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/25/iOS晋级知识汇总(三)语言特性/">iOS晋级知识汇总(三)语言特性</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/25/iOS晋级知识汇总(三)语言特性/" class="archive-article-date">
-  	<time datetime="2019-08-25T13:15:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><h2 id="用分类干了什么事情？"><a href="#用分类干了什么事情？" class="headerlink" title="用分类干了什么事情？"></a>用分类干了什么事情？</h2><ul>
-<li>声明私有方法</li>
-<li>分解提及庞大类文件</li>
-<li>把Framework的私有方法公开</li>
-</ul>
-        
-          <a class="article-more-a" href="/2019/08/25/iOS晋级知识汇总(三)语言特性/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分类</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">关联对象</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Extension</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">KVC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/25/iOS晋级知识汇总(三)语言特性/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -1457,6 +1494,38 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">经验笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">个人主页</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ftp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">image server</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Swift</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SwiftLint</a>
               </li>
             
             <div class="clearfix"></div>
