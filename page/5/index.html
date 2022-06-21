@@ -165,209 +165,6 @@
             
   
     
-<article id="post-深入浅出Runtime (四) Runtime的实际应用之一，字典转模型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/28/深入浅出Runtime (四) Runtime的实际应用之一，字典转模型/">深入浅出Runtime (四) Runtime的实际应用之一，字典转模型</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/28/深入浅出Runtime (四) Runtime的实际应用之一，字典转模型/" class="archive-article-date">
-  	<time datetime="2018-09-28T12:04:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>在我们开发中，经常使用数据模型，模型分为：<strong>本地缓存模型</strong>、<strong>网络下载模型</strong>、以及一些<strong>临时存储模型</strong>，其中网络数据模型需要工程师将服务器的数据序列化，在网络模型赋值的时候，我们所要做的方式有两种：</p>
-<ul>
-<li><p><strong>自己设计数据模型</strong>，将网络中的数据，手动一一对应的形式赋值给自己定义的模型</p>
-<ul>
-<li><strong>优点:</strong>1.设计的模型根据自己的代码架构来实现 2.在迭代过程当中会更顺畅、更清楚业务逻辑、方便修改、更加灵活</li>
-<li><strong>缺点:</strong>1.开发周期会变慢 2.每次改动的时候都需要自己手动处理模型</li>
-</ul>
-</li>
-<li><p><strong>数据转模型</strong>，根据服务器返回的数据规格，转换成字典，在根据字典key=property(Name)的形式设计数据模型用runtime的形式一键生成实例数据模型(已赋值过后的数据模型)</p>
-<ul>
-<li><strong>优点:</strong>1.敏捷式开发 2.添加新的数据时会更方便</li>
-<li><strong>缺点:</strong>1.严重依赖于服务器约定的数据规格 2.服务器数据改动会增加代码的工作量</li>
-</ul>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2018/09/28/深入浅出Runtime (四) Runtime的实际应用之一，字典转模型/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Runtime</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">字典转模型</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Runtime的应用</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/28/深入浅出Runtime (四) Runtime的实际应用之一，字典转模型/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-玩溜Cocos Creator入门学习（四）UI系统介绍UI组件（ScrollView）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/27/玩溜Cocos Creator入门学习（四）UI系统介绍UI组件（ScrollView）/">玩溜Cocos Creator入门学习（四）UI系统介绍UI组件（ScrollView）</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/27/玩溜Cocos Creator入门学习（四）UI系统介绍UI组件（ScrollView）/" class="archive-article-date">
-  	<time datetime="2018-09-27T14:05:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="ScrollView-组件"><a href="#ScrollView-组件" class="headerlink" title="ScrollView 组件"></a>ScrollView 组件</h2><p>ScrollView 是一种带滚动功能的容器，它提供一种方式可以在有限的显示区域内浏览更多的内容。通常 ScrollView 会与<a href="http://docs.cocos.com/creator/manual/zh/components/mask.html" target="_blank" rel="noopener">Mask</a>组件配合使用，同时也可以添加ScrollBar组件来显示浏览内容的位置。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/7980283-782edd496d31a3c8.gif?imageMogr2/auto-orient/strip" alt=""></p>
-        
-          <a class="article-more-a" href="/2018/09/27/玩溜Cocos Creator入门学习（四）UI系统介绍UI组件（ScrollView）/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Cocos Creator</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">游戏</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Cocos Creator游戏UI</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/27/玩溜Cocos Creator入门学习（四）UI系统介绍UI组件（ScrollView）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
 <article id="post-深入浅出Runtime (三) Runtime的消息转发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -519,103 +316,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/09/25/玩溜Cocos-Creator入门学习（三）UI系统UI的组件（Layout、EditBox、RichText）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-tabindex属性的作用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/23/tabindex属性的作用/">tabindex属性的作用</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/23/tabindex属性的作用/" class="archive-article-date">
-  	<time datetime="2018-09-23T14:01:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> tabindex有三个值：0 ，-1， 以及X（X里32767是界点，稍后说明）</p>
-<p>  原本在Html中，只有链接a和表单元素可以被键盘访问（即使是a也必须加上href属性才可以)，但是aria允许tabindex指定给任何html元素。</p>
-<p>  当tabindex=0时，该元素可以用tab键获取焦点，且访问的顺序是按照元素在文档中的顺序来focus，即使采用了浮动改变了页面中显示的顺序，依然是按照html文档中的顺序来定位。</p>
-<p>  当tabindex=-1时，该元素用tab键获取不到焦点，但是可以通过js获取，这样就便于我们通过js设置上下左右键的响应事件来focus，在widget内部可以用到。</p>
-<p>  当tabindex&gt;=1时，该元素可以用tab键获取焦点，而且优先级大于tabindex=0；不过在tabindex&gt;=1时，数字越小，越先定位到。   </p>
-<p>  在IE中，tabindex范围在1到32767之间（包括32767），在FF， Chrome无限制，不过一旦超出32768，顺序跟tabindex=0时一样。这个估计跟各个浏览器对int型的解析有关。</p>
-<p> 点击打开链接         </p>
-<p>补充说明：学习bootstrap的modal时，用到了该属性。</p>
-<hr>
-<p>本文来自 hellogjq 的CSDN 博客 ，全文地址请点击：<a href="https://blog.csdn.net/u012698342/article/details/70045568?utm_source=copy" target="_blank" rel="noopener">https://blog.csdn.net/u012698342/article/details/70045568?utm_source=copy</a> </p>
-
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">tabindex</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/23/tabindex属性的作用/">展开全文 >></a>
         </p>
       
 
@@ -1104,9 +804,260 @@
 
 
   
+    
+<article id="post-程序猿如何修炼内力" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/20/程序猿如何修炼内力/">程序猿如何修炼内力</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/20/程序猿如何修炼内力/" class="archive-article-date">
+  	<time datetime="2018-08-20T15:30:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-42532c5c7f66b34f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>身为一个普通的软件开发者，到了一个阶段会发现自己遇到了瓶颈，也就没有那么从容潇洒的再出去happy，人总是有得有失。<br>
+        
+          <a class="article-more-a" href="/2018/08/20/程序猿如何修炼内力/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/20/程序猿如何修炼内力/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
+<article id="post-本地新建项目夹，push到远程git：! [rejected] master -&gt; master (fetch first),fatal- refusing to merge unrelated histories, ! [rejected] master -&gt; master (non-fast-forward)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/20/本地新建项目夹，push到远程git：! [rejected] master -> master (fetch first),fatal- refusing to merge unrelated histories, ! [rejected] master -> master (non-fast-forward)/">本地新建项目夹，push到远程git：! [rejected] master -&gt; master (fetch first),fatal- refusing to merge unrelated histories, ! [rejected] master -&gt; master (non-fast-forward)</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/20/本地新建项目夹，push到远程git：! [rejected] master -> master (fetch first),fatal- refusing to merge unrelated histories, ! [rejected] master -> master (non-fast-forward)/" class="archive-article-date">
+  	<time datetime="2018-08-20T06:37:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="在自己创建一个新的代码仓库，然后本地创建了一个项目夹，我们需要将文件的文件夹里面的内容上传到git，遇到一些错误信息。"><a href="#在自己创建一个新的代码仓库，然后本地创建了一个项目夹，我们需要将文件的文件夹里面的内容上传到git，遇到一些错误信息。" class="headerlink" title="在自己创建一个新的代码仓库，然后本地创建了一个项目夹，我们需要将文件的文件夹里面的内容上传到git，遇到一些错误信息。"></a>在自己创建一个新的代码仓库，然后本地创建了一个项目夹，我们需要将文件的文件夹里面的内容上传到git，遇到一些错误信息。</h2><h3 id="1-首先创建仓库"><a href="#1-首先创建仓库" class="headerlink" title="1.首先创建仓库:"></a>1.首先创建仓库:</h3><p><img src="http://upload-images.jianshu.io/upload_images/7980283-e2325a6715fcbfaf?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<pre><code>创建一个名字为gittest的仓库，在本地电脑创建一个gittest的项目夹用终端进入输入命令：
+</code></pre>
+        
+          <a class="article-more-a" href="/2018/08/20/本地新建项目夹，push到远程git：! [rejected] master -> master (fetch first),fatal- refusing to merge unrelated histories, ! [rejected] master -> master (non-fast-forward)/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/20/本地新建项目夹，push到远程git：! [rejected] master -> master (fetch first),fatal- refusing to merge unrelated histories, ! [rejected] master -> master (non-fast-forward)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
+<article id="post-iOSApp监测网络变化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/09/iOSApp监测网络变化/">iOSApp监测网络变化</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/09/iOSApp监测网络变化/" class="archive-article-date">
+  	<time datetime="2018-08-09T10:03:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-6e528640859d005c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>在App中经常会监听网络的变化，下面是网上经常用到的两种方式</p>
+        
+          <a class="article-more-a" href="/2018/08/09/iOSApp监测网络变化/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络监听</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/09/iOSApp监测网络变化/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
     </nav>
   
 
