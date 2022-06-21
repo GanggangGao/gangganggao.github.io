@@ -165,101 +165,6 @@
             
   
     
-<article id="post-玩溜Cocos Creator入门学习（五）UI系统介绍UI组件（ScrollBar）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/30/玩溜Cocos Creator入门学习（五）UI系统介绍UI组件（ScrollBar）/">玩溜Cocos Creator入门学习（五）UI系统介绍UI组件（ScrollBar）</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/30/玩溜Cocos Creator入门学习（五）UI系统介绍UI组件（ScrollBar）/" class="archive-article-date">
-  	<time datetime="2018-09-29T16:04:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p><code>ScrollBar</code>是上篇文章<a href="https://www.struggle3g.com/2018/09/27/玩溜Cocos%20Creator入门学习（四）UI系统介绍UI组件（ScrollView）/">玩溜Cocos Creator入门学习（四）UI系统介绍UI组件（ScrollView）</a>的补充，<code>ScrollBar</code> 一般不会单独使用，它需要与<code>ScrollView</code>配合使用</p>
-<h2 id="ScrollBar-组件"><a href="#ScrollBar-组件" class="headerlink" title="ScrollBar 组件"></a>ScrollBar 组件</h2><p><code>ScrollBar</code> 允许用户通过拖动滑块来滚动一张图片，它与<code>Slider</code>组件有点类似，但是它主要是用于滚动而 <code>Slider</code> 则用来设置数值。</p>
-        
-          <a class="article-more-a" href="/2018/09/30/玩溜Cocos Creator入门学习（五）UI系统介绍UI组件（ScrollBar）/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Cocos Creator</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">游戏</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Cocos Creator游戏UI</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/30/玩溜Cocos Creator入门学习（五）UI系统介绍UI组件（ScrollBar）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
 <article id="post-玩溜Cocos Creator入门学习（四）UI系统介绍UI组件（ScrollView）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -1087,6 +992,98 @@
 
 
   
+    
+<article id="post-深入浅出Runtime (三) Runtime的消息转发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/26/深入浅出Runtime (三) Runtime的消息转发/">深入浅出Runtime (三) Runtime的消息转发</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/26/深入浅出Runtime (三) Runtime的消息转发/" class="archive-article-date">
+  	<time datetime="2018-08-26T14:30:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>iOS的消息转发机制，在我们开发中有时候忘记实现某个声明的方法，从而在运行过程中调用该方法出现崩溃，</p>
+<p>当然这类问题是可以解决的，在当前对象或者父类对象中添加对象的方法实现，在重新运行，调用该方法就能解决这个问题</p>
+<p>又或者<strong>在我们运行的时候动态的去添加者中<code>未知</code>方法实现，这就是这篇重点要学习的内容</strong></p>
+        
+          <a class="article-more-a" href="/2018/08/26/深入浅出Runtime (三) Runtime的消息转发/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">消息转发</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Runtime</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/26/深入浅出Runtime (三) Runtime的消息转发/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
@@ -1541,6 +1538,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">区块链</a>
               </li>
             
             <div class="clearfix"></div>
