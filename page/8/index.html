@@ -254,6 +254,95 @@
 
   
     
+<article id="post-popViewControllerAnimatedcalledon" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/07/popViewControllerAnimatedcalledon/">popViewControllerAnimated:calledon</a>
+    </h1>
+  
+
+        
+        <a href="/2018/06/07/popViewControllerAnimatedcalledon/" class="archive-article-date">
+  	<time datetime="2018-06-07T05:54:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#问题描述：<br>在ViewController中<br>当我在弹出UIAlertController的弹出框时，同时调用了 [self.navigationController popViewControllerAnimated:YES];这个方法<br>导致</p>
+<blockquote>
+<p>popViewControllerAnimated: called on <uinavigationcontroller 0x10201e600=""> while an existing transition or presentation is occurring; the navigation stack will not be updated.</uinavigationcontroller></p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2018/06/07/popViewControllerAnimatedcalledon/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">bug</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/07/popViewControllerAnimatedcalledon/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
 <article id="post-IPhone一起玩越狱 -（五）- ssh远程登录Iphone" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -956,112 +1045,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/05/29/汇编基础（九）switch汇编分析/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-XIB同一层级，两个Label的Content Hugging Priority" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/25/XIB同一层级，两个Label的Content Hugging Priority/">XIB同一层级，两个Label的Content Hugging Priority</a>
-    </h1>
-  
-
-        
-        <a href="/2018/05/25/XIB同一层级，两个Label的Content Hugging Priority/" class="archive-article-date">
-  	<time datetime="2018-05-25T09:49:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-766274944d9ce47c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
-<p>#起因<br>在使用xib的过程中，在同一层级创建两个Label：Label1、Label2，并且我需要Label2在Label1的后面10之后，并且两个Label都是自适应长度、高度。<br><img src="https://upload-images.jianshu.io/upload_images/7980283-b0db8cdf1bde30e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
-<p>设置好约束以后会有两个警告<br><img src="https://upload-images.jianshu.io/upload_images/7980283-02ef1d8625e1b7ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
-<p>##警告原因<br>有的时候就是DT，看见黄色的就会恶心，心里发毛<br>因为不设置长度的约束，那么Label的长度在超过IPhone的手机屏幕的时候会让界面会看不到</p>
-<p>###解决方案<br>设置它的长度约束，并且在不超过屏幕的宽度时自适应长度。<br><img src="https://upload-images.jianshu.io/upload_images/7980283-8547caba9a2d0fe4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
-<ul>
-<li>Label1设置右边Trailing与SuperView的Trailing关系，SuperView Trailing&gt;=SubView Trailing</li>
-<li>Label2设置左边leading与SuperView的leading关系，SuperView leading &gt;= SubView leading<br><img src="https://upload-images.jianshu.io/upload_images/7980283-fd83da7933ca82a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""><br><strong>警告消失，好爽</strong><br><img src="https://upload-images.jianshu.io/upload_images/7980283-2f522f56027a4539.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></li>
-</ul>
-<p>如果两者在不关联的情况下，是没有问题的</p>
-<p>##那么开始定制需求，<br>Label2 leading 在Label1 trailing之后Horizontal Spacing （10）的位置，并且其他的约束不变，加入这个约束<br><img src="https://upload-images.jianshu.io/upload_images/7980283-6e25eeabcca7917b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""><br>报错尼玛这没法忍<br><img src="https://upload-images.jianshu.io/upload_images/7980283-127311ded186bc41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
-<ul>
-<li>直译成中文就是“内容拥抱优先级”，这里就叫做“内容环绕优先级”从字面意思上来看就是两个视图，谁的“内容环绕优先级”高，谁就优先环绕其内容</li>
-<li>警告的原因是这两个控件的内容环绕优先级都是一样的。</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/7980283-b512760045c206a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
-<p>###为什么会这样？</p>
-<ul>
-<li>两个都有约束，并且一个向右自动对齐，一个向左自动对齐，并且Label2在Label1水平之后的一个固定位置</li>
-<li>那么Label1的右边设置的是SuperView Trailing&gt;=SubView Trailing Label2设置了Leading在Label1的trailing的10固定位置，发生了冲突，那么是使用Label1的约束呐？还是Label2的约束？</li>
-<li>优先级的作用是，在同一层级，两个控件都设置好约束，一个leading、top一个trailing、top 中间的约束是固定10的间距，两个控件的距离并不一定是10，那么是label1拉伸、压缩，还是Label2拉伸、压缩？还是它们同时拉伸、压缩。这就要设置内容环绕优先级。<br>呐呢很绕口？<br><img src="https://upload-images.jianshu.io/upload_images/7980283-0c4910f1c1c11e07.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""><br> 值越大，内容环绕优先级越高，内容环绕优先级越低就越会被拉伸、压缩<br>###解决方案</li>
-<li>在约束的Label2的Content Hugging Priority的优先级设置高，将251改成 250，Label1的“内容环绕优先级”高，那么Label2就要环绕着Label1<br><img src="https://upload-images.jianshu.io/upload_images/7980283-8c051631c2e35db1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></li>
-</ul>
-
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">XIB</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/25/XIB同一层级，两个Label的Content Hugging Priority/">展开全文 >></a>
         </p>
       
 
