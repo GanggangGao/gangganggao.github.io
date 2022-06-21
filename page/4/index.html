@@ -165,6 +165,92 @@
             
   
     
+<article id="post-深入浅出iOS多线程(二)——pthraed和NSThread的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/02/深入浅出iOS多线程(二)——pthraed和NSThread的使用/">深入浅出iOS多线程(二)——pthraed和NSThread的使用</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/02/深入浅出iOS多线程(二)——pthraed和NSThread的使用/" class="archive-article-date">
+  	<time datetime="2019-07-01T20:54:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="pthread"><a href="#pthread" class="headerlink" title="pthread"></a>pthread</h1><h2 id="pthread简介"><a href="#pthread简介" class="headerlink" title="pthread简介"></a>pthread简介</h2><p><strong>pthread</strong> 是属于 <a href="https://baike.baidu.com/item/POSIX/3792413?fr=aladdin" target="_blank" rel="noopener">POSIX</a> 多线程开发框架，POSIX表示可移植操作系统接口（Portable Operating System Interface of UNIX，缩写为 POSIX ），如果想学习这套API，在网上是可以找到相关的资料等，由于在iOS中有NSThrad，如果不考虑移植性，那么在iOS开发中基本上不回去使用，所以只是了解，pthread是多线程的一种技术实现。</p>
+        
+          <a class="article-more-a" href="/2019/07/02/深入浅出iOS多线程(二)——pthraed和NSThread的使用/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/02/深入浅出iOS多线程(二)——pthraed和NSThread的使用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
 <article id="post-iOS基础全面分析之三(KVO全面分析)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -948,93 +1034,6 @@
 
 
   
-    
-<article id="post-队列异步和同步执行的不同" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/07/队列异步和同步执行的不同/">队列异步和同步执行的不同</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/07/队列异步和同步执行的不同/" class="archive-article-date">
-  	<time datetime="2018-11-07T02:05:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="队列异步和同步执行的不同"><a href="#队列异步和同步执行的不同" class="headerlink" title="队列异步和同步执行的不同"></a>队列异步和同步执行的不同</h1><p>并行队列同步执行，并行队列的特点是：不需要等待前一个任务执行完成就可调度下一个任务；同步执行特点：不会开启新的线程；所以任务是one by one的执行。</p>
-<p>串行队列同步执行，串行队列的特点：按顺序执行；同步执行特点：不会开启新的线程； so，one by one 执行</p>
-<p>并行队列异步执行，并行队列的特点：不需要等待前一个任务执行完成就可调度下一个任务；异步执行特点：可以开启新的线程；so 这个组合是实现任务的并发。</p>
-<p>串行队列异步执行，串行队列的特点：按顺序执行；异步执行：可以开启新的线程；所以串行队列异步执行也是 one by one；</p>
-
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">经验笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/07/队列异步和同步执行的不同/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
@@ -1545,6 +1544,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ipa</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SDK</a>
               </li>
             
             <div class="clearfix"></div>

@@ -165,6 +165,114 @@
             
   
     
+<article id="post-可变与不可变" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/24/可变与不可变/">可变与不可变</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/24/可变与不可变/" class="archive-article-date">
+  	<time datetime="2018-04-24T10:25:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#可变与不可变<br>在iOS项目当中经常会用到NS开头的类，比如NSString、NSDictionary、NSArray不可变，可变NSMutableString、NSMutableDictionary、NSMutableArray等等。</p>
+<p>每次使用的时候都会报点疑问?😇为啥会分这种情况，这样的变化有什么好处，对于Coding来说会有什么样的帮助。</p>
+<p>创建一个对象，它占用的内存空间的大小是我们决定的，而这块内存空间的大小实际上又是alloc这个方法决定的。但是alloc声明一个新的内存空间，初始化大小；在初始化内存空间以后内存的大小、以及值不能随便改变。</p>
+<p>如果我们需要在其他时候去修改这个对象的内存地址大小的时候怎么办呐</p>
+<p>在Objective-C中提出了可变对象(MutableObject)概念，可变对象所占用的内存大小、数据不仅仅在初始化alloc的时候决定还能在其他时候由它自己作出改变。</p>
+<p>了解清楚概念以后，在Foundation框架中，都提供了什么样的可变的类型？</p>
+<p>确切的说所有带NSMutable我们都可以去查看一下是否是可变的类型。</p>
+<p>常见的可变类型：NSMutableArray、NSMutableDictionary、NSMutableString、NSMutableAttributedString、NSMutableSet等等我都不一一举例了，在Xcode中自动补齐一丢丢。</p>
+<p><strong>分析</strong><br>当我们使用不可变的集合的时候，是否可以这么理解：<br>用C的形式来讲是不是可以用顺序表、链表、数组进行创建</p>
+<ul>
+<li>顺序表：1. 查询快 2. 删修麻烦  3. 地址连续我们只需要知道首地址、长度</li>
+<li>链表：1. 查询慢 2. 删修快 3. 是一串首尾相连的地址</li>
+</ul>
+<p><strong>猜测一个场景，在一个拍卖会上链表、顺序表需要介绍各自的特点来让顾客选择：</strong>  </p>
+<ul>
+<li>顺序表 ：哥么在空间复杂度小。并且哥么在查找方面迅速，比某链快多了，而且哥么几个都是住一块儿的。</li>
+<li>链表 ：哥么几个年少多金，不住一块，哥么虽然在查找方面不快，但是哥么想删改简单，</li>
+</ul>
+<h4 id="更深入的扩展"><a href="#更深入的扩展" class="headerlink" title="更深入的扩展"></a>更深入的扩展</h4><p><a href="https://www.jianshu.com/p/3b3efb8bd09d" target="_blank" rel="noopener">iOS 深、浅拷贝NSString、NSMutableString（一）</a></p>
+<p><a href="https://www.jianshu.com/p/46dc4d6c2ae6" target="_blank" rel="noopener">iOS 深、浅拷贝NSArray、NSMutableArray（二）</a></p>
+<p><a href="https://www.jianshu.com/p/c84985b78a61" target="_blank" rel="noopener">iOS 深、浅拷贝的那些奇葩的事（三）</a></p>
+
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">可变</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">不可变</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/24/可变与不可变/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
 <article id="post-汇编基础 汇编指令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -1017,92 +1125,6 @@
 
 
   
-    
-<article id="post-iOS 推送步骤以及原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/13/iOS 推送步骤以及原理/">iOS 推送步骤以及原理</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/13/iOS 推送步骤以及原理/" class="archive-article-date">
-  	<time datetime="2018-03-13T03:20:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="iOS推送"><a href="#iOS推送" class="headerlink" title="iOS推送"></a>iOS推送</h1><h2 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h2><p>1.应用程序向系统APNS注册消息推送。<br>2.iOS系统从APNS Server获取device token,应用程序接收device token.<br>3.应用程序将device token 发送给PUSH服务器，服务器进行缓存处理。<br>4.服务器在触发推送事件以后向APNS服务器发送推送消息，附带的有Device Token、 message等等一些附加值。<br>5.APNS服务将消息下发到iphone。<br>
-        
-          <a class="article-more-a" href="/2018/03/13/iOS 推送步骤以及原理/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">推送</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/13/iOS 推送步骤以及原理/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/10/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/12/">Next &raquo;</a>
@@ -1613,6 +1635,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ipa</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SDK</a>
               </li>
             
             <div class="clearfix"></div>
