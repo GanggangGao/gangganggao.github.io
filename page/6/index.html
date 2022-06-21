@@ -165,97 +165,6 @@
             
   
     
-<article id="post-深入浅出Runtime (一) 什么是Runtime？ 定义？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/07/深入浅出Runtime (一) 什么是Runtime？ 定义？/">深入浅出Runtime (一) 什么是Runtime？ 定义？</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/07/深入浅出Runtime (一) 什么是Runtime？ 定义？/" class="archive-article-date">
-  	<time datetime="2018-09-07T09:11:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Runtime是什么？"><a href="#Runtime是什么？" class="headerlink" title="Runtime是什么？"></a>Runtime是什么？</h2><ul>
-<li>运行时(Runtime)是指将数据类型的确定由编译时推迟到了运行时</li>
-<li>Runtime是一套比较底层的纯C语言API, 属于1个C语言库, 包含了很多底层的C语言API</li>
-<li>平时编写的OC代码，在程序运行过程中，其实最终会转换成Runtime的C语言代码，Runtime是Object-C的幕后工作者</li>
-<li><p>Object-C需要Runtime来创建类和对象，进行消息发送和转发</p>
-<p><strong>特性：</strong> 编写的代码具有运行时、动态特性</p>
-        
-          <a class="article-more-a" href="/2018/09/07/深入浅出Runtime (一) 什么是Runtime？ 定义？/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Runtime</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/07/深入浅出Runtime (一) 什么是Runtime？ 定义？/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
 <article id="post-程序猿如何修炼内力" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -1000,6 +909,93 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/06/27/IPhone一起玩越狱 -（十五）- 禁止tweak插入App进程/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
+<article id="post-IPhone一起玩越狱 -（十四）- DYLD_INSERT_LIBRARIES插入进程分析，不让其插入进程的猜想" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/27/IPhone一起玩越狱 -（十四）- DYLD_INSERT_LIBRARIES插入进程分析，不让其插入进程的猜想/">IPhone一起玩越狱 -（十四）- DYLD_INSERT_LIBRARIES插入进程分析，不让其插入进程的猜想</a>
+    </h1>
+  
+
+        
+        <a href="/2018/06/27/IPhone一起玩越狱 -（十四）- DYLD_INSERT_LIBRARIES插入进程分析，不让其插入进程的猜想/" class="archive-article-date">
+  	<time datetime="2018-06-27T09:12:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-da69a6d0daefb8f6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>当检测到某个App运行，并在这个App进程下加载一个动态库，可以调用了dyld中的一个宏，DYLD_INSERT_LIBRARIES 插入一个动态库<br>dyld是一个应用，dyld是怎么做到？<br>有点疑问，我们要去逆向dyld汇编，然后去搞吗？<br>不需要，因为dyld，Apple已经开源了这个项目<a href="https://opensource.apple.com/tarballs/dyld/" target="_blank" rel="noopener">dyld</a><br>
+        
+          <a class="article-more-a" href="/2018/06/27/IPhone一起玩越狱 -（十四）- DYLD_INSERT_LIBRARIES插入进程分析，不让其插入进程的猜想/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">越狱</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/27/IPhone一起玩越狱 -（十四）- DYLD_INSERT_LIBRARIES插入进程分析，不让其插入进程的猜想/">展开全文 >></a>
         </p>
       
 
