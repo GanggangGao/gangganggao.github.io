@@ -165,6 +165,93 @@
             
   
     
+<article id="post-iOS----SIGPIPE信号终止进程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/12/iOS----SIGPIPE信号终止进程/">iOS----SIGPIPE信号终止进程</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/12/iOS----SIGPIPE信号终止进程/" class="archive-article-date">
+  	<time datetime="2018-03-12T10:15:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h1><p>  SIGPIPE，当一个程序a调用send函数向一个服务A发送信号的数据，服务A在接收数据的时候突然挂掉、无法接收数据、没有接收者，那么内核就会发送一个SIGPIPE信号，从而中断进程，导致程序退出。</p>
+<h1 id="调用signal-SIGPIPE-SIG-IGN"><a href="#调用signal-SIGPIPE-SIG-IGN" class="headerlink" title="调用signal(SIGPIPE, SIG_IGN);"></a>调用signal(SIGPIPE, SIG_IGN);</h1>
+        
+          <a class="article-more-a" href="/2018/03/12/iOS----SIGPIPE信号终止进程/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SIGPIPE</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/12/iOS----SIGPIPE信号终止进程/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
 <article id="post-TCP创建连接的三次握手，关闭连接的四次挥手。" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -993,94 +1080,6 @@
 
 
   
-    
-<article id="post-CLAuthorizationStatus详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/17/CLAuthorizationStatus详解/">CLAuthorizationStatus详解</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/17/CLAuthorizationStatus详解/" class="archive-article-date">
-  	<time datetime="2018-01-17T13:29:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://upload-images.jianshu.io/upload_images/7980283-899087eb931ad02d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<h1 id="CLAuthorizationStatus"><a href="#CLAuthorizationStatus" class="headerlink" title="CLAuthorizationStatus"></a>CLAuthorizationStatus</h1><h4 id="告诉开发者App是否被授权使用定位服务，枚举："><a href="#告诉开发者App是否被授权使用定位服务，枚举：" class="headerlink" title="告诉开发者App是否被授权使用定位服务，枚举："></a>告诉开发者App是否被授权使用定位服务，枚举：</h4><pre><code>[kCLAuthorizationStatusNotDetermined](https://developer.apple.com/documentation/corelocation/clauthorizationstatus/kclauthorizationstatusnotdetermined?language=objc)  //用户没有选择是否要使用定位服务（弹框没选择，或者根本没有弹框）
-</code></pre>
-        
-          <a class="article-more-a" href="/2018/01/17/CLAuthorizationStatus详解/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">CLAuthorizationStatus</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/17/CLAuthorizationStatus详解/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/11/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/13/">Next &raquo;</a>
@@ -1587,6 +1586,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Mac使用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ipa</a>
               </li>
             
             <div class="clearfix"></div>
