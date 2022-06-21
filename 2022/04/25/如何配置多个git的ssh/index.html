@@ -8,22 +8,22 @@
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
   <title>如何配置多个git的ssh | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如何配置多个git的ssh最近用到了gitlab、github一些仓库，然后各种不好使的问题，以前解决过，没有好好的做记录，这次解决以后坐下记录防止以后在胡乱瞎折腾。">
+  <meta name="description" content="最近用到了gitlab、github一些仓库，然后各种不好使的问题，以前解决过，没有好好的做记录，这次解决以后做下记录防止以后在胡乱瞎折腾。">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何配置多个git的ssh">
 <meta property="og:url" content="https://www.struggle3g.com/2022/04/25/如何配置多个git的ssh/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="如何配置多个git的ssh最近用到了gitlab、github一些仓库，然后各种不好使的问题，以前解决过，没有好好的做记录，这次解决以后坐下记录防止以后在胡乱瞎折腾。">
+<meta property="og:description" content="最近用到了gitlab、github一些仓库，然后各种不好使的问题，以前解决过，没有好好的做记录，这次解决以后做下记录防止以后在胡乱瞎折腾。">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-4c0c3d5b3d70d107.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-f8921f6ec67a5694.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-37d28ae5add0198b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-c57358f103819f5a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2022-06-21T05:01:15.000Z">
+<meta property="og:updated_time" content="2022-06-21T05:20:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何配置多个git的ssh">
-<meta name="twitter:description" content="如何配置多个git的ssh最近用到了gitlab、github一些仓库，然后各种不好使的问题，以前解决过，没有好好的做记录，这次解决以后坐下记录防止以后在胡乱瞎折腾。">
+<meta name="twitter:description" content="最近用到了gitlab、github一些仓库，然后各种不好使的问题，以前解决过，没有好好的做记录，这次解决以后做下记录防止以后在胡乱瞎折腾。">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7980283-4c0c3d5b3d70d107.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
@@ -190,7 +190,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="如何配置多个git的ssh"><a href="#如何配置多个git的ssh" class="headerlink" title="如何配置多个git的ssh"></a>如何配置多个git的ssh</h1><p>最近用到了gitlab、github一些仓库，然后各种不好使的问题，以前解决过，没有好好的做记录，这次解决以后坐下记录防止以后在胡乱瞎折腾。</p>
+        <p>最近用到了gitlab、github一些仓库，然后各种不好使的问题，以前解决过，没有好好的做记录，这次解决以后做下记录防止以后在胡乱瞎折腾。</p>
 <a id="more"></a>
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="1-生成各个平台的SSH-Keys"><a href="#1-生成各个平台的SSH-Keys" class="headerlink" title="1. 生成各个平台的SSH-Keys"></a>1. 生成各个平台的SSH-Keys</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 命令的使用方式</span><br><span class="line">ssh-keygen [-q] [-b bits] [-C comment] [-f output_keyfile] [-m format] [-N new_passphrase] [-t dsa | ecdsa | ed25519 | rsa]</span><br><span class="line">-t 代表密钥的类型</span><br><span class="line">-C 代表用于识别密钥的注释，即可以填写任意值啊，一般都填写邮箱</span><br><span class="line">-f 生成文件的路径</span><br><span class="line">// 先生成一个默认的id_rsa 不生成有可能导致别名配置的keys不生效</span><br><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot; -f  ～/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line">// 再依次制定别名， 生成其他给平台使用 ssh_key文件</span><br><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot; -f  ~/.ssh/github_rsa</span><br><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot; -f ~/.ssh/gitee.rsa</span><br><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot; -f ~/.ssh/gitlab_ras</span><br></pre></td></tr></table></figure>
 <p><img src="https://upload-images.jianshu.io/upload_images/7980283-4c0c3d5b3d70d107.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
@@ -318,8 +318,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2022/04/03/FluttrState的生命周期/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">FluttrState的生命周期</div>
+    <a href="/2022/04/03/JSON转成Dart类对象/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JSON转成Dart类对象</div>
       <i class="icon-circle-right"></i>
     </a>
   
