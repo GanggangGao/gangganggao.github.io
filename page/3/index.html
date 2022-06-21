@@ -165,6 +165,294 @@
             
   
     
+<article id="post-iOS晋级知识汇总(二)runtime" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/22/iOS晋级知识汇总(二)runtime/">iOS晋级知识汇总(二)runtime</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/22/iOS晋级知识汇总(二)runtime/" class="archive-article-date">
+  	<time datetime="2019-08-22T15:17:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Runtime"><a href="#Runtime" class="headerlink" title="Runtime"></a>Runtime</h1><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><ul>
+<li>objc_object</li>
+<li>objc_class </li>
+<li>isa指针</li>
+<li>method_t</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/08/22/iOS晋级知识汇总(二)runtime/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">对象、类对象、元类对象</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">消息传递机制</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">消息转发</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">消息传递</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/22/iOS晋级知识汇总(二)runtime/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
+<article id="post-iOS晋级知识汇总(一)UI优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/18/iOS晋级知识汇总(一)UI优化/">iOS晋级知识汇总(一)优化相关</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/18/iOS晋级知识汇总(一)UI优化/" class="archive-article-date">
+  	<time datetime="2019-08-18T14:35:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="UItableview相关"><a href="#UItableview相关" class="headerlink" title="UItableview相关"></a>UItableview相关</h1><h2 id="重用机制"><a href="#重用机制" class="headerlink" title="重用机制"></a>重用机制</h2><p>通过下面方法得到cell：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cell =  [self.TableView dequeueReusableCellWithIdentifier:identifer];</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/08/18/iOS晋级知识汇总(一)UI优化/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">UItableview相关</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">数据源同步</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">事件传递和视图响应</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">图像显示原理</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/18/iOS晋级知识汇总(一)UI优化/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
+<article id="post-iOS 面试题及答案20道61～80(四)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/28/iOS 面试题及答案20道61～80(四)/">iOS 面试题及答案20道61～80(四)</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/28/iOS 面试题及答案20道61～80(四)/" class="archive-article-date">
+  	<time datetime="2019-07-28T14:48:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="61：谈谈iOS内存"><a href="#61：谈谈iOS内存" class="headerlink" title="61：谈谈iOS内存"></a>61：谈谈iOS内存</h2>
+        
+          <a class="article-more-a" href="/2019/07/28/iOS 面试题及答案20道61～80(四)/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">面试题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/28/iOS 面试题及答案20道61～80(四)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
 <article id="post-iOS基础全面分析之四(动画全面分析)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -173,13 +461,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/12/iOS基础全面分析之四(动画全面分析)/">iOS基础全面分析之四(动画全面分析)</a>
+      <a class="article-title" href="/2019/07/09/iOS基础全面分析之四(动画全面分析)/">深入浅出iOS多线程(五)——多线程锁</a>
     </h1>
   
 
         
-        <a href="/2019/07/12/iOS基础全面分析之四(动画全面分析)/" class="archive-article-date">
-  	<time datetime="2019-07-12T07:00:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-12</time>
+        <a href="/2019/07/09/iOS基础全面分析之四(动画全面分析)/" class="archive-article-date">
+  	<time datetime="2019-07-09T08:01:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-09</time>
 </a>
         
       </header>
@@ -189,161 +477,7 @@
         <h1 id="iOS动画"><a href="#iOS动画" class="headerlink" title="iOS动画"></a>iOS动画</h1><p>好的应用都有一个共同的特点，那就是良好的用户体验，动画作为提升用户体验一个重要技术，在开发人员和产品设计人员手里，则应该受到足够重视。</p>
 <p>CoreGraphics(核心图形)、QuartzCore、CoreAnimation(核心动画)</p>
         
-          <a class="article-more-a" href="/2019/07/12/iOS基础全面分析之四(动画全面分析)/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/12/iOS基础全面分析之四(动画全面分析)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-iOS基础全面分析之一(KVC全面分析)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/12/iOS基础全面分析之一(KVC全面分析)/">iOS基础全面分析之一(KVC全面分析)</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/12/iOS基础全面分析之一(KVC全面分析)/" class="archive-article-date">
-  	<time datetime="2019-07-12T07:00:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="KVC全面分析"><a href="#KVC全面分析" class="headerlink" title="KVC全面分析"></a>KVC全面分析</h1><h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><ol>
-<li>能够对对象的私有成员进行取值赋值</li>
-<li>对数值和结构体的属性进行的打包解包处理 (NSNumber、NSValue)</li>
-</ol>
-        
-          <a class="article-more-a" href="/2019/07/12/iOS基础全面分析之一(KVC全面分析)/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/12/iOS基础全面分析之一(KVC全面分析)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-iOSApp监测网络变化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/08/iOSApp监测网络变化/">iOSApp监测网络变化</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/08/iOSApp监测网络变化/" class="archive-article-date">
-  	<time datetime="2018-11-08T14:26:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-6e528640859d005c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>在App中经常会监听网络的变化，下面是网上经常用到的两种方式</p>
-        
-          <a class="article-more-a" href="/2018/11/08/iOSApp监测网络变化/#more">more >></a>
+          <a class="article-more-a" href="/2019/07/09/iOS基础全面分析之四(动画全面分析)/#more">more >></a>
         
       
 
@@ -360,7 +494,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络监听</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS动画</a>
         		</li>
       		
 		</ul>
@@ -370,7 +504,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/08/iOSApp监测网络变化/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/07/09/iOS基础全面分析之四(动画全面分析)/">展开全文 >></a>
         </p>
       
 
@@ -406,7 +540,7 @@
 
   
     
-<article id="post-队列异步和同步执行的不同" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-深入浅出iOS多线程(五)——多线程锁" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
     
@@ -414,24 +548,23 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/07/队列异步和同步执行的不同/">队列异步和同步执行的不同</a>
+      <a class="article-title" href="/2019/07/07/深入浅出iOS多线程(五)——多线程锁/">深入浅出iOS多线程(五)——多线程锁</a>
     </h1>
   
 
         
-        <a href="/2018/11/07/队列异步和同步执行的不同/" class="archive-article-date">
-  	<time datetime="2018-11-07T02:05:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
+        <a href="/2019/07/07/深入浅出iOS多线程(五)——多线程锁/" class="archive-article-date">
+  	<time datetime="2019-07-06T18:20:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="队列异步和同步执行的不同"><a href="#队列异步和同步执行的不同" class="headerlink" title="队列异步和同步执行的不同"></a>队列异步和同步执行的不同</h1><p>并行队列同步执行，并行队列的特点是：不需要等待前一个任务执行完成就可调度下一个任务；同步执行特点：不会开启新的线程；所以任务是one by one的执行。</p>
-<p>串行队列同步执行，串行队列的特点：按顺序执行；同步执行特点：不会开启新的线程； so，one by one 执行</p>
-<p>并行队列异步执行，并行队列的特点：不需要等待前一个任务执行完成就可调度下一个任务；异步执行特点：可以开启新的线程；so 这个组合是实现任务的并发。</p>
-<p>串行队列异步执行，串行队列的特点：按顺序执行；异步执行：可以开启新的线程；所以串行队列异步执行也是 one by one；</p>
-
+        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-1ad548e8f4aab6ec.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""><br><a href="/p/7e0894416b0b">深入浅出iOS多线程(一)——线程的概念</a><br><a href="/p/6fcb075be867">深入浅出iOS多线程(二)——pthraed和NSThread的使用</a><br><a href="/p/ac1a5ea5bf5a">深入浅出iOS多线程(三)——GCD多线程</a><br><a href="/p/134343277d9f">深入浅出iOS多线程(四)——NSOperation多线程</a><br><a href="/p/6493794657de">深入浅出iOS多线程(五)——多线程锁</a></p>
+        
+          <a class="article-more-a" href="/2019/07/07/深入浅出iOS多线程(五)——多线程锁/#more">more >></a>
+        
       
 
 
@@ -447,7 +580,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">经验笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程</a>
         		</li>
       		
 		</ul>
@@ -457,7 +590,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/07/队列异步和同步执行的不同/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/07/07/深入浅出iOS多线程(五)——多线程锁/">展开全文 >></a>
         </p>
       
 
@@ -493,7 +626,7 @@
 
   
     
-<article id="post-iOS用户点击屏幕事件抓取" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-深入浅出iOS多线程(四)——NSOperation多线程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
     
@@ -501,24 +634,22 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/03/iOS用户点击屏幕事件抓取/">iOS用户点击屏幕事件抓取</a>
+      <a class="article-title" href="/2019/07/03/深入浅出iOS多线程(四)——NSOperation多线程/">深入浅出iOS多线程(四)——NSOperation多线程</a>
     </h1>
   
 
         
-        <a href="/2018/11/03/iOS用户点击屏幕事件抓取/" class="archive-article-date">
-  	<time datetime="2018-11-03T13:36:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-03</time>
+        <a href="/2019/07/03/深入浅出iOS多线程(四)——NSOperation多线程/" class="archive-article-date">
+  	<time datetime="2019-07-02T17:10:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-ac989463c789cfcb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
-<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>在开发当中，有各种各样的需求，很大部分的内容都是可以完成的，主观因素在于你连试过没没试过，就说做不了，证明一点就是懒，懒是程序猿的大忌。</p>
-<p><strong>莫懒</strong><br>
+        <h1 id="NSOperation的作用"><a href="#NSOperation的作用" class="headerlink" title="NSOperation的作用"></a>NSOperation的作用</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>和GCD一样，NSOperation也是并发编程技术，NSOperation是苹果提供给我们的一套多线程解决方案。实际上NSOperation是基于GCD更高一层的封装,比GCD更加简单，更加方便</p>
         
-          <a class="article-more-a" href="/2018/11/03/iOS用户点击屏幕事件抓取/#more">more >></a>
+          <a class="article-more-a" href="/2019/07/03/深入浅出iOS多线程(四)——NSOperation多线程/#more">more >></a>
         
       
 
@@ -535,7 +666,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">点击事件</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程</a>
         		</li>
       		
 		</ul>
@@ -545,7 +676,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/03/iOS用户点击屏幕事件抓取/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/07/03/深入浅出iOS多线程(四)——NSOperation多线程/">展开全文 >></a>
         </p>
       
 
@@ -581,7 +712,7 @@
 
   
     
-<article id="post-玩溜Cocos Creator入门学习（九）UI系统介绍UI组件（Slider）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-深入浅出iOS多线程(三)——GCD多线程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
     
@@ -589,24 +720,22 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/19/玩溜Cocos Creator入门学习（九）UI系统介绍UI组件（Slider）/">玩溜Cocos Creator入门学习（九）UI系统介绍UI组件（Slider）</a>
+      <a class="article-title" href="/2019/07/02/深入浅出iOS多线程(三)——GCD多线程/">深入浅出iOS多线程(三)——GCD多线程</a>
     </h1>
   
 
         
-        <a href="/2018/10/19/玩溜Cocos Creator入门学习（九）UI系统介绍UI组件（Slider）/" class="archive-article-date">
-  	<time datetime="2018-10-19T11:39:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-19</time>
+        <a href="/2019/07/02/深入浅出iOS多线程(三)——GCD多线程/" class="archive-article-date">
+  	<time datetime="2019-07-02T13:39:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-05f94b9ff71e5622.gif?imageMogr2/auto-orient/strip" alt=""></p>
-<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>Slider是一个滑动器组件，如图</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/7980283-a16530f1dbc98ea3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
+        <h1 id="GCD简介"><a href="#GCD简介" class="headerlink" title="GCD简介"></a>GCD简介</h1><p>前面分析的pthread和NSThread多线程技术，直接操作线程，而下面分析的GCD以及下一篇NSOpration都是并发解决技术</p>
         
-          <a class="article-more-a" href="/2018/10/19/玩溜Cocos Creator入门学习（九）UI系统介绍UI组件（Slider）/#more">more >></a>
+          <a class="article-more-a" href="/2019/07/02/深入浅出iOS多线程(三)——GCD多线程/#more">more >></a>
         
       
 
@@ -623,15 +752,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Cocos Creator</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">游戏</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Cocos Creator游戏UI</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程</a>
         		</li>
       		
 		</ul>
@@ -641,7 +762,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/19/玩溜Cocos Creator入门学习（九）UI系统介绍UI组件（Slider）/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/07/02/深入浅出iOS多线程(三)——GCD多线程/">展开全文 >></a>
         </p>
       
 
@@ -677,7 +798,7 @@
 
   
     
-<article id="post-玩溜Cocos Creator入门学习（八）UI系统介绍UI组件（ToggleGroup、ToggleContainer）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-深入浅出iOS多线程(二)——pthraed和NSThread的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
     
@@ -685,29 +806,22 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/18/玩溜Cocos Creator入门学习（八）UI系统介绍UI组件（ToggleGroup、ToggleContainer）/">玩溜Cocos Creator入门学习（八）UI系统介绍UI组件（ToggleGroup、ToggleContainer）</a>
+      <a class="article-title" href="/2019/07/02/深入浅出iOS多线程(二)——pthraed和NSThread的使用/">深入浅出iOS多线程(二)——pthraed和NSThread的使用</a>
     </h1>
   
 
         
-        <a href="/2018/10/18/玩溜Cocos Creator入门学习（八）UI系统介绍UI组件（ToggleGroup、ToggleContainer）/" class="archive-article-date">
-  	<time datetime="2018-10-18T11:39:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-18</time>
+        <a href="/2019/07/02/深入浅出iOS多线程(二)——pthraed和NSThread的使用/" class="archive-article-date">
+  	<time datetime="2019-07-01T20:54:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p><img src="https://upload-images.jianshu.io/upload_images/7980283-365f68f2797bb859.gif?imageMogr2/auto-orient/strip" alt=""></p>
-<blockquote>
-<blockquote>
-<p>上篇介绍了Toggle的介绍、使用，当我们在使用一组的Toggle其中只能选择一个选项的时候。</p>
-</blockquote>
-</blockquote>
-<p><strong>注意:</strong> 该组件已被弃用，请使用ToggleContainer。</p>
-<p>实际操作中， 不管是ToggleGroup、ToggleContainer目前都是可用的。</p>
+        <h1 id="pthread"><a href="#pthread" class="headerlink" title="pthread"></a>pthread</h1><h2 id="pthread简介"><a href="#pthread简介" class="headerlink" title="pthread简介"></a>pthread简介</h2><p><strong>pthread</strong> 是属于 <a href="https://baike.baidu.com/item/POSIX/3792413?fr=aladdin" target="_blank" rel="noopener">POSIX</a> 多线程开发框架，POSIX表示可移植操作系统接口（Portable Operating System Interface of UNIX，缩写为 POSIX ），如果想学习这套API，在网上是可以找到相关的资料等，由于在iOS中有NSThrad，如果不考虑移植性，那么在iOS开发中基本上不回去使用，所以只是了解，pthread是多线程的一种技术实现。</p>
         
-          <a class="article-more-a" href="/2018/10/18/玩溜Cocos Creator入门学习（八）UI系统介绍UI组件（ToggleGroup、ToggleContainer）/#more">more >></a>
+          <a class="article-more-a" href="/2019/07/02/深入浅出iOS多线程(二)——pthraed和NSThread的使用/#more">more >></a>
         
       
 
@@ -724,15 +838,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Cocos Creator</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">游戏</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Cocos Creator游戏UI</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程</a>
         		</li>
       		
 		</ul>
@@ -742,7 +848,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/18/玩溜Cocos Creator入门学习（八）UI系统介绍UI组件（ToggleGroup、ToggleContainer）/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/07/02/深入浅出iOS多线程(二)——pthraed和NSThread的使用/">展开全文 >></a>
         </p>
       
 
@@ -778,7 +884,7 @@
 
   
     
-<article id="post-玩溜Cocos Creator入门学习（七）UI系统介绍UI组件（Toggle）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-iOS基础全面分析之三(KVO全面分析)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
     
@@ -786,23 +892,22 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/16/玩溜Cocos Creator入门学习（七）UI系统介绍UI组件（Toggle）/">玩溜Cocos Creator入门学习（七）UI系统介绍UI组件（Toggle）</a>
+      <a class="article-title" href="/2019/06/30/iOS基础全面分析之三(KVO全面分析)/">iOS基础全面分析之三(KVO全面分析)</a>
     </h1>
   
 
         
-        <a href="/2018/10/16/玩溜Cocos Creator入门学习（七）UI系统介绍UI组件（Toggle）/" class="archive-article-date">
-  	<time datetime="2018-10-16T07:39:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-16</time>
+        <a href="/2019/06/30/iOS基础全面分析之三(KVO全面分析)/" class="archive-article-date">
+  	<time datetime="2019-06-29T16:35:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h1><p><img src="https://upload-images.jianshu.io/upload_images/7980283-090eb432a8221d7e.gif?imageMogr2/auto-orient/strip" alt=""></p>
-<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p><code>Toggle</code> 是一个 <code>CheckBox</code>，当它和 <code>ToggleGroup</code> 一起使用的时候，可以变成 <code>RadioButton</code>。也就是经常用到的选择、多选按钮</p>
+        <h1 id="KVO全面分析"><a href="#KVO全面分析" class="headerlink" title="KVO全面分析"></a>KVO全面分析</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>KVO的全程是  Key-Value Observing，翻译过来就是键值监听，可以用于监听某个对象属性值的改变</p>
         
-          <a class="article-more-a" href="/2018/10/16/玩溜Cocos Creator入门学习（七）UI系统介绍UI组件（Toggle）/#more">more >></a>
+          <a class="article-more-a" href="/2019/06/30/iOS基础全面分析之三(KVO全面分析)/#more">more >></a>
         
       
 
@@ -819,15 +924,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Cocos Creator</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">游戏</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Cocos Creator游戏UI</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">KVO</a>
         		</li>
       		
 		</ul>
@@ -837,7 +934,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/16/玩溜Cocos Creator入门学习（七）UI系统介绍UI组件（Toggle）/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/06/30/iOS基础全面分析之三(KVO全面分析)/">展开全文 >></a>
         </p>
       
 
@@ -873,7 +970,7 @@
 
   
     
-<article id="post-玩溜Cocos Creator入门学习（六）UI系统介绍UI组件（ProgressBar）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-iOS基础全面分析之二(RunLoop全面分析)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
     
@@ -881,26 +978,26 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/15/玩溜Cocos Creator入门学习（六）UI系统介绍UI组件（ProgressBar）/">玩溜Cocos Creator入门学习（六）UI系统介绍UI组件（ProgressBar）</a>
+      <a class="article-title" href="/2019/06/29/iOS基础全面分析之二(RunLoop全面分析)/">iOS基础全面分析之二(RunLoop全面分析)</a>
     </h1>
   
 
         
-        <a href="/2018/10/15/玩溜Cocos Creator入门学习（六）UI系统介绍UI组件（ProgressBar）/" class="archive-article-date">
-  	<time datetime="2018-10-15T11:42:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-15</time>
+        <a href="/2019/06/29/iOS基础全面分析之二(RunLoop全面分析)/" class="archive-article-date">
+  	<time datetime="2019-06-28T18:15:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>在开发中经常会用到各种各样的进度条，比如说某个操作的进度、加载的进度等等，那么在Cocos Creator中是怎么实现进度条的？</p>
-<h2 id="ProgressBar-组件"><a href="#ProgressBar-组件" class="headerlink" title="ProgressBar 组件"></a>ProgressBar 组件</h2><p>ProgressBar（进度条）经常被用于在游戏中显示某个操作的进度，在节点上添加 ProgressBar 组件，然后给该组件关联一个 Bar Sprite 就可以在场景中控制 Bar Sprite 来显示进度了。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/7980283-a0b5c932e7383223.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
-<p>点击 <strong>属性检查器</strong> 下面的添加组件按钮，然后从添加 UI 组件中选择<code>ProgressBar</code>，即可添加 <code>ProgressBar</code> 组件到节点上。</p>
-<p>进度条的脚本接口请参考<a href="http://docs.cocos.com/creator/api/zh/classes/ProgressBar.html" target="_blank" rel="noopener">ProgressBar API</a>。</p>
+        <h1 id="RunLoop全面分析"><a href="#RunLoop全面分析" class="headerlink" title="RunLoop全面分析"></a>RunLoop全面分析</h1><h2 id="什么是RunLoop？"><a href="#什么是RunLoop？" class="headerlink" title="什么是RunLoop？"></a>什么是RunLoop？</h2><p><strong>字面的意思：</strong></p>
+<ul>
+<li>运行循环，程序运行过程中循环的处理事情</li>
+</ul>
+<p><strong>iOS中实际含义：</strong></p>
         
-          <a class="article-more-a" href="/2018/10/15/玩溜Cocos Creator入门学习（六）UI系统介绍UI组件（ProgressBar）/#more">more >></a>
+          <a class="article-more-a" href="/2019/06/29/iOS基础全面分析之二(RunLoop全面分析)/#more">more >></a>
         
       
 
@@ -917,15 +1014,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Cocos Creator</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">游戏</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Cocos Creator游戏UI</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Runloop</a>
         		</li>
       		
 		</ul>
@@ -935,102 +1024,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/15/玩溜Cocos Creator入门学习（六）UI系统介绍UI组件（ProgressBar）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-玩溜Cocos Creator入门学习（五）UI系统介绍UI组件（ScrollBar）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/30/玩溜Cocos Creator入门学习（五）UI系统介绍UI组件（ScrollBar）/">玩溜Cocos Creator入门学习（五）UI系统介绍UI组件（ScrollBar）</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/30/玩溜Cocos Creator入门学习（五）UI系统介绍UI组件（ScrollBar）/" class="archive-article-date">
-  	<time datetime="2018-09-29T16:04:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p><code>ScrollBar</code>是上篇文章<a href="https://www.struggle3g.com/2018/09/27/玩溜Cocos%20Creator入门学习（四）UI系统介绍UI组件（ScrollView）/">玩溜Cocos Creator入门学习（四）UI系统介绍UI组件（ScrollView）</a>的补充，<code>ScrollBar</code> 一般不会单独使用，它需要与<code>ScrollView</code>配合使用</p>
-<h2 id="ScrollBar-组件"><a href="#ScrollBar-组件" class="headerlink" title="ScrollBar 组件"></a>ScrollBar 组件</h2><p><code>ScrollBar</code> 允许用户通过拖动滑块来滚动一张图片，它与<code>Slider</code>组件有点类似，但是它主要是用于滚动而 <code>Slider</code> 则用来设置数值。</p>
-        
-          <a class="article-more-a" href="/2018/09/30/玩溜Cocos Creator入门学习（五）UI系统介绍UI组件（ScrollBar）/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Cocos Creator</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">游戏</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Cocos Creator游戏UI</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/30/玩溜Cocos Creator入门学习（五）UI系统介绍UI组件（ScrollBar）/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/06/29/iOS基础全面分析之二(RunLoop全面分析)/">展开全文 >></a>
         </p>
       
 
@@ -1067,7 +1061,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 
@@ -1527,6 +1521,42 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">区块链</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Flutter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MacOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">tabindex</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">KVO</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">iOS动画</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Runloop</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂记</a>
               </li>
             
             <div class="clearfix"></div>
