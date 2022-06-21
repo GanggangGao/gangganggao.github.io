@@ -165,6 +165,502 @@
             
   
     
+<article id="post-可变与不可变" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/24/可变与不可变/">可变与不可变</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/24/可变与不可变/" class="archive-article-date">
+  	<time datetime="2018-04-24T10:25:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#可变与不可变<br>在iOS项目当中经常会用到NS开头的类，比如NSString、NSDictionary、NSArray不可变，可变NSMutableString、NSMutableDictionary、NSMutableArray等等。</p>
+<p>每次使用的时候都会报点疑问?😇为啥会分这种情况，这样的变化有什么好处，对于Coding来说会有什么样的帮助。</p>
+<p>创建一个对象，它占用的内存空间的大小是我们决定的，而这块内存空间的大小实际上又是alloc这个方法决定的。但是alloc声明一个新的内存空间，初始化大小；在初始化内存空间以后内存的大小、以及值不能随便改变。</p>
+<p>如果我们需要在其他时候去修改这个对象的内存地址大小的时候怎么办呐</p>
+<p>在Objective-C中提出了可变对象(MutableObject)概念，可变对象所占用的内存大小、数据不仅仅在初始化alloc的时候决定还能在其他时候由它自己作出改变。</p>
+<p>了解清楚概念以后，在Foundation框架中，都提供了什么样的可变的类型？</p>
+<p>确切的说所有带NSMutable我们都可以去查看一下是否是可变的类型。</p>
+<p>常见的可变类型：NSMutableArray、NSMutableDictionary、NSMutableString、NSMutableAttributedString、NSMutableSet等等我都不一一举例了，在Xcode中自动补齐一丢丢。</p>
+<p><strong>分析</strong><br>当我们使用不可变的集合的时候，是否可以这么理解：<br>用C的形式来讲是不是可以用顺序表、链表、数组进行创建</p>
+<ul>
+<li>顺序表：1. 查询快 2. 删修麻烦  3. 地址连续我们只需要知道首地址、长度</li>
+<li>链表：1. 查询慢 2. 删修快 3. 是一串首尾相连的地址</li>
+</ul>
+<p><strong>猜测一个场景，在一个拍卖会上链表、顺序表需要介绍各自的特点来让顾客选择：</strong>  </p>
+<ul>
+<li>顺序表 ：哥么在空间复杂度小。并且哥么在查找方面迅速，比某链快多了，而且哥么几个都是住一块儿的。</li>
+<li>链表 ：哥么几个年少多金，不住一块，哥么虽然在查找方面不快，但是哥么想删改简单，</li>
+</ul>
+<h4 id="更深入的扩展"><a href="#更深入的扩展" class="headerlink" title="更深入的扩展"></a>更深入的扩展</h4><p><a href="https://www.jianshu.com/p/3b3efb8bd09d" target="_blank" rel="noopener">iOS 深、浅拷贝NSString、NSMutableString（一）</a></p>
+<p><a href="https://www.jianshu.com/p/46dc4d6c2ae6" target="_blank" rel="noopener">iOS 深、浅拷贝NSArray、NSMutableArray（二）</a></p>
+<p><a href="https://www.jianshu.com/p/c84985b78a61" target="_blank" rel="noopener">iOS 深、浅拷贝的那些奇葩的事（三）</a></p>
+
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">可变</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">不可变</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/24/可变与不可变/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
+<article id="post-汇编基础 汇编指令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/23/汇编基础 汇编指令/">汇编基础（四）函数&amp;返回值</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/23/汇编基础 汇编指令/" class="archive-article-date">
+  	<time datetime="2018-04-22T17:49:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="汇编基础-汇编指令"><a href="#汇编基础-汇编指令" class="headerlink" title="汇编基础 汇编指令"></a>汇编基础 汇编指令</h2><ul>
+<li><strong>bl</strong> 指令 跳转到标号出执行<ul>
+<li><strong>b.le</strong>  ：判断上面cmp的值是小于等于 执行标号，否则直接往下走</li>
+<li><strong>b.ge</strong>     大于等于 执行地址  否则往下</li>
+<li><strong>b.lt</strong>       判断上面camp的值是 小于 执行后面的地址中的方法 否则直接往下走</li>
+<li><strong>b.gt</strong>     大于 执行地址  否则往下</li>
+<li><strong>b.eq</strong>    等于 执行地址  否则往下</li>
+<li><strong>B.HI</strong>     比较结果是无符号大于，执行地址中的方法，否则不跳转</li>
+<li><strong>ret</strong> 返回</li>
+</ul>
+</li>
+<li><strong>mov</strong> x0,#0x10      x0 = 0x10</li>
+<li><strong>str</strong>  w10 ,[sp]   将w10寄存器的值存到 sp栈空间内存</li>
+<li><strong>stp</strong> x0，x1,[sp.#0x10]   x0、x1 的值存入 sp + 0x10</li>
+<li><strong>orr</strong>  x0，wzr,#0x1  x0 = wzr | 0x1</li>
+<li><strong>stur</strong> w10 ,[sp]   将w10寄存器的值存到 sp栈空间内存</li>
+<li><strong>ldr</strong>  w10 ,[sp]   w10 =  sp栈内存中的值</li>
+<li><strong>ldp</strong>  x0，x1,[sp]   x0、x1 =   sp栈内存中的值</li>
+<li><strong>adrp</strong>  通过基地址 + 偏移 获得一个字符串（全局变量）</li>
+</ul>
+<blockquote>
+<ol>
+<li>将1的值,左移12位 1 0000 0000 0000 == 0x1000</li>
+<li>将PC寄存器的低12位清零 </li>
+<li>将1 和 2 的结果相加<br>adrp 是计算指定的数据地址 到当前PC值的相对偏移<br>由于得到的结果是低12bit为0<br>10 1024<br>12  == 4KB</li>
+</ol>
+<p>总结<br>adrp找到的是一个目标数据偏移的相对地址，他是一个不准确的地址，偏移的误差有4KB<br>为什么偏移的误差是4KB呐？ 在地址总线上面，10条地址总线的寻址能力是1024，12条地址总线的能力是4*1024 4KB</p>
+</blockquote>
+<ul>
+<li><strong>cmp</strong>:<blockquote>
+<p>ZF=1则AX=BX<br>ZF=0则AX！=BX<br>CF=1则AX<bx cf="0则AX">=BX<br>CF=0并ZF=0则AX&gt;BX<br>CF=1或ZF=1则AX&lt;=BX</bx></p>
+</blockquote>
+</li>
+</ul>
+<p>16位数据操作指令<br>名字 功能<br>ADC  带进位加法（ADD with Carry）<br>ADD  加法<br>AND  按位与。这里的按位与和C的”&amp;”功能相同<br>ASR  算术右移（Arithmetic Shift Right）<br>BIC  按位清零（把一个数跟另一个无符号数的反码按位与）<br>CMN  负向比较（把一个数跟另一个数据的二进制补码相比较）<br>CMP  比较（Compare，比较两个数并且更新标志） </p>
+<p>##cmp（Compare）比较指令<br>CMP 把一个寄存器的内容和另一个寄存器的内容或立即数进行比较。但不存储结果，只是正确的更改标志。<br>一般CMP做完判断后会进行跳转，后面通常会跟上B指令！<br>CPY  把一个寄存器的值拷贝（COPY）到另一个寄存器中<br>EOR  近位异或<br>LSL  逻辑左移（Logic Shift Left）<br>LSR  逻辑右移（Logic Shift Right）<br>MOV  寄存器加载数据，既能用于寄存器间的传输，也能用于加载立即数<br>MUL  乘法（Multiplication）<br>MVN  加载一个数的 NOT值（取到逻辑反的值）<br>NEG  取二进制补码<br>ORR  按位或<br>ROR  循环右移<br>SBC  带借位的减法<br>SUB  减法（Subtraction）<br>TST  测试（Test，执行按位与操作，并且根据结果更新Z）<br>REV  在一个32位寄存器中反转（Reverse）字节序<br>REVH  把一个32位寄存器分成两个（Half）16位数，在每个16位数中反转字节序<br>REVSH  把一个32位寄存器的低16位半字进行字节反转，然后带符号扩展到32位<br>SXTB  带符号（Signed）扩展一个字节（Byte）到 32位<br>SXTH  带符号（Signed）扩展一个半字（Half）到 32位<br>UXTB  无符号（Unsigned）扩展一个字节（Byte）到 32位<br>UXTH  无符号（Unsigned）扩展一个半字（Half）到 32位</p>
+<p>16位转移指令<br>名字 功能<br>B  无条件转移（Branch）<br>B<cond>  有条件（Condition）转移<br>BL  转移并连接（Link）。用于呼叫一个子程序，返回地址被存储在LR中<br>CBZ  比较（Compare），如果结果为零（Zero）就转移（只能跳到后面的指令）<br>CBNZ  比较，如果结果非零（Non Zero）就转移（只能跳到后面的指令）<br>IT  If-Then</cond></p>
+<p>16位存储器数据传送指令<br>名字 功能<br>LDR  从存储器中加载（Load）字到一个寄存器（Register）中<br>LDRH  从存储器中加载半（Half）字到一个寄存器中<br>LDRB  从存储器中加载字节（Byte）到一个寄存器中<br>LDRSH  从存储器中加载半字，再经过带符号扩展后存储一个寄存器中<br>LDRSB  从存储器中加载字节，再经过带符号扩展后存储一个寄存器中<br>STR  把一个寄存器按字存储（Store）到存储器中<br>STRH  把一个寄存器存器的低半字存储到存储器中<br>STRB  把一个寄存器的低字节存储到存储器中<br>LDMIA  加载多个字，并且在加载后自增基址寄存器<br>STMIA  存储多个字，并且在存储后自增基址寄存器<br>PUSH  压入多个寄存器到栈中<br>POP  从栈中弹出多个值到寄存器中</p>
+<p>其它16位指令<br>名字 功能<br>SVC  系统服务调用（Service Call）<br>BKPT  断点（Break Point）指令。如果调试被使能，则进入调试状态（停机）。<br>NOP  无操作（No Operation）<br>CPSIE  使能 PRIMASK(CPSIE i)/FAULTMASK(CPSIE f)——清零相应的位<br>CPSID  除能 PRIMASK(CPSID i)/FAULTMASK(CPSID f)——置位相应的位</p>
+<p>32位数据操作指令<br>名字 功能<br>ADC  带进位加法<br>ADD  加法<br>ADDW  宽加法（可以加 12 位立即数）<br>AND  按位与（原文是逻辑与，有误——译注）<br>ASR  算术右移<br>BIC  位清零（把一个数按位取反后，与另一个数逻辑与）<br>BFC  位段清零<br>BFI  位段插入<br>CMN  负向比较（把一个数和另一个数的二进制补码比较，并更新标志位）<br>CMP  比较两个数并更新标志位<br>CLZ  计算前导零的数目<br>EOR  按位异或<br>LSL  逻辑左移<br>LSR  逻辑右移<br>MLA  乘加<br>MLS  乘减<br>MOVW  把 16 位立即数放到寄存器的底16位，高16位清0<br>MOV  加载16位立即数到寄存器（其实汇编器会产生MOVW——译注）<br>MOVT  把 16 位立即数放到寄存器的高16位，低 16位不影响<br>MVN  移动一个数的补码<br>MUL  乘法<br>ORR  按位或（原文为逻辑或，有误——译注）<br>ORN  把源操作数按位取反后，再执行按位或（原文为逻辑或，有误——译注）<br>RBIT  位反转（把一个 32 位整数先用2 进制表达，再旋转180度——译注）<br>REV  对一个32 位整数做按字节反转<br>REVH/REV16 对一个32 位整数的高低半字都执行字节反转<br>REVSH  对一个32 位整数的低半字执行字节反转，再带符号扩展成32位数<br>ROR  圆圈右移<br>RRX  带进位的逻辑右移一格（最高位用C 填充，且不影响C的值——译注）<br>SFBX  从一个32 位整数中提取任意的位段，并且带符号扩展成 32 位整数<br>SDIV  带符号除法<br>SMLAL  带符号长乘加（两个带符号的 32 位整数相乘得到 64 位的带符号积，再把积加到另一个带符号 64位整数中）<br>SMULL  带符号长乘法（两个带符号的 32 位整数相乘得到 64位的带符号积）<br>SSAT  带符号的饱和运算<br>SBC  带借位的减法<br>SUB  减法<br>SUBW  宽减法，可以减 12 位立即数<br>SXTB  字节带符号扩展到32位数<br>TEQ  测试是否相等（对两个数执行异或，更新标志但不存储结果）<br>TST  测试（对两个数执行按位与，更新Z 标志但不存储结果）<br>UBFX  无符号位段提取<br>UDIV  无符号除法<br>UMLAL  无符号长乘加（两个无符号的 32 位整数相乘得到 64 位的无符号积，再把积加到另一个无符号 64位整数中）<br>UMULL  无符号长乘法（两个无符号的 32 位整数相乘得到 64位的无符号积）<br>USAT  无符号饱和操作（但是源操作数是带符号的——译注）<br>UXTB  字节被无符号扩展到32 位（高24位清0——译注）<br>UXTH  半字被无符号扩展到32 位（高16位清0——译注）</p>
+<p>32位存储器数据传送指令<br>名字 功能<br>LDR  加载字到寄存器<br>LDRB  加载字节到寄存器<br>LDRH  加载半字到寄存器<br>LDRSH  加载半字到寄存器，再带符号扩展到 32位<br>LDM  从一片连续的地址空间中加载多个字到若干寄存器<br>LDRD  从连续的地址空间加载双字（64 位整数）到2 个寄存器<br>STR  存储寄存器中的字<br>STRB  存储寄存器中的低字节<br>STRH  存储寄存器中的低半字<br>STM  存储若干寄存器中的字到一片连续的地址空间中<br>STRD  存储2 个寄存器组成的双字到连续的地址空间中<br>PUSH  把若干寄存器的值压入堆栈中<br>POP  从堆栈中弹出若干的寄存器的值</p>
+<p>32位转移指令<br>名字 功能<br>B  无条件转移<br>BL  转移并连接（呼叫子程序）<br>TBB  以字节为单位的查表转移。从一个字节数组中选一个8位前向跳转地址并转移<br>TBH  以半字为单位的查表转移。从一个半字数组中选一个16 位前向跳转的地址并转移</p>
+<p>其它32位指令<br>LDREX  加载字到寄存器，并且在内核中标明一段地址进入了互斥访问状态<br>LDREXH  加载半字到寄存器，并且在内核中标明一段地址进入了互斥访问状态<br>LDREXB  加载字节到寄存器，并且在内核中标明一段地址进入了互斥访问状态<br>STREX  检查将要写入的地址是否已进入了互斥访问状态，如果是则存储寄存器的字<br>STREXH  检查将要写入的地址是否已进入了互斥访问状态，如果是则存储寄存器的半字<br>STREXB  检查将要写入的地址是否已进入了互斥访问状态，如果是则存储寄存器的字节<br>CLREX  在本地的处理上清除互斥访问状态的标记（先前由 LDREX/LDREXH/LDREXB做的标记）<br>MRS  加载特殊功能寄存器的值到通用寄存器<br>MSR  存储通用寄存器的值到特殊功能寄存器<br>NOP  无操作<br>SEV  发送事件<br>WFE  休眠并且在发生事件时被唤醒<br>WFI  休眠并且在发生中断时被唤醒<br>ISB  指令同步隔离（与流水线和 MPU等有关——译注）<br>DSB  数据同步隔离（与流水线、MPU 和cache等有关——译注）<br>DMB  数据存储隔离（与流水线、MPU 和cache等有关——译注）</p>
+
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">汇编</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/23/汇编基础 汇编指令/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
+<article id="post-汇编基础（四）函数&amp;返回值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/23/汇编基础（四）函数&返回值/">汇编基础（四）函数&amp;返回值</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/23/汇编基础（四）函数&返回值/" class="archive-article-date">
+  	<time datetime="2018-04-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="bl和ret指令"><a href="#bl和ret指令" class="headerlink" title="bl和ret指令"></a>bl和ret指令</h4><h6 id="bl标号"><a href="#bl标号" class="headerlink" title="bl标号"></a>bl标号</h6><ul>
+<li>将下一条指令的地址放入lr(x30)寄存器</li>
+<li>转到标号处执行指令<blockquote>
+<p>注意：当我们遇到bl指令的时候，是跳转指令，跳转之后我们是怎么回来的？怎么回到bl下面的指令？遇到bl后，CPU会将下一个指令的内存地址存到lr寄存器当中。</p>
+        
+          <a class="article-more-a" href="/2018/04/23/汇编基础（四）函数&返回值/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">汇编</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/23/汇编基础（四）函数&返回值/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
+<article id="post-汇编基础（三）堆栈操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/22/汇编基础（三）堆栈操作/">汇编基础（三）堆栈操作</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/22/汇编基础（三）堆栈操作/" class="archive-article-date">
+  	<time datetime="2018-04-22T15:45:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>当大家写程序的时候要压栈，比方说iOS里面push，pop界面的时候也就是说压栈出栈，还有当大家创建变量的时候，在栈分配空间，或者在堆分配空间，怎么分配的？带着疑问哥么开始学习了。<br>
+        
+          <a class="article-more-a" href="/2018/04/22/汇编基础（三）堆栈操作/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">汇编</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/22/汇编基础（三）堆栈操作/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
+<article id="post-汇编基础（二）CPU寄存器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/22/汇编基础（二）CPU寄存器/">汇编基础（二）CPU寄存器</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/22/汇编基础（二）CPU寄存器/" class="archive-article-date">
+  	<time datetime="2018-04-22T13:09:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##引言</p>
+<p>####概念<br><strong>CPU是什么？</strong><br>CPU是中央处理器，中央处理器（CPU，Central Processing Unit）是一块超大规模的<a href="https://baike.baidu.com/item/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF" target="_blank" rel="noopener">集成电路</a>，是一台计算机的运算核心（Core）和控制核心（ Control Unit）。它的功能主要是解释计算机<a href="https://baike.baidu.com/item/%E6%8C%87%E4%BB%A4" target="_blank" rel="noopener">指令</a>以及处理计算机软件中的数据。<br><strong>寄存器是什么？</strong><br><a href="https://baike.baidu.com/item/%E5%AF%84%E5%AD%98%E5%99%A8" target="_blank" rel="noopener">寄存器</a>是<a href="https://baike.baidu.com/item/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8" target="_blank" rel="noopener">中央处理器</a>内的组成部分。寄存器是有限存贮容量的高速存贮部件，它们可用来暂存<a href="https://baike.baidu.com/item/%E6%8C%87%E4%BB%A4" target="_blank" rel="noopener">指令</a>、<a href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE/33305" target="_blank" rel="noopener">数据</a>和<a href="https://baike.baidu.com/item/%E5%9C%B0%E5%9D%80/80420" target="_blank" rel="noopener">地址</a>。<br>
+        
+          <a class="article-more-a" href="/2018/04/22/汇编基础（二）CPU寄存器/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">汇编</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/22/汇编基础（二）CPU寄存器/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
 <article id="post-Cycript（二）非越狱调试、修改App中UI的数据" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -629,449 +1125,9 @@
 
 
   
-    
-<article id="post-iOS 推送步骤以及原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/13/iOS 推送步骤以及原理/">iOS 推送步骤以及原理</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/13/iOS 推送步骤以及原理/" class="archive-article-date">
-  	<time datetime="2018-03-13T03:20:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="iOS推送"><a href="#iOS推送" class="headerlink" title="iOS推送"></a>iOS推送</h1><h2 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h2><p>1.应用程序向系统APNS注册消息推送。<br>2.iOS系统从APNS Server获取device token,应用程序接收device token.<br>3.应用程序将device token 发送给PUSH服务器，服务器进行缓存处理。<br>4.服务器在触发推送事件以后向APNS服务器发送推送消息，附带的有Device Token、 message等等一些附加值。<br>5.APNS服务将消息下发到iphone。<br>
-        
-          <a class="article-more-a" href="/2018/03/13/iOS 推送步骤以及原理/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">推送</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/13/iOS 推送步骤以及原理/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-iOS----SIGPIPE信号终止进程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/12/iOS----SIGPIPE信号终止进程/">iOS----SIGPIPE信号终止进程</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/12/iOS----SIGPIPE信号终止进程/" class="archive-article-date">
-  	<time datetime="2018-03-12T10:15:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h1><p>  SIGPIPE，当一个程序a调用send函数向一个服务A发送信号的数据，服务A在接收数据的时候突然挂掉、无法接收数据、没有接收者，那么内核就会发送一个SIGPIPE信号，从而中断进程，导致程序退出。</p>
-<h1 id="调用signal-SIGPIPE-SIG-IGN"><a href="#调用signal-SIGPIPE-SIG-IGN" class="headerlink" title="调用signal(SIGPIPE, SIG_IGN);"></a>调用signal(SIGPIPE, SIG_IGN);</h1>
-        
-          <a class="article-more-a" href="/2018/03/12/iOS----SIGPIPE信号终止进程/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SIGPIPE</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/12/iOS----SIGPIPE信号终止进程/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-iOS  深、浅拷贝的那些奇葩的事（四）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/02/iOS  深、浅拷贝的那些奇葩的事（四）/">iOS  深、浅拷贝的那些奇葩的事（四）</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/02/iOS  深、浅拷贝的那些奇葩的事（四）/" class="archive-article-date">
-  	<time datetime="2018-03-02T10:14:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>&emsp;在前面两篇，讲到了深（单层深拷贝、完整深拷贝）、浅拷贝的概念、应用、验证，来认识深拷贝、浅拷贝，这篇就具体说一下在开发过程中遇到的一些深、浅拷贝那些奇葩的事情。</p>
-<h4 id="不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃"><a href="#不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃" class="headerlink" title="不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃"></a>不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃</h4><p>&emsp;步骤：</p>
-<ol>
-<li>创建一个不可变类型(NSDictionary)变量Dict1并初始化.</li>
-<li>将Dict1变量赋值给(NSMutableDictionary)变量的MutableDict1.</li>
-<li>调用Dict2的NSMutableDictionary的方法运行。
-        
-          <a class="article-more-a" href="/2018/03/02/iOS  深、浅拷贝的那些奇葩的事（四）/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">copy</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/02/iOS  深、浅拷贝的那些奇葩的事（四）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-iOS 深拷贝，完全深拷贝（三）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/01/iOS 深拷贝，完全深拷贝（三）/">iOS 深拷贝，完全深拷贝（三）</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/01/iOS 深拷贝，完全深拷贝（三）/" class="archive-article-date">
-  	<time datetime="2018-03-01T14:54:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://www.jianshu.com/p/46dc4d6c2ae6" target="_blank" rel="noopener">iOS 深、浅拷贝NSArray、NSMutableArray（二）</a>挖坑的内容</p>
-<p>上两篇，主要是讲了深、浅拷贝实现，以及理解。单层深拷贝、浅拷贝，最后挖坑没有介绍到完全深拷贝的实现。<br>
-        
-          <a class="article-more-a" href="/2018/03/01/iOS 深拷贝，完全深拷贝（三）/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">copy</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/01/iOS 深拷贝，完全深拷贝（三）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-iOS 深、浅拷贝NSArray、NSMutableArray（二）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/28/iOS 深、浅拷贝NSArray、NSMutableArray（二）/">iOS 深、浅拷贝NSArray、NSMutableArray（二）</a>
-    </h1>
-  
-
-        
-        <a href="/2018/02/28/iOS 深、浅拷贝NSArray、NSMutableArray（二）/" class="archive-article-date">
-  	<time datetime="2018-02-28T11:47:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="疑问？"><a href="#疑问？" class="headerlink" title="疑问？"></a>疑问？</h1><pre><code>上篇文章主要介绍的内容是对字符串的深浅拷贝，那么其他类型的深浅拷贝也是一样的吗？
-
-集合的深浅拷贝呐？NSArray、NSMutableArray、NSDictionary、NSMutableDictionary、NSSet、NSMutableSet等等。
-</code></pre>
-        
-          <a class="article-more-a" href="/2018/02/28/iOS 深、浅拷贝NSArray、NSMutableArray（二）/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">copy</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/28/iOS 深、浅拷贝NSArray、NSMutableArray（二）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/9/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/11/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/9/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/11/">Next &raquo;</a>
     </nav>
   
 

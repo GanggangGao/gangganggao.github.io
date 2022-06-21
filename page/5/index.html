@@ -351,6 +351,103 @@
 
   
     
+<article id="post-tabindex属性的作用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/23/tabindex属性的作用/">tabindex属性的作用</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/23/tabindex属性的作用/" class="archive-article-date">
+  	<time datetime="2018-09-23T14:01:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> tabindex有三个值：0 ，-1， 以及X（X里32767是界点，稍后说明）</p>
+<p>  原本在Html中，只有链接a和表单元素可以被键盘访问（即使是a也必须加上href属性才可以)，但是aria允许tabindex指定给任何html元素。</p>
+<p>  当tabindex=0时，该元素可以用tab键获取焦点，且访问的顺序是按照元素在文档中的顺序来focus，即使采用了浮动改变了页面中显示的顺序，依然是按照html文档中的顺序来定位。</p>
+<p>  当tabindex=-1时，该元素用tab键获取不到焦点，但是可以通过js获取，这样就便于我们通过js设置上下左右键的响应事件来focus，在widget内部可以用到。</p>
+<p>  当tabindex&gt;=1时，该元素可以用tab键获取焦点，而且优先级大于tabindex=0；不过在tabindex&gt;=1时，数字越小，越先定位到。   </p>
+<p>  在IE中，tabindex范围在1到32767之间（包括32767），在FF， Chrome无限制，不过一旦超出32768，顺序跟tabindex=0时一样。这个估计跟各个浏览器对int型的解析有关。</p>
+<p> 点击打开链接         </p>
+<p>补充说明：学习bootstrap的modal时，用到了该属性。</p>
+<hr>
+<p>本文来自 hellogjq 的CSDN 博客 ，全文地址请点击：<a href="https://blog.csdn.net/u012698342/article/details/70045568?utm_source=copy" target="_blank" rel="noopener">https://blog.csdn.net/u012698342/article/details/70045568?utm_source=copy</a> </p>
+
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">tabindex</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/23/tabindex属性的作用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
 <article id="post-iPhone定位服务    " class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -968,96 +1065,9 @@
 
 
   
-    
-<article id="post-iOSApp监测网络变化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/09/iOSApp监测网络变化/">iOSApp监测网络变化</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/09/iOSApp监测网络变化/" class="archive-article-date">
-  	<time datetime="2018-08-09T10:03:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-6e528640859d005c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>在App中经常会监听网络的变化，下面是网上经常用到的两种方式</p>
-        
-          <a class="article-more-a" href="/2018/08/09/iOSApp监测网络变化/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络监听</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/09/iOSApp监测网络变化/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
     </nav>
   
 
