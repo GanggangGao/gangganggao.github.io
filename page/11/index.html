@@ -165,6 +165,97 @@
             
   
     
+<article id="post-iOS  深、浅拷贝的那些奇葩的事（四）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/02/iOS  深、浅拷贝的那些奇葩的事（四）/">iOS  深、浅拷贝的那些奇葩的事（四）</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/02/iOS  深、浅拷贝的那些奇葩的事（四）/" class="archive-article-date">
+  	<time datetime="2018-03-02T10:14:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>&emsp;在前面两篇，讲到了深（单层深拷贝、完整深拷贝）、浅拷贝的概念、应用、验证，来认识深拷贝、浅拷贝，这篇就具体说一下在开发过程中遇到的一些深、浅拷贝那些奇葩的事情。</p>
+<h4 id="不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃"><a href="#不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃" class="headerlink" title="不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃"></a>不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃</h4><p>&emsp;步骤：</p>
+<ol>
+<li>创建一个不可变类型(NSDictionary)变量Dict1并初始化.</li>
+<li>将Dict1变量赋值给(NSMutableDictionary)变量的MutableDict1.</li>
+<li>调用Dict2的NSMutableDictionary的方法运行。
+        
+          <a class="article-more-a" href="/2018/03/02/iOS  深、浅拷贝的那些奇葩的事（四）/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">copy</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/02/iOS  深、浅拷贝的那些奇葩的事（四）/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
 <article id="post-iOS 深拷贝，完全深拷贝（三）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -971,102 +1062,9 @@
 
 
   
-    
-<article id="post-**为什么向nil对象发送消息的时候，不会崩溃？向一个实例对象发送消息的时候没找到相关的方法会抛出cash？**" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/03/**为什么向nil对象发送消息的时候，不会崩溃？向一个实例对象发送消息的时候没找到相关的方法会抛出cash？**/">为什么向nil对象发送消息的时候，不会崩溃？向一个实例对象发送消息的时候没找到相关的方法会抛出cash？</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/03/**为什么向nil对象发送消息的时候，不会崩溃？向一个实例对象发送消息的时候没找到相关的方法会抛出cash？**/" class="archive-article-date">
-  	<time datetime="2018-01-03T11:08:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-首先Objectvice-c的语言的动态运行时"><a href="#1-首先Objectvice-c的语言的动态运行时" class="headerlink" title="1.首先Objectvice-c的语言的动态运行时;"></a>1.首先Objectvice-c的语言的动态运行时;</h2><pre><code>每个对象调用方法的时候都是调用Object_msgSend(self, method,value).
-
-当self为空的时候直接返回的空，并不会抛出cash.
-</code></pre><h2 id="2-而为什么向实例对象发送消息的时候，实例对象没有找到method时会抛出cash"><a href="#2-而为什么向实例对象发送消息的时候，实例对象没有找到method时会抛出cash" class="headerlink" title="2.而为什么向实例对象发送消息的时候，实例对象没有找到method时会抛出cash."></a>2.而为什么向实例对象发送消息的时候，实例对象没有找到method时会抛出cash.</h2>
-        
-          <a class="article-more-a" href="/2018/01/03/**为什么向nil对象发送消息的时候，不会崩溃？向一个实例对象发送消息的时候没找到相关的方法会抛出cash？**/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">nil</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/03/**为什么向nil对象发送消息的时候，不会崩溃？向一个实例对象发送消息的时候没找到相关的方法会抛出cash？**/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/10/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span>
+      <a class="extend prev" rel="prev" href="/page/10/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/12/">Next &raquo;</a>
     </nav>
   
 
