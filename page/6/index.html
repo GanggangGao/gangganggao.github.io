@@ -165,281 +165,6 @@
             
   
     
-<article id="post-玩溜Cocos-Creator入门学习（二）UI系统介绍-UI的组件（Canvas、Widget、Button）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/19/玩溜Cocos-Creator入门学习（二）UI系统介绍-UI的组件（Canvas、Widget、Button）/">玩溜Cocos Creator入门学习（二）UI系统介绍 UI的组件（Canvas、Widget、Button）</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/19/玩溜Cocos-Creator入门学习（二）UI系统介绍-UI的组件（Canvas、Widget、Button）/" class="archive-article-date">
-  	<time datetime="2018-09-19T08:35:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>Cocos Creator是触控科技推出的最新的开发者工具，实现了彻底的脚本化、组件化、以及数据驱动的特点，当然还有一个更加好用的UI系统，</p>
-<p>UI系统的基本组成部分和工作流程，所有UI界面的生产都是由最基本的UI元素拼装而成，下面就是UI系统的UI组件的介绍。<br>
-        
-          <a class="article-more-a" href="/2018/09/19/玩溜Cocos-Creator入门学习（二）UI系统介绍-UI的组件（Canvas、Widget、Button）/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Cocos Creator</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">游戏</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Cocos Creator游戏UI</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/19/玩溜Cocos-Creator入门学习（二）UI系统介绍-UI的组件（Canvas、Widget、Button）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-深入浅出Runtime (二) Runtime的消息机制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/13/深入浅出Runtime (二) Runtime的消息机制/">深入浅出Runtime (二) Runtime的消息机制</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/13/深入浅出Runtime (二) Runtime的消息机制/" class="archive-article-date">
-  	<time datetime="2018-09-13T09:57:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-8303426b5ebb66ec.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
-<h2 id="Runtime消息机制"><a href="#Runtime消息机制" class="headerlink" title="Runtime消息机制"></a>Runtime消息机制</h2><h3 id="消息发送"><a href="#消息发送" class="headerlink" title="消息发送"></a>消息发送</h3><p>在Object-C中，我们其实可以直接调用C的代码也就是Runtime的C语言代码，需要添加<code>message.h</code>头文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;objc/runtime.h&gt;</span><br><span class="line">#import &lt;objc/message.h&gt;</span><br></pre></td></tr></table></figure>
-<p>编写Runtime的时候会遇到没有提示的尴尬，那是因为在Xcode5.0以后的版本，Apple不建议我们写比较底层的代码，So，在target-&gt;info搜索msg将YES改成NO，然后可以尽情的使用Runtime代码</p>
-<p>其中有个方法<code>objc_msgSend</code>就是消息发送的方法，在Object-C中所有调用的方法，都是向这个类、或者发送消息<br>
-        
-          <a class="article-more-a" href="/2018/09/13/深入浅出Runtime (二) Runtime的消息机制/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Runtime</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/13/深入浅出Runtime (二) Runtime的消息机制/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-玩溜Cocos Creator入门学习（一）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/13/玩溜Cocos Creator入门学习（一）/">玩溜Cocos Creator入门学习（一）</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/13/玩溜Cocos Creator入门学习（一）/" class="archive-article-date">
-  	<time datetime="2018-09-13T08:32:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>作为触控科技旗下的新产品，Cocos Creator有鲜明的特色</p>
-<ul>
-<li>面向JavaScript脚本化开发</li>
-<li>组件化和数据驱动的全新工作流</li>
-</ul>
-<p><strong>组件化和数据驱动的优势</strong></p>
-<ul>
-<li>分离数据与功能</li>
-<li>给予美术策划直接生产和管理的能力</li>
-<li>解放程序猿生产力，专注于更有技术含量的功能开发</li>
-</ul>
-<p>官方视频的话：<strong>功能开发和内容的关系从未如此和谐</strong>有待验证！</p>
-<h2 id="Cocos-Creator的基本结构"><a href="#Cocos-Creator的基本结构" class="headerlink" title="Cocos Creator的基本结构"></a>Cocos Creator的基本结构</h2><h3 id="资源管理器"><a href="#资源管理器" class="headerlink" title="资源管理器"></a>资源管理器</h3><p>资源管理里面包含了，工程的所有资源列表，看起来像是ide中的文件，其实这个是一个数据库，导入的资源最后会自动分配一个uuid，以后不管怎么移动、改名，都不会影响场景和脚本中的调用</p>
-<ul>
-<li><strong>包括项目中所有资源和脚本文件，为了每个资源分配UUID，解决改名和移动时的索引问题</strong></li>
-</ul>
-        
-          <a class="article-more-a" href="/2018/09/13/玩溜Cocos Creator入门学习（一）/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/13/玩溜Cocos Creator入门学习（一）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
 <article id="post-深入浅出Runtime (一) 什么是Runtime？ 定义？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -1009,6 +734,272 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/02/IPhone一起玩越狱 -（十八）- 探究Xcode怎么使用lldb调试我们的程序/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
+<article id="post-IPhone一起玩越狱 -（十七）- tweak 反反反插入" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/29/IPhone一起玩越狱 -（十七）- tweak 反反反插入/">IPhone一起玩越狱 -（十七）- tweak 反反反插入</a>
+    </h1>
+  
+
+        
+        <a href="/2018/06/29/IPhone一起玩越狱 -（十七）- tweak 反反反插入/" class="archive-article-date">
+  	<time datetime="2018-06-29T09:03:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-f8e0f332b29793c8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p><strong>tweak：</strong> 在越狱环境，我要去修改，玩玩某个App，需要做的就是用theos创建一个tweak的项目，然后去修改App<br><strong>反tweak：</strong>  当我知道tweak去将动态库临时插入进程从而修改我的App的时候，这么搞那可不行万一怀孕了呐？，插入进程需要的DYLD的宏的环境变量DYLD_INSTER_LIBRARIES，查看dyld的源代码，我知道了在MachO文件中添加一个section其中segmentname、sectionname分别为<strong>RESTRICT、</strong>restrict从而达到我要的防治进程使用DYLD临时插入动态库<br><strong>反反tweak：</strong> 前几天玩的好好的App，突然之间tweak插入进程插不进去，我擦，这怎么回事？ 经过反复搜索，各种途径的努力，原来App在项目打包的时候，在MachO文件中添加了一个section其中segmentname、sectionname分别为<strong>RESTRICT、</strong>restrict，那么我只要修改MachO文件中的这个section，使它的segmentname、sectionname任意字段修改不等于<strong>RESTRICT、</strong>restrict，那么我的目的就达到了，然后我还是可以爆你。<br>
+        
+          <a class="article-more-a" href="/2018/06/29/IPhone一起玩越狱 -（十七）- tweak 反反反插入/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">越狱</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/29/IPhone一起玩越狱 -（十七）- tweak 反反反插入/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
+<article id="post-IPhone一起玩越狱 -（十六）- tweak 反反插入" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/28/IPhone一起玩越狱 -（十六）- tweak 反反插入/">IPhone一起玩越狱 -（十六）- tweak 反反插入</a>
+    </h1>
+  
+
+        
+        <a href="/2018/06/28/IPhone一起玩越狱 -（十六）- tweak 反反插入/" class="archive-article-date">
+  	<time datetime="2018-06-28T06:13:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>通过<a href="https://www.jianshu.com/p/cefd2f8435ab" target="_blank" rel="noopener">tweak的原理</a>的研究的出来的结论是：</p>
+<ul>
+<li>tweak是根据dyld中的<code>DYLD_INSTER_LIBRARIES</code>这个宏环境变量临时插入自己的动态库</li>
+<li>在App的MachO文件中存在segmentname、sectionname 分别为<strong>RESTRICT、 </strong>restrict就能够使dyld中的DYLD_INSTER_LIBRARIES这个宏插入动态库失败，也就是tweak失败</li>
+<li>在<a href="/p/78ea4107f0be">IPhone一起玩越狱 -（十五）- 禁止tweak插入App进程</a>介绍了反tweak插入，也就是防护你的App被tweak篡改</li>
+</ul>
+<p><strong>反tweak插入，是一个防护问题，我怎么去攻破这层防护呐？这个防护是完美无缺的吗？</strong><br>
+        
+          <a class="article-more-a" href="/2018/06/28/IPhone一起玩越狱 -（十六）- tweak 反反插入/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">越狱</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/28/IPhone一起玩越狱 -（十六）- tweak 反反插入/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
+<article id="post-IPhone一起玩越狱 -（十五）- 禁止tweak插入App进程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/27/IPhone一起玩越狱 -（十五）- 禁止tweak插入App进程/">IPhone一起玩越狱 -（十五）- 禁止tweak插入App进程</a>
+    </h1>
+  
+
+        
+        <a href="/2018/06/27/IPhone一起玩越狱 -（十五）- 禁止tweak插入App进程/" class="archive-article-date">
+  	<time datetime="2018-06-27T10:31:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>知道了<a href="/p/cefd2f8435ab">Tweak的原理</a>，也大概知道dyld加载动态库的先觉条件，那么开始去搞它tweak</p>
+<h2 id="让tweak无法插入App进程"><a href="#让tweak无法插入App进程" class="headerlink" title="让tweak无法插入App进程"></a>让tweak无法插入App进程</h2>
+        
+          <a class="article-more-a" href="/2018/06/27/IPhone一起玩越狱 -（十五）- 禁止tweak插入App进程/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">越狱</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/27/IPhone一起玩越狱 -（十五）- 禁止tweak插入App进程/">展开全文 >></a>
         </p>
       
 

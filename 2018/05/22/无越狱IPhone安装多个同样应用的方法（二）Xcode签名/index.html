@@ -6,34 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
-  <title>Struggle3g‘s Blog</title>
+  <title>无越狱IPhone安装多个同样应用的方法（二）Xcode签名 | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: 无越狱iphone安装多个同样应用的方法（一）date: 2018-05-22 01:28:00tags:  - 越狱   #引言在工作之余，有人问想要安装多个某信、其他App 怎么办？这个时候我的思想是：我凑 这都找我不假思索的说：“越狱啊”某人：“不想越狱”“不想越狱你还想装多个App？”某人：“是的”“额，你想干嘛？”（其实心里没底，我也不清楚，但是装逼还是要全套的）某人：“">
-<meta name="keywords" content="iOS,客户端,流媒体,iot,程序猿,程序员,程序猿,devepoer,开源,代码,code,黑客,破解,砸壳,html,用户体验">
+  <meta name="description" content="回顾##手动重签名的过程（重新梳理） ###准备  越狱的ipa包 一个可以开发的开发者账号 codesign、security、chmod、zip命令工具 创建重新签名App的工程 MsignDsemo">
+<meta name="keywords" content="越狱">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Struggle3g‘s Blog">
-<meta property="og:url" content="https://www.struggle3g.com/2022/06/21/无越狱iphone安装多个同样应用的方法（一）/index.html">
+<meta property="og:title" content="无越狱IPhone安装多个同样应用的方法（二）Xcode签名">
+<meta property="og:url" content="https://www.struggle3g.com/2018/05/22/无越狱IPhone安装多个同样应用的方法（二）Xcode签名/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="title: 无越狱iphone安装多个同样应用的方法（一）date: 2018-05-22 01:28:00tags:  - 越狱   #引言在工作之余，有人问想要安装多个某信、其他App 怎么办？这个时候我的思想是：我凑 这都找我不假思索的说：“越狱啊”某人：“不想越狱”“不想越狱你还想装多个App？”某人：“是的”“额，你想干嘛？”（其实心里没底，我也不清楚，但是装逼还是要全套的）某人：“">
+<meta property="og:description" content="回顾##手动重签名的过程（重新梳理） ###准备  越狱的ipa包 一个可以开发的开发者账号 codesign、security、chmod、zip命令工具 创建重新签名App的工程 MsignDsemo">
 <meta property="og:locale" content="ch">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-7a4b6523356bcb0b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/400">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-d6faba433b2475cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-4172293efb278238.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-585e1d07946845b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-7d68814f9575f4bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-9e08ce7a2a9ae51a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-5aa132ee8fa0bed0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-7b5555196724a2f0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-bf887445a1c1a3af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-de523272facdac66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-1761a03901d53f58.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-065200d8175213d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-ee40b7061bf3724d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:updated_time" content="2022-06-21T01:45:51.000Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-9f43937de81150eb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-ac4507d6a65fb08b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
+<meta property="og:updated_time" content="2022-06-21T04:28:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Struggle3g‘s Blog">
-<meta name="twitter:description" content="title: 无越狱iphone安装多个同样应用的方法（一）date: 2018-05-22 01:28:00tags:  - 越狱   #引言在工作之余，有人问想要安装多个某信、其他App 怎么办？这个时候我的思想是：我凑 这都找我不假思索的说：“越狱啊”某人：“不想越狱”“不想越狱你还想装多个App？”某人：“是的”“额，你想干嘛？”（其实心里没底，我也不清楚，但是装逼还是要全套的）某人：“">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7980283-7a4b6523356bcb0b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/400">
+<meta name="twitter:title" content="无越狱IPhone安装多个同样应用的方法（二）Xcode签名">
+<meta name="twitter:description" content="回顾##手动重签名的过程（重新梳理） ###准备  越狱的ipa包 一个可以开发的开发者账号 codesign、security、chmod、zip命令工具 创建重新签名App的工程 MsignDsemo">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7980283-9f43937de81150eb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
   
@@ -178,85 +167,71 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-无越狱iphone安装多个同样应用的方法（一）" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-无越狱IPhone安装多个同样应用的方法（二）Xcode签名" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
 
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      无越狱IPhone安装多个同样应用的方法（二）Xcode签名
+    </h1>
+  
+
+        
+        <a href="/2018/05/22/无越狱IPhone安装多个同样应用的方法（二）Xcode签名/" class="archive-article-date">
+  	<time datetime="2018-05-22T11:19:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-22</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title: 无越狱iphone安装多个同样应用的方法（一）<br>date: 2018-05-22 01:28:00<br>tags: </p>
-<pre><code>- 越狱
-</code></pre><hr>
-<p><img src="https://upload-images.jianshu.io/upload_images/7980283-7a4b6523356bcb0b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt=""></p>
-<p>#引言<br>在工作之余，有人问想要安装多个某信、其他App 怎么办？<br>这个时候我的思想是：我凑 这都找我<br>不假思索的说：“越狱啊”<br>某人：“不想越狱”<br>“不想越狱你还想装多个App？”<br>某人：“是的”<br>“额，你想干嘛？”（其实心里没底，我也不清楚，但是装逼还是要全套的）<br>某人：“我业务多，比方说某信账号工作的时候一个、生活一个、玩有一个、行业交流有一个、还有一些其他账号”<br>….<br>不要爬来来来正题</p>
+        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-9f43937de81150eb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
+<h1 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h1><p>##手动重签名的过程（重新梳理）</p>
+<p>###准备</p>
+<ul>
+<li>越狱的ipa包</li>
+<li>一个可以开发的开发者账号</li>
+<li><code>codesign</code>、<code>security</code>、<code>chmod</code>、<code>zip</code>命令工具</li>
+<li>创建重新签名App的工程 MsignDsemo</li>
+</ul>
 <a id="more"></a>
-<p>#正文<br>根据上一篇文章<a href="https://www.jianshu.com/p/99cfd96e779b" target="_blank" rel="noopener">探究IPhone怎么验证App合法、开发怎么验证？</a> ， 自己重新签名App达到安装多个同样的App的目的，因为在IPhone中Bundle identifier这个标示（appleid）决定了你的app的标示唯一，so修改Bundle identifier重新将App打包成Bundle identifier、证书等就可以实现App多个安装，实际上是骗过Apple，这个不再是一样的app，目的达到 实现多开。</p>
-<p>#手动签名的方式</p>
-<p>##准备操作</p>
-<ul>
-<li>准备需要多开的应用的ipa包（越狱包）、并解压文件</li>
-<li>需要一个开发者账号、或者自己注册的私人的可申请开发证书的账号</li>
-<li><p><code>codesign</code>重签名，以及查看签名信息的工具<br>##分析包文件<br>###一、查看App的签名的信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">codesign -vv -d 路径/WeChat.app</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>进入ipa包解压后的文件夹，查看签名信息:<br><img src="https://upload-images.jianshu.io/upload_images/7980283-d6faba433b2475cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
-<p>然后我们发现是没有签名信息的，签名信息是被破坏的、砸过壳的，在Iphone上面是不让安装的用Xcode安装是安装不了的。</p>
-</li>
-</ul>
-</li>
-<li>查看正版应用的签名信息：<br><img src="https://upload-images.jianshu.io/upload_images/7980283-4172293efb278238.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""><br>正版的是有签名信息，只有这个签名信息的时候才能安装，我们如果需要重新签名需要证书进行签名<br>###二、列出我们所有的证书<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">security find-identity -v -p codesigning</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/7980283-585e1d07946845b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
-<ul>
-<li>上述是存在的几个证书，只要是能够开发的证书都是可以用的。<br>如果，Xcode选中的证书能够把demo安装到iphone上面，那么这个证书就能够让我们重新签名</li>
-</ul>
-<p>###三、越狱的App与正版的App有什么区别？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">otool -l WeChat | grep crypt</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>通过<code>otool</code>工具来查看可执行文件的加密信息<ul>
-<li>越狱版的加密信息：<br><img src="https://upload-images.jianshu.io/upload_images/7980283-7d68814f9575f4bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""><br>加密的信息是0</li>
-<li>正式版的加密信息：<br><img src="https://upload-images.jianshu.io/upload_images/7980283-9e08ce7a2a9ae51a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""><br>加密的信息是1</li>
-</ul>
-</li>
-</ul>
-<p>##手动重签名操作</p>
-<p>###一、目标文件<br><img src="https://upload-images.jianshu.io/upload_images/7980283-5aa132ee8fa0bed0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""><br>我们将要对WeChat进行重签名：</p>
+<p>###操作</p>
 <ol>
-<li>我们个人免费证书没法对Plugins里面的内容进行重签名，所以只能干掉<br>干掉Plugins文件里面的内容<br><img src="https://upload-images.jianshu.io/upload_images/7980283-7b5555196724a2f0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></li>
-<li>watch文件干掉（因为里面也有Plugins，并且我们对于这个App也没用）</li>
-<li>对Frameworks里面的动态库<ul>
-<li>通过下面命令进行依次签名<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">codesign -fs &quot;你的证书&quot;  签名的文件</span><br></pre></td></tr></table></figure>
+<li>干掉Plugins文件夹中的所有插件</li>
+<li>watch文件夹干掉</li>
+<li><p>通过命令工具<code>codesign</code>对Frameworks文件夹中的所有动态库加密</p>
+<ul>
+<li><figure class="highlight plain"><figcaption><span>-fs "你的证书"  签名的文件```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4. 给MachO文件可执行的权限</span><br><span class="line">    - ```chmod +x WeChat</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
+<li><p>Bunild <code>MsignDsemo</code> 得到 <code>MsignDsemo.app</code> 复制<code>embedded.mobileprovision</code>文件到越狱包中的.app文件夹里</p>
+</li>
+<li>将越狱包中<code>Info.plist</code>文件中的<code>bundle Identifier</code> 换成<code>MsignDsemo</code>的<code>bundle Identifier</code></li>
+<li><p>查看<code>embedded.mobileprovision</code>权限字典，copy生成权限*.plist</p>
+<ul>
+<li><figure class="highlight plain"><figcaption><span>cms -D -i embedded.mobileprovision```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">8. 使用权限*.plist文件签名整个app 也就是 `Payload`文件夹</span><br><span class="line">    - ```codesign -fs &quot;证书&quot; --no-strict --entitlements=权限文件plist 你的应用.app</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>打包ipa文件</p>
+<ul>
+<li><figure class="highlight plain"><figcaption><span>-ry WeChat.ipa Payload ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">10. 使用Xcode安装ipa文件</span><br><span class="line"></span><br><span class="line">#正文</span><br><span class="line">使用`Xcode`进行签名，因为在很多时候我们在做手动重签名的时候，iOS版本升级，或者Apple在改变了签名的规则，那么我们在按照上面所述的内容进行重签名就不行了，上述的步骤都是写死的，我们思考一下，在我们打包的过程中都是在哪里打包的？是在Xcode，签名的规则改不改变Apple知道，但是Xcode是肯定能够签名的！</span><br><span class="line"></span><br><span class="line">##准备</span><br><span class="line">- 创建一个项目`XcodeCodeSignDemo`</span><br><span class="line">- 一个越狱的ipa包 `test.ipa`</span><br><span class="line"></span><br><span class="line">##步骤</span><br><span class="line">1. 首先解压`test.ipa`</span><br><span class="line">2. 修改`test.app`里面的`Info.plist`中的`bundle identifier （XcodeCodeSignDemo的bundle identifier ）`  </span><br><span class="line">3. 签名`test.app`中的Frameworks中的动态库</span><br><span class="line">    - ```codesign -fs &quot;你的证书&quot;  签名的文件</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>添加MachO的可执行权限</p>
+<ul>
+<li><code>chmod +x WeChat</code></li>
+</ul>
+</li>
+<li><code>Plugins</code>、<code>watch</code>还是需要干掉</li>
+<li>打开<code>Xcode</code>Show in Finder<code>Products</code>文件夹下的<em>.app替换成越狱修改好的</em>.app替换，名字要跟工程的名字一样</li>
+<li>直接Run<br><img src="https://upload-images.jianshu.io/upload_images/7980283-ac4507d6a65fb08b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></li>
 </ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/7980283-bf887445a1c1a3af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
-<ol start="4">
-<li><p>给可执行文件可执行的权限，在App中可以看到WeChat是白色的不可执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x WeChat</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>新建一个项目，build拿到release版本的App中的<code>embedded.mobileprovision</code>文件直接拷贝到我们刚才修改的越狱包里面</p>
-</li>
-<li>修改Info.plist中的Bundle identifier！越狱App的替换成新建项目的！</li>
-<li>在越狱App中查看复制过去的<code>embedded.mobileprovision</code>的权限<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">security cms -D -i embedded.mobileprovision</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/7980283-de523272facdac66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""><br>  将权限copy出来生成一个plist文件<br><img src="https://upload-images.jianshu.io/upload_images/7980283-1761a03901d53f58.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
-<ol start="8">
-<li>签名整个App<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">codesign -fs &quot;证书&quot; --no-strict --entitlements=权限文件plist 你的应用.app</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>###二用Xcode安装签名后的App<br><strong>步骤</strong></p>
-<ol>
-<li><p>打包ipa 在*.app文件夹下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip -ry WeChat.ipa Payload</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>Xcode command + shift + 2</code>找到我们的真机设备<br><img src="https://upload-images.jianshu.io/upload_images/7980283-065200d8175213d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
-</li>
-</ol>
-<p>##结果</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/7980283-ee40b7061bf3724d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
 
       
 
@@ -268,6 +243,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">越狱</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -320,7 +306,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.struggle3g.com/2022/06/21/无越狱iphone安装多个同样应用的方法（一）/" alt="二维码">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.struggle3g.com/2018/05/22/无越狱IPhone安装多个同样应用的方法（二）Xcode签名/" alt="二维码">
      
     </div>
 
@@ -340,18 +326,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/06/21/无越狱IPhone安装多个同样应用的方法（二）Xcode签名/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/05/24/无越狱IPhone安装多个同样应用的方法（三）自动化重签名/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          (no title)
+          无越狱IPhone安装多个同样应用的方法（三）自动化重签名
         
       </div>
     </a>
   
   
-    <a href="/2022/04/03/FluttrState的生命周期/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">FluttrState的生命周期</div>
+    <a href="/2018/05/22/无越狱iphone安装多个同样应用的方法（一）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">无越狱iphone安装多个同样应用的方法（一）</div>
       <i class="icon-circle-right"></i>
     </a>
   

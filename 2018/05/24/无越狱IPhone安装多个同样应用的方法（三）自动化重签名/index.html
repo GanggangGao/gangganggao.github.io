@@ -6,23 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
-  <title>Struggle3g‘s Blog</title>
+  <title>无越狱IPhone安装多个同样应用的方法（三）自动化重签名 | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: 无越狱IPhone安装多个同样应用的方法（三）自动化重签名date: 2018-05-24 01:19:00tags:  - 越狱   #回顾已经做了手动、xcode重新签名，基本上的操作大致都差不多，都是将能够重新签名的进行重新签名、不能签名的干掉 ##自动化签名原理其实说白了，就是将自己手动做的操作直接写成一个shell脚本进行重签名，按照一定规则对App进行重签名，解决了重复">
-<meta name="keywords" content="iOS,客户端,流媒体,iot,程序猿,程序员,程序猿,devepoer,开源,代码,code,黑客,破解,砸壳,html,用户体验">
+  <meta name="description" content="#回顾已经做了手动、xcode重新签名，基本上的操作大致都差不多，都是将能够重新签名的进行重新签名、不能签名的干掉 ##自动化签名原理其实说白了，就是将自己手动做的操作直接写成一个shell脚本进行重签名，按照一定规则对App进行重签名，解决了重复操作步骤的一些麻烦 ##准备、操作步骤  新建一个项目AutomatedResigning 在AutomatedResigning根目录创建Resig">
+<meta name="keywords" content="越狱">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Struggle3g‘s Blog">
-<meta property="og:url" content="https://www.struggle3g.com/2022/06/21/无越狱IPhone安装多个同样应用的方法（三）自动化重签名/index.html">
+<meta property="og:title" content="无越狱IPhone安装多个同样应用的方法（三）自动化重签名">
+<meta property="og:url" content="https://www.struggle3g.com/2018/05/24/无越狱IPhone安装多个同样应用的方法（三）自动化重签名/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="title: 无越狱IPhone安装多个同样应用的方法（三）自动化重签名date: 2018-05-24 01:19:00tags:  - 越狱   #回顾已经做了手动、xcode重新签名，基本上的操作大致都差不多，都是将能够重新签名的进行重新签名、不能签名的干掉 ##自动化签名原理其实说白了，就是将自己手动做的操作直接写成一个shell脚本进行重签名，按照一定规则对App进行重签名，解决了重复">
+<meta property="og:description" content="#回顾已经做了手动、xcode重新签名，基本上的操作大致都差不多，都是将能够重新签名的进行重新签名、不能签名的干掉 ##自动化签名原理其实说白了，就是将自己手动做的操作直接写成一个shell脚本进行重签名，按照一定规则对App进行重签名，解决了重复操作步骤的一些麻烦 ##准备、操作步骤  新建一个项目AutomatedResigning 在AutomatedResigning根目录创建Resig">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-dfc9f85be16aac9f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-97f1fcecb13aeb77.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-2b2c3670de9731d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:updated_time" content="2022-06-21T01:48:34.000Z">
+<meta property="og:updated_time" content="2022-06-21T04:28:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Struggle3g‘s Blog">
-<meta name="twitter:description" content="title: 无越狱IPhone安装多个同样应用的方法（三）自动化重签名date: 2018-05-24 01:19:00tags:  - 越狱   #回顾已经做了手动、xcode重新签名，基本上的操作大致都差不多，都是将能够重新签名的进行重新签名、不能签名的干掉 ##自动化签名原理其实说白了，就是将自己手动做的操作直接写成一个shell脚本进行重签名，按照一定规则对App进行重签名，解决了重复">
+<meta name="twitter:title" content="无越狱IPhone安装多个同样应用的方法（三）自动化重签名">
+<meta name="twitter:description" content="#回顾已经做了手动、xcode重新签名，基本上的操作大致都差不多，都是将能够重新签名的进行重新签名、不能签名的干掉 ##自动化签名原理其实说白了，就是将自己手动做的操作直接写成一个shell脚本进行重签名，按照一定规则对App进行重签名，解决了重复操作步骤的一些麻烦 ##准备、操作步骤  新建一个项目AutomatedResigning 在AutomatedResigning根目录创建Resig">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7980283-dfc9f85be16aac9f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
@@ -172,13 +172,24 @@
   <div class="article-inner">
 
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      无越狱IPhone安装多个同样应用的方法（三）自动化重签名
+    </h1>
+  
+
+        
+        <a href="/2018/05/24/无越狱IPhone安装多个同样应用的方法（三）自动化重签名/" class="archive-article-date">
+  	<time datetime="2018-05-23T17:19:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-24</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title: 无越狱IPhone安装多个同样应用的方法（三）自动化重签名<br>date: 2018-05-24 01:19:00<br>tags: </p>
-<pre><code>- 越狱
-</code></pre><hr>
-<p><img src="https://upload-images.jianshu.io/upload_images/7980283-dfc9f85be16aac9f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
+        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-dfc9f85be16aac9f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
 <p>#回顾<br>已经做了手动、xcode重新签名，基本上的操作大致都差不多，都是将能够重新签名的进行重新签名、不能签名的干掉</p>
 <p>##自动化签名原理<br>其实说白了，就是将自己手动做的操作直接写成一个shell脚本进行重签名，按照一定规则对App进行重签名，解决了重复操作步骤的一些麻烦<br><!--mores--></p>
 <p>##准备、操作步骤</p>
@@ -204,6 +215,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">越狱</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -256,7 +278,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.struggle3g.com/2022/06/21/无越狱IPhone安装多个同样应用的方法（三）自动化重签名/" alt="二维码">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.struggle3g.com/2018/05/24/无越狱IPhone安装多个同样应用的方法（三）自动化重签名/" alt="二维码">
      
     </div>
 
@@ -276,9 +298,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2018/05/25/XIB同一层级，两个Label的Content Hugging Priority/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          XIB同一层级，两个Label的Content Hugging Priority
+        
+      </div>
+    </a>
   
-    <a href="/2022/06/21/无越狱IPhone安装多个同样应用的方法（二）Xcode签名/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
+  
+    <a href="/2018/05/22/无越狱IPhone安装多个同样应用的方法（二）Xcode签名/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">无越狱IPhone安装多个同样应用的方法（二）Xcode签名</div>
       <i class="icon-circle-right"></i>
     </a>
   
