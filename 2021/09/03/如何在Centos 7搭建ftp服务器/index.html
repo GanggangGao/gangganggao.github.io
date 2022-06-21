@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Struggle3g‘s Blog">
 <meta property="og:description" content="安装nginx1. 下载下载地址，选择Stable version下面的nginx-xxx或者直接使用命令下载 wget http://nginx.org/download/nginx-1.20.1.tar.gz">
 <meta property="og:locale" content="ch">
-<meta property="og:updated_time" content="2022-06-21T04:07:33.000Z">
+<meta property="og:updated_time" content="2022-06-21T05:49:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何在Centos7搭建ftp图片服务器">
 <meta name="twitter:description" content="安装nginx1. 下载下载地址，选择Stable version下面的nginx-xxx或者直接使用命令下载 wget http://nginx.org/download/nginx-1.20.1.tar.gz">
@@ -201,7 +201,7 @@
 <h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><p>安装结束后进入<code>/opt/nginx/sbin</code></p>
 <p>然后启动 ./nginx 这条命令</p>
 <p>验证配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nginx -t -c /opt/nginx/conf/nginx.conf</span><br><span class="line">或者</span><br><span class="line">cd  /opt/nginx/sbin</span><br><span class="line">./nginx -t</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">nginx -t -c /opt/nginx/conf/nginx.conf</span><br><span class="line">或者</span><br><span class="line">cd  /opt/nginx/sbin</span><br><span class="line">./nginx -t</span><br><span class="line"></span><br><span class="line">/opt/nginx/sbin/nginx -t -c /opt/nginx/conf/nginx.conf</span><br><span class="line"></span><br><span class="line">/opt/nginx/sbin/nginx -c /opt/nginx/conf/nginx.conf</span><br></pre></td></tr></table></figure>
 <h4 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">查询nginx主进程号</span><br><span class="line">ps -ef | grep nginx</span><br><span class="line">从容停止   kill -QUIT 主进程号</span><br><span class="line">快速停止   kill -TERM 主进程号</span><br><span class="line">强制停止   kill -9 nginx</span><br></pre></td></tr></table></figure>
 <h4 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h4><p>查看启动状态 <code>ps -ef |grep nginx</code><br><code>kill -HUP 主进程号或进程号文件路径</code><br>或者使用<br><code>cd /opt/nginx/sbin
 ./nginx -s reload</code></p>
