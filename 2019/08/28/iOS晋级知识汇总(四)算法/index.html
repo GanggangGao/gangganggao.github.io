@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Struggle3g‘s Blog">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-4ee9bc9777e16ab5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2022-06-25T05:14:45.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:23:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS晋级知识汇总(四)算法">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7980283-4ee9bc9777e16ab5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -184,7 +184,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><meta name="referrer" content="no-referrer"><br><img src="https://upload-images.jianshu.io/upload_images/7980283-4ee9bc9777e16ab5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="一般算法.png"></p>
+        <meta name="referrer" content="no-referrer">
+
+<p><img src="https://upload-images.jianshu.io/upload_images/7980283-4ee9bc9777e16ab5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="一般算法.png"></p>
  <a id="more"></a>
 <h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><h2 id="字符串反转算法"><a href="#字符串反转算法" class="headerlink" title="字符串反转算法"></a>字符串反转算法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">//核心思想交换前后两个字符，同时移动指针</span><br><span class="line">void char_reverse(char *cha)&#123;</span><br><span class="line">    </span><br><span class="line">    char *begin = cha;  //指向第一个字符</span><br><span class="line">    char *end = cha + strlen(cha)-1;  //指向最后一个字符</span><br><span class="line">    while (begin &lt; end) &#123;</span><br><span class="line">        //交换前后两个字符，同时移动指针</span><br><span class="line">        char temp = *begin;</span><br><span class="line">        *(begin++) = *end; //将*end的的值赋值给 *begin   begin+1</span><br><span class="line">        *(end--) = temp;   //将temp的值赋值给 *end     end-1</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">## 链表反转算法</span><br><span class="line"></span><br><span class="line">![链表反转.png](https://upload-images.jianshu.io/upload_images/7980283-1b0e9ca4a4aa3ed5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</span><br></pre></td></tr></table></figure>
 <p>struct Node{<br>    int data;<br>    struct Node <em>next;<br>};<br>//链表反转<br>struct Node</em> reverseList(struct Node *head){</p>

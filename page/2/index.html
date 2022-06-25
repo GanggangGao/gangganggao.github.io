@@ -165,6 +165,98 @@
             
   
     
+<article id="post-如何使用SwiftLint？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/09/20/如何使用SwiftLint？/">如何使用SwiftLint？</a>
+    </h1>
+  
+
+        
+        <a href="/2021/09/20/如何使用SwiftLint？/" class="archive-article-date">
+  	<time datetime="2021-09-20T14:13:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><meta name="referrer" content="no-referrer"></p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><a href="https://github.com/realm/SwiftLint" target="_blank" rel="noopener">SwiftLint</a> 是 <a href="https://realm.io" target="_blank" rel="noopener">Realm</a> 推出的一款 Swift 代码规范检查工具。</p>
+<p>该工具基于<a href="https://github.com/github/swift-style-guide" target="_blank" rel="noopener">swift代码规范</a>进行代码检查，在Xcode中执行编译时，会自动运行检查，不符合规范的代码会给予警告或者错误，可以对规则进行自定义，在需要对Codeing进行规则约束时相当的方便。</p>
+        
+          <a class="article-more-a" href="/2021/09/20/如何使用SwiftLint？/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Swift</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SwiftLint</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/09/20/如何使用SwiftLint？/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
 <article id="post-如何在Centos 7搭建ftp服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -1006,117 +1098,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/09/10/iOS晋级知识汇总(七)第三方库/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-iOS晋级知识汇总(六)框架和架构" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/06/iOS晋级知识汇总(六)框架和架构/">iOS晋级知识汇总(六)框架和架构</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/06/iOS晋级知识汇总(六)框架和架构/" class="archive-article-date">
-  	<time datetime="2019-09-06T15:12:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <meta name="referrer" content="no-referrer">
-
-
-<h1 id="怎样设计一个图片缓存框架-基本框架"><a href="#怎样设计一个图片缓存框架-基本框架" class="headerlink" title="怎样设计一个图片缓存框架(基本框架)"></a>怎样设计一个图片缓存框架(基本框架)</h1><ul>
-<li>Manager</li>
-<li>内存缓存</li>
-<li>磁盘缓存</li>
-<li>网络下载</li>
-<li>CodeManager<ul>
-<li>图片解码</li>
-<li>图片压缩/解压缩</li>
-</ul>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2019/09/06/iOS晋级知识汇总(六)框架和架构/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">架构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MVP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MVC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/06/iOS晋级知识汇总(六)框架和架构/">展开全文 >></a>
         </p>
       
 

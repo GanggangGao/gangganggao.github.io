@@ -165,6 +165,93 @@
             
   
     
+<article id="post-深入浅出iOS多线程(三)——GCD多线程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/02/深入浅出iOS多线程(三)——GCD多线程/">深入浅出iOS多线程(三)——GCD多线程</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/02/深入浅出iOS多线程(三)——GCD多线程/" class="archive-article-date">
+  	<time datetime="2019-07-02T13:39:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><meta name="referrer" content="no-referrer"></p>
+<h1 id="GCD简介"><a href="#GCD简介" class="headerlink" title="GCD简介"></a>GCD简介</h1><p>前面分析的pthread和NSThread多线程技术，直接操作线程，而下面分析的GCD以及下一篇NSOpration都是并发解决技术</p>
+        
+          <a class="article-more-a" href="/2019/07/02/深入浅出iOS多线程(三)——GCD多线程/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/02/深入浅出iOS多线程(三)——GCD多线程/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
 <article id="post-深入浅出iOS多线程(二)——pthraed和NSThread的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -924,96 +1011,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/01/25/iOS 面试题及答案20道1～20(一)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-野指针问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/25/野指针问题/">野指针</a>
-    </h1>
-  
-
-        
-        <a href="/2019/01/25/野指针问题/" class="archive-article-date">
-  	<time datetime="2019-01-25T13:40:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <meta name="referrer" content="no-referrer">
-
-<h2 id="Thread-1-EXC-BAD-ACCESS-code-EXC-I386-GPFLT"><a href="#Thread-1-EXC-BAD-ACCESS-code-EXC-I386-GPFLT" class="headerlink" title="Thread 1: EXC_BAD_ACCESS (code=EXC_I386_GPFLT)"></a>Thread 1: EXC_BAD_ACCESS (code=EXC_I386_GPFLT)</h2><p>一、当一个对象被释放，但是指针还存在时，调用该对象的时候就会出现这种问题，俗称野指针，好比是这个对象已经不属于你了你调用肯定有问题。</p>
-<p>二、出现这种情况的闪退，断点直接断道main函数中通常是由于调用了一个已经被释放掉的、不存在的僵尸对象，</p>
-<p><strong>野指针通常是指我们创建一个指针变量，当然这个指针变量指向的是某一块内存空间（对象），当这个内存空间（对象）被释放掉以后，而指针并没有置为nil，那么这个指针变量就是野指针</strong></p>
-<p><strong>僵尸对象，就是已经释放掉了内存空间的那个对象。这个对象就是僵尸对象。这块空间还是存在的在未分配给其他对象之前，这块地址中的值还存在</strong></p>
-<p>僵尸对象的解决方法是直接使用xcode的instruments中的zombies来查看是否是僵尸对象</p>
-
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">bug</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/25/野指针问题/">展开全文 >></a>
         </p>
       
 

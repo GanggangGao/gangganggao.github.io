@@ -165,6 +165,93 @@
             
   
     
+<article id="post-iOS 推送步骤以及原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/13/iOS 推送步骤以及原理/">iOS 推送步骤以及原理</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/13/iOS 推送步骤以及原理/" class="archive-article-date">
+  	<time datetime="2018-03-13T03:20:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><meta name="referrer" content="no-referrer"></p>
+<h1 id="iOS推送"><a href="#iOS推送" class="headerlink" title="iOS推送"></a>iOS推送</h1><h2 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h2><p>1.应用程序向系统APNS注册消息推送。<br>2.iOS系统从APNS Server获取device token,应用程序接收device token.<br>3.应用程序将device token 发送给PUSH服务器，服务器进行缓存处理。<br>4.服务器在触发推送事件以后向APNS服务器发送推送消息，附带的有Device Token、 message等等一些附加值。<br>5.APNS服务将消息下发到iphone。<br>
+        
+          <a class="article-more-a" href="/2018/03/13/iOS 推送步骤以及原理/#more">more >></a>
+        
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">推送</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/13/iOS 推送步骤以及原理/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
 <article id="post-iOS----SIGPIPE信号终止进程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -972,98 +1059,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/01/25/本地新建项目夹，push到远程git：! [rejected] master -> master (fetch first),fatal- refusing to merge unrelated histories, ! [rejected] master -> master (non-fast-forward)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-iOS Objective-C为什么属性（property）同时重写setter、getter方法会报错？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/19/iOS Objective-C为什么属性（property）同时重写setter、getter方法会报错？/">iOS Objective-C为什么属性（property）同时重写setter、getter方法会报错？</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/19/iOS Objective-C为什么属性（property）同时重写setter、getter方法会报错？/" class="archive-article-date">
-  	<time datetime="2018-01-19T04:20:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><meta name="referrer" content="no-referrer"></p>
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><pre><code>在开发当中，遇到定义了一个属性，需要同时重构它的setter、getter方法，有的时候会报错，上代码：
-</code></pre>
-        
-          <a class="article-more-a" href="/2018/01/19/iOS Objective-C为什么属性（property）同时重写setter、getter方法会报错？/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">setter</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">getter</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/19/iOS Objective-C为什么属性（property）同时重写setter、getter方法会报错？/">展开全文 >></a>
         </p>
       
 

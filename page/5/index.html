@@ -165,6 +165,96 @@
             
   
     
+<article id="post-野指针问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/25/野指针问题/">野指针</a>
+    </h1>
+  
+
+        
+        <a href="/2019/01/25/野指针问题/" class="archive-article-date">
+  	<time datetime="2019-01-25T13:40:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer">
+
+<h2 id="Thread-1-EXC-BAD-ACCESS-code-EXC-I386-GPFLT"><a href="#Thread-1-EXC-BAD-ACCESS-code-EXC-I386-GPFLT" class="headerlink" title="Thread 1: EXC_BAD_ACCESS (code=EXC_I386_GPFLT)"></a>Thread 1: EXC_BAD_ACCESS (code=EXC_I386_GPFLT)</h2><p>一、当一个对象被释放，但是指针还存在时，调用该对象的时候就会出现这种问题，俗称野指针，好比是这个对象已经不属于你了你调用肯定有问题。</p>
+<p>二、出现这种情况的闪退，断点直接断道main函数中通常是由于调用了一个已经被释放掉的、不存在的僵尸对象，</p>
+<p><strong>野指针通常是指我们创建一个指针变量，当然这个指针变量指向的是某一块内存空间（对象），当这个内存空间（对象）被释放掉以后，而指针并没有置为nil，那么这个指针变量就是野指针</strong></p>
+<p><strong>僵尸对象，就是已经释放掉了内存空间的那个对象。这个对象就是僵尸对象。这块空间还是存在的在未分配给其他对象之前，这块地址中的值还存在</strong></p>
+<p>僵尸对象的解决方法是直接使用xcode的instruments中的zombies来查看是否是僵尸对象</p>
+
+      
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">bug</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/01/25/野指针问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
+    
 <article id="post-队列异步和同步执行的不同" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
@@ -1009,102 +1099,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/09/28/深入浅出Runtime (四) Runtime的实际应用之一，字典转模型/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-玩溜Cocos Creator入门学习（四）UI系统介绍UI组件（ScrollView）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/27/玩溜Cocos Creator入门学习（四）UI系统介绍UI组件（ScrollView）/">玩溜Cocos Creator入门学习（四）UI系统介绍UI组件（ScrollView）</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/27/玩溜Cocos Creator入门学习（四）UI系统介绍UI组件（ScrollView）/" class="archive-article-date">
-  	<time datetime="2018-09-27T14:05:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><meta name="referrer" content="no-referrer"></p>
-<h2 id="ScrollView-组件"><a href="#ScrollView-组件" class="headerlink" title="ScrollView 组件"></a>ScrollView 组件</h2><p>ScrollView 是一种带滚动功能的容器，它提供一种方式可以在有限的显示区域内浏览更多的内容。通常 ScrollView 会与<a href="http://docs.cocos.com/creator/manual/zh/components/mask.html" target="_blank" rel="noopener">Mask</a>组件配合使用，同时也可以添加ScrollBar组件来显示浏览内容的位置。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/7980283-782edd496d31a3c8.gif?imageMogr2/auto-orient/strip" alt=""></p>
-        
-          <a class="article-more-a" href="/2018/09/27/玩溜Cocos Creator入门学习（四）UI系统介绍UI组件（ScrollView）/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Cocos Creator</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">游戏</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Cocos Creator游戏UI</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/27/玩溜Cocos Creator入门学习（四）UI系统介绍UI组件（ScrollView）/">展开全文 >></a>
         </p>
       
 

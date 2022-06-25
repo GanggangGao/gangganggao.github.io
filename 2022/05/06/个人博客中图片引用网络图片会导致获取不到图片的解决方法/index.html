@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
-  <title>Struggle3g‘s Blog</title>
+  <title>个人博客中图片引用网络图片会导致获取不到图片的解决方法 | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Coding yourself">
+  <meta name="description" content="RT，如果想要解决这个问题，需要在你的head中添加一个meta标签 1&amp;lt;meta name=&amp;quot;referrer&amp;quot; content=&amp;quot;no-referrer&amp;quot;/&amp;gt; 这样就能解决这个问题，具体原因如下： meta标签中属性referrer当一个用户点击当前页面中的一个链接，然后跳转到目标页面时，目标页面会收到一个信息，即用户是从哪个源链接跳转过">
 <meta name="keywords" content="iOS,客户端,流媒体,iot,程序猿,程序员,程序猿,devepoer,开源,代码,code,黑客,破解,砸壳,html,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Struggle3g‘s Blog">
-<meta property="og:url" content="https://www.struggle3g.com/page/3/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="个人博客中图片引用网络图片会导致获取不到图片的解决方法">
+<meta property="og:url" content="https://www.struggle3g.com/2022/05/06/个人博客中图片引用网络图片会导致获取不到图片的解决方法/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="Coding yourself">
+<meta property="og:description" content="RT，如果想要解决这个问题，需要在你的head中添加一个meta标签 1&amp;lt;meta name=&amp;quot;referrer&amp;quot; content=&amp;quot;no-referrer&amp;quot;/&amp;gt; 这样就能解决这个问题，具体原因如下： meta标签中属性referrer当一个用户点击当前页面中的一个链接，然后跳转到目标页面时，目标页面会收到一个信息，即用户是从哪个源链接跳转过">
 <meta property="og:locale" content="ch">
+<meta property="og:updated_time" content="2022-06-25T23:33:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Struggle3g‘s Blog">
-<meta name="twitter:description" content="Coding yourself">
+<meta name="twitter:title" content="个人博客中图片引用网络图片会导致获取不到图片的解决方法">
+<meta name="twitter:description" content="RT，如果想要解决这个问题，需要在你的head中添加一个meta标签 1&amp;lt;meta name=&amp;quot;referrer&amp;quot; content=&amp;quot;no-referrer&amp;quot;/&amp;gt; 这样就能解决这个问题，具体原因如下： meta标签中属性referrer当一个用户点击当前页面中的一个链接，然后跳转到目标页面时，目标页面会收到一个信息，即用户是从哪个源链接跳转过">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
   
@@ -163,23 +164,21 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-    
-<article id="post-iOS晋级知识汇总(六)框架和架构" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-个人博客中图片引用网络图片会导致获取不到图片的解决方法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
 
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/06/iOS晋级知识汇总(六)框架和架构/">iOS晋级知识汇总(六)框架和架构</a>
+    <h1 class="article-title" itemprop="name">
+      个人博客中图片引用网络图片会导致获取不到图片的解决方法
     </h1>
   
 
         
-        <a href="/2019/09/06/iOS晋级知识汇总(六)框架和架构/" class="archive-article-date">
-  	<time datetime="2019-09-06T15:12:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
+        <a href="/2022/05/06/个人博客中图片引用网络图片会导致获取不到图片的解决方法/" class="archive-article-date">
+  	<time datetime="2022-05-06T12:21:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-06</time>
 </a>
         
       </header>
@@ -188,21 +187,14 @@
       
         <meta name="referrer" content="no-referrer">
 
+<p>RT，如果想要解决这个问题，需要在你的<code>head</code>中添加一个<code>meta</code>标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt;</span><br></pre></td></tr></table></figure>
+<p>这样就能解决这个问题，具体原因如下：</p>
+<h2 id="meta标签中属性referrer"><a href="#meta标签中属性referrer" class="headerlink" title="meta标签中属性referrer"></a>meta标签中属性<code>referrer</code></h2><p>当一个用户点击当前页面中的一个链接，然后跳转到目标页面时，目标页面会收到一个信息，即用户是从哪个源链接跳转过来的；</p>
+<p>服务器根据这个源链接进行校验，是否是规定的域名，来防止盗链, 当然不提倡这么做，因为之前并没有考虑到这些以前的博客都是在别的网站上传图片得到网络链接，在个人博客中直接使用这个链接，之后打算使用个人博客仓库地址中的图片。<br>比如： hexo+git 那么就使用 <code>hexo-asset-image</code> 来对你的博客图片进行处理。</p>
+<p><code>referrer</code>的值如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1、no-referrer：所有请求不发送 referrer。</span><br><span class="line"></span><br><span class="line">2、no-referrer-when-downgrade（默认值）：当请求安全级别下降时不发送 referrer。目前，只有一种情况会发生安全级别下降，即从 HTTPS 到 HTTP。HTTPS 到 HTTP 的资源引用和链接跳转都不会发送 referrer。</span><br><span class="line"></span><br><span class="line">3、same-origin：对于同源的链接和引用，会发送referrer，其他的不会。</span><br><span class="line"></span><br><span class="line">4、origin：在任何情况下仅发送源信息作为引用地址。源信息包括访问协议和域名。</span><br><span class="line"></span><br><span class="line">5、strict-origin：在安全级别下降时不发送 referrer；而在同等安全级别的情况下仅发送源信息。注意：这个是新加的标准，有些浏览器可能还不支持。</span><br><span class="line"></span><br><span class="line">6、origin-when-cross-origin：同源的链接和引用，会发送完全的 referrer 信息；但非同源链接和引用时，只发送源信息。</span><br><span class="line"></span><br><span class="line">7、strict-origin-when-cross-origin：同源的链接和引用，会发送 referrer。安全级别下降时不发送 referrer。其它情况下发送源信息。注意：这个是新加的标准，有些浏览器可能还不支持。</span><br><span class="line"></span><br><span class="line">8、unsafe-url：无论是否发生协议降级，无论是本站链接还是站外链接，统统都发送 Referrer 信息。正如其名，这是最宽松而最不安全的策略。</span><br></pre></td></tr></table></figure>
 
-<h1 id="怎样设计一个图片缓存框架-基本框架"><a href="#怎样设计一个图片缓存框架-基本框架" class="headerlink" title="怎样设计一个图片缓存框架(基本框架)"></a>怎样设计一个图片缓存框架(基本框架)</h1><ul>
-<li>Manager</li>
-<li>内存缓存</li>
-<li>磁盘缓存</li>
-<li>网络下载</li>
-<li>CodeManager<ul>
-<li>图片解码</li>
-<li>图片压缩/解压缩</li>
-</ul>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2019/09/06/iOS晋级知识汇总(六)框架和架构/#more">more >></a>
-        
       
 
 
@@ -213,42 +205,86 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">架构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MVP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MVC</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/06/iOS晋级知识汇总(六)框架和架构/">展开全文 >></a>
-        </p>
-      
+        
+
+<!--MOB SHARE BEGIN-->
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.struggle3g.com/2022/05/06/个人博客中图片引用网络图片会导致获取不到图片的解决方法/" alt="二维码">
+     
+    </div>
+
+</div>
+
+<div class="mask js-mask"></div>
+<!--MOB SHARE END-->
+
+
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2022/04/25/如何配置多个git的ssh/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何配置多个git的ssh</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -268,877 +304,20 @@
 
 
 
-
-
-
-
-
-
-  
-    
-<article id="post-iOS晋级知识汇总(五)设计模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/03/iOS晋级知识汇总(五)设计模式/">iOS晋级知识汇总(六)设计模式</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/03/iOS晋级知识汇总(五)设计模式/" class="archive-article-date">
-  	<time datetime="2019-09-03T14:45:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <meta name="referrer" content="no-referrer">
-
-<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h2 id="六大设计原则"><a href="#六大设计原则" class="headerlink" title="六大设计原则"></a>六大设计原则</h2>
-        
-          <a class="article-more-a" href="/2019/09/03/iOS晋级知识汇总(五)设计模式/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">六大原则</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">责任链</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">桥接</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/03/iOS晋级知识汇总(五)设计模式/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-iOS晋级知识汇总(四)算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/28/iOS晋级知识汇总(四)算法/">iOS晋级知识汇总(四)算法</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/28/iOS晋级知识汇总(四)算法/" class="archive-article-date">
-  	<time datetime="2019-08-28T15:27:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <meta name="referrer" content="no-referrer">
-
-<p><img src="https://upload-images.jianshu.io/upload_images/7980283-4ee9bc9777e16ab5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="一般算法.png"></p>
-        
-          <a class="article-more-a" href="/2019/08/28/iOS晋级知识汇总(四)算法/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">字符串反转算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">链表反转算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">有序数组合并</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">排序算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/28/iOS晋级知识汇总(四)算法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-iOS晋级知识汇总(三)语言特性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/25/iOS晋级知识汇总(三)语言特性/">iOS晋级知识汇总(三)语言特性</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/25/iOS晋级知识汇总(三)语言特性/" class="archive-article-date">
-  	<time datetime="2019-08-25T13:15:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><meta name="referrer" content="no-referrer"></p>
-<h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><h2 id="用分类干了什么事情？"><a href="#用分类干了什么事情？" class="headerlink" title="用分类干了什么事情？"></a>用分类干了什么事情？</h2><ul>
-<li>声明私有方法</li>
-<li>分解提及庞大类文件</li>
-<li>把Framework的私有方法公开</li>
-</ul>
-        
-          <a class="article-more-a" href="/2019/08/25/iOS晋级知识汇总(三)语言特性/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分类</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">关联对象</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Extension</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">KVC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/25/iOS晋级知识汇总(三)语言特性/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-iOS晋级知识汇总(二)runtime" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/22/iOS晋级知识汇总(二)runtime/">iOS晋级知识汇总(二)runtime</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/22/iOS晋级知识汇总(二)runtime/" class="archive-article-date">
-  	<time datetime="2019-08-22T15:17:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><meta name="referrer" content="no-referrer"></p>
-<h1 id="Runtime"><a href="#Runtime" class="headerlink" title="Runtime"></a>Runtime</h1><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><ul>
-<li>objc_object</li>
-<li>objc_class </li>
-<li>isa指针</li>
-<li>method_t</li>
-</ul>
-        
-          <a class="article-more-a" href="/2019/08/22/iOS晋级知识汇总(二)runtime/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">对象、类对象、元类对象</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">消息传递机制</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">消息转发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">消息传递</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/22/iOS晋级知识汇总(二)runtime/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-iOS晋级知识汇总(一)UI优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/18/iOS晋级知识汇总(一)UI优化/">iOS晋级知识汇总(一)优化相关</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/18/iOS晋级知识汇总(一)UI优化/" class="archive-article-date">
-  	<time datetime="2019-08-18T14:35:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <meta name="referrer" content="no-referrer">
-
-<h1 id="UItableview相关"><a href="#UItableview相关" class="headerlink" title="UItableview相关"></a>UItableview相关</h1><h2 id="重用机制"><a href="#重用机制" class="headerlink" title="重用机制"></a>重用机制</h2><p>通过下面方法得到cell：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cell =  [self.TableView dequeueReusableCellWithIdentifier:identifer];</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2019/08/18/iOS晋级知识汇总(一)UI优化/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">UItableview相关</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">数据源同步</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">事件传递和视图响应</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">图像显示原理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/18/iOS晋级知识汇总(一)UI优化/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-iOS 面试题及答案20道61～80(四)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/28/iOS 面试题及答案20道61～80(四)/">iOS 面试题及答案20道61～80(四)</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/28/iOS 面试题及答案20道61～80(四)/" class="archive-article-date">
-  	<time datetime="2019-07-28T14:48:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><meta name="referrer" content="no-referrer"></p>
-<h2 id="61：谈谈iOS内存"><a href="#61：谈谈iOS内存" class="headerlink" title="61：谈谈iOS内存"></a>61：谈谈iOS内存</h2>
-        
-          <a class="article-more-a" href="/2019/07/28/iOS 面试题及答案20道61～80(四)/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">面试题</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/28/iOS 面试题及答案20道61～80(四)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-iOS基础全面分析之四(动画全面分析)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/09/iOS基础全面分析之四(动画全面分析)/">深入浅出iOS多线程(五)——多线程锁</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/09/iOS基础全面分析之四(动画全面分析)/" class="archive-article-date">
-  	<time datetime="2019-07-09T08:01:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <meta name="referrer" content="no-referrer">
-
-<h1 id="iOS动画"><a href="#iOS动画" class="headerlink" title="iOS动画"></a>iOS动画</h1><p>好的应用都有一个共同的特点，那就是良好的用户体验，动画作为提升用户体验一个重要技术，在开发人员和产品设计人员手里，则应该受到足够重视。</p>
-<p>CoreGraphics(核心图形)、QuartzCore、CoreAnimation(核心动画)</p>
-        
-          <a class="article-more-a" href="/2019/07/09/iOS基础全面分析之四(动画全面分析)/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS动画</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/09/iOS基础全面分析之四(动画全面分析)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-深入浅出iOS多线程(五)——多线程锁" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/07/深入浅出iOS多线程(五)——多线程锁/">深入浅出iOS多线程(五)——多线程锁</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/07/深入浅出iOS多线程(五)——多线程锁/" class="archive-article-date">
-  	<time datetime="2019-07-06T18:20:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <meta name="referrer" content="no-referrer">
-
-<p><img src="https://upload-images.jianshu.io/upload_images/7980283-1ad548e8f4aab6ec.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""><br><a href="/p/7e0894416b0b">深入浅出iOS多线程(一)——线程的概念</a><br><a href="/p/6fcb075be867">深入浅出iOS多线程(二)——pthraed和NSThread的使用</a><br><a href="/p/ac1a5ea5bf5a">深入浅出iOS多线程(三)——GCD多线程</a><br><a href="/p/134343277d9f">深入浅出iOS多线程(四)——NSOperation多线程</a><br><a href="/p/6493794657de">深入浅出iOS多线程(五)——多线程锁</a></p>
-        
-          <a class="article-more-a" href="/2019/07/07/深入浅出iOS多线程(五)——多线程锁/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/07/深入浅出iOS多线程(五)——多线程锁/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
-    
-<article id="post-深入浅出iOS多线程(四)——NSOperation多线程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/03/深入浅出iOS多线程(四)——NSOperation多线程/">深入浅出iOS多线程(四)——NSOperation多线程</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/03/深入浅出iOS多线程(四)——NSOperation多线程/" class="archive-article-date">
-  	<time datetime="2019-07-02T17:10:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><meta name="referrer" content="no-referrer"></p>
-<h1 id="NSOperation的作用"><a href="#NSOperation的作用" class="headerlink" title="NSOperation的作用"></a>NSOperation的作用</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>和GCD一样，NSOperation也是并发编程技术，NSOperation是苹果提供给我们的一套多线程解决方案。实际上NSOperation是基于GCD更高一层的封装,比GCD更加简单，更加方便</p>
-        
-          <a class="article-more-a" href="/2019/07/03/深入浅出iOS多线程(四)——NSOperation多线程/#more">more >></a>
-        
-      
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/03/深入浅出iOS多线程(四)——NSOperation多线程/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
-    </nav>
   
+
+  
+
+  
+
+  
+
+
+
+
+
 
 
           </div>
@@ -1152,8 +331,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
