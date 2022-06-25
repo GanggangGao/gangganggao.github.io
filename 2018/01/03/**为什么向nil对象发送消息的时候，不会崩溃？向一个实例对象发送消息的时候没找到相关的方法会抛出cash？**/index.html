@@ -17,7 +17,7 @@
 <meta property="og:description" content="1.首先Objectvice-c的语言的动态运行时;每个对象调用方法的时候都是调用Object_msgSend(self, method,value).  当self为空的时候直接返回的空，并不会抛出cash. 2.而为什么向实例对象发送消息的时候，实例对象没有找到method时会抛出cash.">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7980283-355a2cc79b122cab?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2022-06-21T01:07:58.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:03:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为什么向nil对象发送消息的时候，不会崩溃？向一个实例对象发送消息的时候没找到相关的方法会抛出cash？">
 <meta name="twitter:description" content="1.首先Objectvice-c的语言的动态运行时;每个对象调用方法的时候都是调用Object_msgSend(self, method,value).  当self为空的时候直接返回的空，并不会抛出cash. 2.而为什么向实例对象发送消息的时候，实例对象没有找到method时会抛出cash.">
@@ -187,7 +187,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-首先Objectvice-c的语言的动态运行时"><a href="#1-首先Objectvice-c的语言的动态运行时" class="headerlink" title="1.首先Objectvice-c的语言的动态运行时;"></a>1.首先Objectvice-c的语言的动态运行时;</h2><pre><code>每个对象调用方法的时候都是调用Object_msgSend(self, method,value).
+        <meta name="referrer" content="no-referrer">
+
+<h2 id="1-首先Objectvice-c的语言的动态运行时"><a href="#1-首先Objectvice-c的语言的动态运行时" class="headerlink" title="1.首先Objectvice-c的语言的动态运行时;"></a>1.首先Objectvice-c的语言的动态运行时;</h2><pre><code>每个对象调用方法的时候都是调用Object_msgSend(self, method,value).
 
 当self为空的时候直接返回的空，并不会抛出cash.
 </code></pre><h2 id="2-而为什么向实例对象发送消息的时候，实例对象没有找到method时会抛出cash"><a href="#2-而为什么向实例对象发送消息的时候，实例对象没有找到method时会抛出cash" class="headerlink" title="2.而为什么向实例对象发送消息的时候，实例对象没有找到method时会抛出cash."></a>2.而为什么向实例对象发送消息的时候，实例对象没有找到method时会抛出cash.</h2><a id="more"></a>

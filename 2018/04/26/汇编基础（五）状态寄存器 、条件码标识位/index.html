@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-f632bfc911828a19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-f05b1ac8d576123c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-bb8122b6edb05857.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500">
-<meta property="og:updated_time" content="2022-06-21T01:37:17.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:06:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编基础（五）状态寄存器 、条件码标识位">
 <meta name="twitter:description" content="引言在汇编基础（二）CPU寄存器已经说到过寄存器，作为一个刚学习汇编的人来说，有可能会在后面在补充很多以前所缺乏的知识，我会在我学习完以后在好好梳理一下以前的内容">
@@ -204,7 +204,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在<a href="https://www.jianshu.com/p/fcd1b421a709" target="_blank" rel="noopener">汇编基础（二）CPU寄存器</a>已经说到过寄存器，作为一个刚学习汇编的人来说，有可能会在后面在补充很多以前所缺乏的知识，我会在我学习完以后在好好梳理一下以前的内容<br><a id="more"></a></p>
+        <p><meta name="referrer" content="no-referrer"></p>
+<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在<a href="https://www.jianshu.com/p/fcd1b421a709" target="_blank" rel="noopener">汇编基础（二）CPU寄存器</a>已经说到过寄存器，作为一个刚学习汇编的人来说，有可能会在后面在补充很多以前所缺乏的知识，我会在我学习完以后在好好梳理一下以前的内容<br><a id="more"></a></p>
 <h3 id="状态寄存器"><a href="#状态寄存器" class="headerlink" title="状态寄存器"></a>状态寄存器</h3><p>CPU内部的寄存器中,有一种特殊的寄存器(对于不同的处理器,个数和结构都可能不同).这种寄存器在ARM中,被称为状态寄存器就是CPSR(current program status register)寄存器CPSR和其他寄存器不一样,其他寄存器是用来存放数据的,都是整个寄存器具有一个含义.而CPSR寄存器是按位起作用的,也就是说,它的每一位都有专门的含义,记录特定的信息.</p>
 <blockquote>
 <p>注:CPSR寄存器是32位的</p>

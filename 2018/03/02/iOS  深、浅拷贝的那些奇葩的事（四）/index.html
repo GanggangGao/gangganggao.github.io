@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
   <title>iOS  深、浅拷贝的那些奇葩的事（四） | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="引言&amp;emsp;在前面两篇，讲到了深（单层深拷贝、完整深拷贝）、浅拷贝的概念、应用、验证，来认识深拷贝、浅拷贝，这篇就具体说一下在开发过程中遇到的一些深、浅拷贝那些奇葩的事情。 不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃&amp;emsp;步骤：  创建一个不可变类型(NSDictionary)变量Dict1并初始化. 将Dict1变量赋值给(NSMutableDictionar">
+  <meta name="description" content="引言&amp;emsp;在前面两篇，讲到了深（单层深拷贝、完整深拷贝）、浅拷贝的概念、应用、验证，来认识深拷贝、浅拷贝，这篇就具体说一下在开发过程中遇到的一些深、浅拷贝那些奇葩的事情。 不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃&amp;emsp;步骤：  创建一个不可变类型(NSDictionary)变量Dict1并初始化. 将Dict1变量赋值给(NSMutableDictiona">
 <meta name="keywords" content="copy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS  深、浅拷贝的那些奇葩的事（四）">
 <meta property="og:url" content="https://www.struggle3g.com/2018/03/02/iOS  深、浅拷贝的那些奇葩的事（四）/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="引言&amp;emsp;在前面两篇，讲到了深（单层深拷贝、完整深拷贝）、浅拷贝的概念、应用、验证，来认识深拷贝、浅拷贝，这篇就具体说一下在开发过程中遇到的一些深、浅拷贝那些奇葩的事情。 不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃&amp;emsp;步骤：  创建一个不可变类型(NSDictionary)变量Dict1并初始化. 将Dict1变量赋值给(NSMutableDictionar">
+<meta property="og:description" content="引言&amp;emsp;在前面两篇，讲到了深（单层深拷贝、完整深拷贝）、浅拷贝的概念、应用、验证，来认识深拷贝、浅拷贝，这篇就具体说一下在开发过程中遇到的一些深、浅拷贝那些奇葩的事情。 不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃&amp;emsp;步骤：  创建一个不可变类型(NSDictionary)变量Dict1并初始化. 将Dict1变量赋值给(NSMutableDictiona">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7980283-2792aff0dad55736.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2022-06-21T01:22:22.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:12:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS  深、浅拷贝的那些奇葩的事（四）">
-<meta name="twitter:description" content="引言&amp;emsp;在前面两篇，讲到了深（单层深拷贝、完整深拷贝）、浅拷贝的概念、应用、验证，来认识深拷贝、浅拷贝，这篇就具体说一下在开发过程中遇到的一些深、浅拷贝那些奇葩的事情。 不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃&amp;emsp;步骤：  创建一个不可变类型(NSDictionary)变量Dict1并初始化. 将Dict1变量赋值给(NSMutableDictionar">
+<meta name="twitter:description" content="引言&amp;emsp;在前面两篇，讲到了深（单层深拷贝、完整深拷贝）、浅拷贝的概念、应用、验证，来认识深拷贝、浅拷贝，这篇就具体说一下在开发过程中遇到的一些深、浅拷贝那些奇葩的事情。 不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃&amp;emsp;步骤：  创建一个不可变类型(NSDictionary)变量Dict1并初始化. 将Dict1变量赋值给(NSMutableDictiona">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/7980283-2792aff0dad55736.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
@@ -187,7 +187,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>&emsp;在前面两篇，讲到了深（单层深拷贝、完整深拷贝）、浅拷贝的概念、应用、验证，来认识深拷贝、浅拷贝，这篇就具体说一下在开发过程中遇到的一些深、浅拷贝那些奇葩的事情。</p>
+        <p><meta name="referrer" content="no-referrer"></p>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>&emsp;在前面两篇，讲到了深（单层深拷贝、完整深拷贝）、浅拷贝的概念、应用、验证，来认识深拷贝、浅拷贝，这篇就具体说一下在开发过程中遇到的一些深、浅拷贝那些奇葩的事情。</p>
 <h4 id="不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃"><a href="#不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃" class="headerlink" title="不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃"></a>不可变类型变量Copy赋值给可变类型变量，调用可变类型变量的方法崩溃</h4><p>&emsp;步骤：</p>
 <ol>
 <li>创建一个不可变类型(NSDictionary)变量Dict1并初始化.</li>

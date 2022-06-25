@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
   <title>CLAuthorizationStatus详解 | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CLAuthorizationStatus告诉开发者App是否被授权使用定位服务，枚举：[kCLAuthorizationStatusNotDetermined](https://developer.apple.com/documentation/corelocation/clauthorizationstatus/kclauthorizationstatusnotdetermined?lang">
+  <meta name="description" content="CLAuthorizationStatus告诉开发者App是否被授权使用定位服务，枚举：[kCLAuthorizationStatusNotDetermined](https://developer.apple.com/documentation/corelocation/clauthorizationstatus/kclauthorizationstatusnotdetermined?l">
 <meta name="keywords" content="CLAuthorizationStatus">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CLAuthorizationStatus详解">
 <meta property="og:url" content="https://www.struggle3g.com/2018/01/17/CLAuthorizationStatus详解/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="CLAuthorizationStatus告诉开发者App是否被授权使用定位服务，枚举：[kCLAuthorizationStatusNotDetermined](https://developer.apple.com/documentation/corelocation/clauthorizationstatus/kclauthorizationstatusnotdetermined?lang">
+<meta property="og:description" content="CLAuthorizationStatus告诉开发者App是否被授权使用定位服务，枚举：[kCLAuthorizationStatusNotDetermined](https://developer.apple.com/documentation/corelocation/clauthorizationstatus/kclauthorizationstatusnotdetermined?l">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7980283-899087eb931ad02d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2022-06-21T01:15:41.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:11:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CLAuthorizationStatus详解">
-<meta name="twitter:description" content="CLAuthorizationStatus告诉开发者App是否被授权使用定位服务，枚举：[kCLAuthorizationStatusNotDetermined](https://developer.apple.com/documentation/corelocation/clauthorizationstatus/kclauthorizationstatusnotdetermined?lang">
+<meta name="twitter:description" content="CLAuthorizationStatus告诉开发者App是否被授权使用定位服务，枚举：[kCLAuthorizationStatusNotDetermined](https://developer.apple.com/documentation/corelocation/clauthorizationstatus/kclauthorizationstatusnotdetermined?l">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/7980283-899087eb931ad02d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
@@ -187,7 +187,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://upload-images.jianshu.io/upload_images/7980283-899087eb931ad02d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+        <meta name="referrer" content="no-referrer">
+
+
+<p><img src="http://upload-images.jianshu.io/upload_images/7980283-899087eb931ad02d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
 <h1 id="CLAuthorizationStatus"><a href="#CLAuthorizationStatus" class="headerlink" title="CLAuthorizationStatus"></a>CLAuthorizationStatus</h1><h4 id="告诉开发者App是否被授权使用定位服务，枚举："><a href="#告诉开发者App是否被授权使用定位服务，枚举：" class="headerlink" title="告诉开发者App是否被授权使用定位服务，枚举："></a>告诉开发者App是否被授权使用定位服务，枚举：</h4><pre><code>[kCLAuthorizationStatusNotDetermined](https://developer.apple.com/documentation/corelocation/clauthorizationstatus/kclauthorizationstatusnotdetermined?language=objc)  //用户没有选择是否要使用定位服务（弹框没选择，或者根本没有弹框）
 </code></pre><a id="more"></a>
 <pre><code>[kCLAuthorizationStatusRestricted](https://developer.apple.com/documentation/corelocation/clauthorizationstatus/kclauthorizationstatusrestricted?language=objc)          //定位服务授权状态受限制，可能由于活动限制了定位服务，并且用户不能改变当前的权限，这个状态有可能不是用户拒绝的，但是也有可能是用户拒绝的。官网说的，具体没遇到过（遇到过的童鞋请告知谢谢）

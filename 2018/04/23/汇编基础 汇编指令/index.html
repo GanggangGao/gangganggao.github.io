@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
   <title>汇编基础（四）函数&amp;返回值 | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="汇编基础 汇编指令 bl 指令 跳转到标号出执行 b.le  ：判断上面cmp的值是小于等于 执行标号，否则直接往下走 b.ge     大于等于 执行地址  否则往下 b.lt       判断上面camp的值是 小于 执行后面的地址中的方法 否则直接往下走 b.gt     大于 执行地址  否则往下 b.eq    等于 执行地址  否则往下 B.HI     比较结果是无符号大于，执行地址">
+  <meta name="description" content="汇编基础 汇编指令 bl 指令 跳转到标号出执行 b.le  ：判断上面cmp的值是小于等于 执行标号，否则直接往下走 b.ge     大于等于 执行地址  否则往下 b.lt       判断上面camp的值是 小于 执行后面的地址中的方法 否则直接往下走 b.gt     大于 执行地址  否则往下 b.eq    等于 执行地址  否则往下 B.HI     比较结果是无符号大于，执行">
 <meta name="keywords" content="汇编">
 <meta property="og:type" content="article">
 <meta property="og:title" content="汇编基础（四）函数&amp;返回值">
 <meta property="og:url" content="https://www.struggle3g.com/2018/04/23/汇编基础 汇编指令/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="汇编基础 汇编指令 bl 指令 跳转到标号出执行 b.le  ：判断上面cmp的值是小于等于 执行标号，否则直接往下走 b.ge     大于等于 执行地址  否则往下 b.lt       判断上面camp的值是 小于 执行后面的地址中的方法 否则直接往下走 b.gt     大于 执行地址  否则往下 b.eq    等于 执行地址  否则往下 B.HI     比较结果是无符号大于，执行地址">
+<meta property="og:description" content="汇编基础 汇编指令 bl 指令 跳转到标号出执行 b.le  ：判断上面cmp的值是小于等于 执行标号，否则直接往下走 b.ge     大于等于 执行地址  否则往下 b.lt       判断上面camp的值是 小于 执行后面的地址中的方法 否则直接往下走 b.gt     大于 执行地址  否则往下 b.eq    等于 执行地址  否则往下 B.HI     比较结果是无符号大于，执行">
 <meta property="og:locale" content="ch">
-<meta property="og:updated_time" content="2022-06-21T01:31:59.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:04:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编基础（四）函数&amp;返回值">
-<meta name="twitter:description" content="汇编基础 汇编指令 bl 指令 跳转到标号出执行 b.le  ：判断上面cmp的值是小于等于 执行标号，否则直接往下走 b.ge     大于等于 执行地址  否则往下 b.lt       判断上面camp的值是 小于 执行后面的地址中的方法 否则直接往下走 b.gt     大于 执行地址  否则往下 b.eq    等于 执行地址  否则往下 B.HI     比较结果是无符号大于，执行地址">
+<meta name="twitter:description" content="汇编基础 汇编指令 bl 指令 跳转到标号出执行 b.le  ：判断上面cmp的值是小于等于 执行标号，否则直接往下走 b.ge     大于等于 执行地址  否则往下 b.lt       判断上面camp的值是 小于 执行后面的地址中的方法 否则直接往下走 b.gt     大于 执行地址  否则往下 b.eq    等于 执行地址  否则往下 B.HI     比较结果是无符号大于，执行">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
   
@@ -185,7 +185,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="汇编基础-汇编指令"><a href="#汇编基础-汇编指令" class="headerlink" title="汇编基础 汇编指令"></a>汇编基础 汇编指令</h2><ul>
+        <meta name="referrer" content="no-referrer">
+
+<h2 id="汇编基础-汇编指令"><a href="#汇编基础-汇编指令" class="headerlink" title="汇编基础 汇编指令"></a>汇编基础 汇编指令</h2><ul>
 <li><strong>bl</strong> 指令 跳转到标号出执行<ul>
 <li><strong>b.le</strong>  ：判断上面cmp的值是小于等于 执行标号，否则直接往下走</li>
 <li><strong>b.ge</strong>     大于等于 执行地址  否则往下</li>

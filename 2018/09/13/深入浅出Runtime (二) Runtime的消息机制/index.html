@@ -18,7 +18,7 @@
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-8303426b5ebb66ec.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7980283-fefd8aa88daadbae.gif?imageMogr2/auto-orient/strip">
-<meta property="og:updated_time" content="2022-06-21T03:41:26.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:08:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入浅出Runtime (二) Runtime的消息机制">
 <meta name="twitter:description" content="Runtime消息机制消息发送在Object-C中，我们其实可以直接调用C的代码也就是Runtime的C语言代码，需要添加message.h头文件 12#import &amp;lt;objc/runtime.h&amp;gt;#import &amp;lt;objc/message.h&amp;gt; 编写Runtime的时候会遇到没有提示的尴尬，那是因为在Xcode5.0以后的版本，Apple不建议我们写比较底层的代码，S">
@@ -188,7 +188,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-8303426b5ebb66ec.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
+        <p><meta name="referrer" content="no-referrer"><br><img src="https://upload-images.jianshu.io/upload_images/7980283-8303426b5ebb66ec.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
 <h2 id="Runtime消息机制"><a href="#Runtime消息机制" class="headerlink" title="Runtime消息机制"></a>Runtime消息机制</h2><h3 id="消息发送"><a href="#消息发送" class="headerlink" title="消息发送"></a>消息发送</h3><p>在Object-C中，我们其实可以直接调用C的代码也就是Runtime的C语言代码，需要添加<code>message.h</code>头文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;objc/runtime.h&gt;</span><br><span class="line">#import &lt;objc/message.h&gt;</span><br></pre></td></tr></table></figure>
 <p>编写Runtime的时候会遇到没有提示的尴尬，那是因为在Xcode5.0以后的版本，Apple不建议我们写比较底层的代码，So，在target-&gt;info搜索msg将YES改成NO，然后可以尽情的使用Runtime代码</p>

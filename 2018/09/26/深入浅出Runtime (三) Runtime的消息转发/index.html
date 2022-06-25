@@ -18,7 +18,7 @@
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-d98c63337a09808c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-06dc49c206acc445.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2022-06-21T03:44:40.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:08:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入浅出Runtime (三) Runtime的消息转发">
 <meta name="twitter:description" content="引言iOS的消息转发机制，在我们开发中有时候忘记实现某个声明的方法，从而在运行过程中调用该方法出现崩溃， 当然这类问题是可以解决的，在当前对象或者父类对象中添加对象的方法实现，在重新运行，调用该方法就能解决这个问题 又或者在我们运行的时候动态的去添加者中未知方法实现，这就是这篇重点要学习的内容">
@@ -188,7 +188,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>iOS的消息转发机制，在我们开发中有时候忘记实现某个声明的方法，从而在运行过程中调用该方法出现崩溃，</p>
+        <p><meta name="referrer" content="no-referrer"></p>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>iOS的消息转发机制，在我们开发中有时候忘记实现某个声明的方法，从而在运行过程中调用该方法出现崩溃，</p>
 <p>当然这类问题是可以解决的，在当前对象或者父类对象中添加对象的方法实现，在重新运行，调用该方法就能解决这个问题</p>
 <p>又或者<strong>在我们运行的时候动态的去添加者中<code>未知</code>方法实现，这就是这篇重点要学习的内容</strong></p>
 <a id="more"></a>

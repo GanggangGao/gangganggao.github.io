@@ -18,7 +18,7 @@
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-da69a6d0daefb8f6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-6cfa5dccb04997a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500">
-<meta property="og:updated_time" content="2022-06-21T03:34:55.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:16:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IPhone一起玩越狱 -（十四）- DYLD_INSERT_LIBRARIES插入进程分析，不让其插入进程的猜想">
 <meta name="twitter:description" content="引言当检测到某个App运行，并在这个App进程下加载一个动态库，可以调用了dyld中的一个宏，DYLD_INSERT_LIBRARIES 插入一个动态库dyld是一个应用，dyld是怎么做到？有点疑问，我们要去逆向dyld汇编，然后去搞吗？不需要，因为dyld，Apple已经开源了这个项目dyld">
@@ -188,7 +188,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-da69a6d0daefb8f6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
+        <meta name="referrer" content="no-referrer">
+
+<p><img src="https://upload-images.jianshu.io/upload_images/7980283-da69a6d0daefb8f6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
 <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>当检测到某个App运行，并在这个App进程下加载一个动态库，可以调用了dyld中的一个宏，DYLD_INSERT_LIBRARIES 插入一个动态库<br>dyld是一个应用，dyld是怎么做到？<br>有点疑问，我们要去逆向dyld汇编，然后去搞吗？<br>不需要，因为dyld，Apple已经开源了这个项目<a href="https://opensource.apple.com/tarballs/dyld/" target="_blank" rel="noopener">dyld</a><br><a id="more"></a></p>
 <h2 id="分析dyld"><a href="#分析dyld" class="headerlink" title="分析dyld"></a>分析dyld</h2><p>站在巨人的肩膀来分析dyld，大家在看一个开源代码的时候，代码量小还好，如果代码量大从头开始看，起点-&gt;过程-&gt;结果，这么一套下来，我都不敢想象，需要花费多长的时间，而且大部分我们只需要一部份的逻辑，关键代码，就好比我们接受一个旧的项目，需要修改某一处，我们需要做的步骤是定位-&gt;调试-&gt;修改-&gt;结果<br>我想要知道的是<code>DYLD_INSERT_LIBRARIES</code>在dyld中做了什么样的角色，为什么说站在巨人的肩膀，因为你可以借助别人分析的成果，这样可以节省很多不必要的时间。</p>
 <p>在dyld.app中我们找到这句代码<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const char* const *			DYLD_INSERT_LIBRARIES;</span><br><span class="line">// load any inserted libraries   </span><br><span class="line">if ( sEnv.DYLD_INSERT_LIBRARIES != NULL ) &#123;</span><br><span class="line">  for (const char* const* lib = sEnv.DYLD_INSERT_LIBRARIES; *lib != NULL; ++lib) </span><br><span class="line">      loadInsertedDylib(*lib);</span><br><span class="line">&#125;</span><br><span class="line">//如果DYLD_INSERT_LIBRARIES的指针不为空，遍历所有的lib然后去加载</span><br></pre></td></tr></table></figure></p>

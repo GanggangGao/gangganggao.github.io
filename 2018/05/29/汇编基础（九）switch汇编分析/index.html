@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
   <title>汇编基础（九）switch汇编分析 | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#引言最近工作比较忙，没怎么去研究汇编的内容，这么多天，感觉有点生疏，有的时候累死累活很晚才回来，还要在学习别的东西，在写一些总结，力不从心，就算是强迫自己去写去学习，我认为效率也是低下的。这种情况，既影响了第二天的工作，学习的时候也不会太过专注，只为一味的应付了事，学习是一个枯燥、兴趣使向、有目的性的 一些概念上的内容，其实光看光听、光说不练，基本上也就相当于拍脑袋做事情，正儿八经的研究应该是">
+  <meta name="description" content="#引言最近工作比较忙，没怎么去研究汇编的内容，这么多天，感觉有点生疏，有的时候累死累活很晚才回来，还要在学习别的东西，在写一些总结，力不从心，就算是强迫自己去写去学习，我认为效率也是低下的。这种情况，既影响了第二天的工作，学习的时候也不会太过专注，只为一味的应付了事，学习是一个枯燥、兴趣使向、有目的性的 一些概念上的内容，其实光看光听、光说不练，基本上也就相当于拍脑袋做事情，正儿八经的研究应">
 <meta name="keywords" content="汇编">
 <meta property="og:type" content="article">
 <meta property="og:title" content="汇编基础（九）switch汇编分析">
 <meta property="og:url" content="https://www.struggle3g.com/2018/05/29/汇编基础（九）switch汇编分析/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="#引言最近工作比较忙，没怎么去研究汇编的内容，这么多天，感觉有点生疏，有的时候累死累活很晚才回来，还要在学习别的东西，在写一些总结，力不从心，就算是强迫自己去写去学习，我认为效率也是低下的。这种情况，既影响了第二天的工作，学习的时候也不会太过专注，只为一味的应付了事，学习是一个枯燥、兴趣使向、有目的性的 一些概念上的内容，其实光看光听、光说不练，基本上也就相当于拍脑袋做事情，正儿八经的研究应该是">
+<meta property="og:description" content="#引言最近工作比较忙，没怎么去研究汇编的内容，这么多天，感觉有点生疏，有的时候累死累活很晚才回来，还要在学习别的东西，在写一些总结，力不从心，就算是强迫自己去写去学习，我认为效率也是低下的。这种情况，既影响了第二天的工作，学习的时候也不会太过专注，只为一味的应付了事，学习是一个枯燥、兴趣使向、有目的性的 一些概念上的内容，其实光看光听、光说不练，基本上也就相当于拍脑袋做事情，正儿八经的研究应">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-5f8eaddf4bb52e10.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-ec5ba0d7bb354138.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
@@ -23,10 +23,10 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-9f1f76eefa296fcc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-9c25774674cd4f60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-9803f497bb53426c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:updated_time" content="2022-06-21T03:04:18.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:05:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编基础（九）switch汇编分析">
-<meta name="twitter:description" content="#引言最近工作比较忙，没怎么去研究汇编的内容，这么多天，感觉有点生疏，有的时候累死累活很晚才回来，还要在学习别的东西，在写一些总结，力不从心，就算是强迫自己去写去学习，我认为效率也是低下的。这种情况，既影响了第二天的工作，学习的时候也不会太过专注，只为一味的应付了事，学习是一个枯燥、兴趣使向、有目的性的 一些概念上的内容，其实光看光听、光说不练，基本上也就相当于拍脑袋做事情，正儿八经的研究应该是">
+<meta name="twitter:description" content="#引言最近工作比较忙，没怎么去研究汇编的内容，这么多天，感觉有点生疏，有的时候累死累活很晚才回来，还要在学习别的东西，在写一些总结，力不从心，就算是强迫自己去写去学习，我认为效率也是低下的。这种情况，既影响了第二天的工作，学习的时候也不会太过专注，只为一味的应付了事，学习是一个枯燥、兴趣使向、有目的性的 一些概念上的内容，其实光看光听、光说不练，基本上也就相当于拍脑袋做事情，正儿八经的研究应">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7980283-5f8eaddf4bb52e10.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
@@ -193,7 +193,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-5f8eaddf4bb52e10.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
+        <meta name="referrer" content="no-referrer">
+
+<p><img src="https://upload-images.jianshu.io/upload_images/7980283-5f8eaddf4bb52e10.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
 <p>#引言<br>最近工作比较忙，没怎么去研究汇编的内容，这么多天，感觉有点生疏，有的时候累死累活很晚才回来，还要在学习别的东西，在写一些总结，力不从心，就算是强迫自己去写去学习，我认为效率也是低下的。这种情况，既影响了第二天的工作，学习的时候也不会太过专注，只为一味的应付了事，学习是一个枯燥、兴趣使向、有目的性的</p>
 <p>一些概念上的内容，其实光看光听、光说不练，基本上也就相当于拍脑袋做事情，正儿八经的研究应该是：构思-&gt;过程-&gt;验证 往往复复每次都会有新的体会<br><a id="more"></a></p>
 <p>##switch 注意事项<br>1、假设switch语句的分支比较少的时候（例如3，少于4的时候没有意义）没有必要使用此结构，相当于if。<br>2、各个分支常量的差值较大的时候，编译器会在效率还是内存进行取舍，这个时候编译器还是会编译成类似于if，else的结构。<br>3、在分支比较多的时候：在编译的时候会生成一个表（跳转表每个地址四个字节）。</p>

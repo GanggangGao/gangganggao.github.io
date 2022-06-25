@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Struggle3g‘s Blog">
 <meta property="og:description" content="在写程序的过程当中，创建一个单例，然后static volatile 实例的时候volatile这个关键字的含义有点不知其含义。 总的来说告诉编译器这个volatile修饰的变量是易变的，当需要读取这个变量的值时，应该从内存中读取，而不是从寄存器中读取。">
 <meta property="og:locale" content="ch">
-<meta property="og:updated_time" content="2022-06-21T01:09:54.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:18:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="volatitle关键字">
 <meta name="twitter:description" content="在写程序的过程当中，创建一个单例，然后static volatile 实例的时候volatile这个关键字的含义有点不知其含义。 总的来说告诉编译器这个volatile修饰的变量是易变的，当需要读取这个变量的值时，应该从内存中读取，而不是从寄存器中读取。">
@@ -185,7 +185,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在写程序的过程当中，创建一个单例，然后static volatile 实例的时候volatile这个关键字的含义有点不知其含义。</p>
+        <meta name="referrer" content="no-referrer">
+
+<p>在写程序的过程当中，创建一个单例，然后static volatile 实例的时候volatile这个关键字的含义有点不知其含义。</p>
 <p>总的来说告诉编译器这个volatile修饰的变量是易变的，当需要读取这个变量的值时，应该从内存中读取，而不是从寄存器中读取。<br><a id="more"></a><br>主要作用：</p>
 <p>会强制变量修改的值立即存储到内存当中；两个线程A，B同时修改volatile变量的时候，两个线程都会首先从内存中读取值到寄存器当中，B修改变量时，会使A的寄存器中的值变无效；当A去修改时发现自己缓存的内容无效，会等待主内存的值更新以后再去读取新的值到寄存器当中重新计算。</p>
 <p>非volatile 例子： int count = 1    count ++</p>

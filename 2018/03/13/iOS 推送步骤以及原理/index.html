@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
   <title>iOS 推送步骤以及原理 | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="iOS推送步骤：1.应用程序向系统APNS注册消息推送。2.iOS系统从APNS Server获取device token,应用程序接收device token.3.应用程序将device token 发送给PUSH服务器，服务器进行缓存处理。4.服务器在触发推送事件以后向APNS服务器发送推送消息，附带的有Device Token、 message等等一些附加值。5.APNS服务将消息下发到ip">
+  <meta name="description" content="iOS推送步骤：1.应用程序向系统APNS注册消息推送。2.iOS系统从APNS Server获取device token,应用程序接收device token.3.应用程序将device token 发送给PUSH服务器，服务器进行缓存处理。4.服务器在触发推送事件以后向APNS服务器发送推送消息，附带的有Device Token、 message等等一些附加值。5.APNS服务将消息下发到i">
 <meta name="keywords" content="推送">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS 推送步骤以及原理">
 <meta property="og:url" content="https://www.struggle3g.com/2018/03/13/iOS 推送步骤以及原理/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="iOS推送步骤：1.应用程序向系统APNS注册消息推送。2.iOS系统从APNS Server获取device token,应用程序接收device token.3.应用程序将device token 发送给PUSH服务器，服务器进行缓存处理。4.服务器在触发推送事件以后向APNS服务器发送推送消息，附带的有Device Token、 message等等一些附加值。5.APNS服务将消息下发到ip">
+<meta property="og:description" content="iOS推送步骤：1.应用程序向系统APNS注册消息推送。2.iOS系统从APNS Server获取device token,应用程序接收device token.3.应用程序将device token 发送给PUSH服务器，服务器进行缓存处理。4.服务器在触发推送事件以后向APNS服务器发送推送消息，附带的有Device Token、 message等等一些附加值。5.APNS服务将消息下发到i">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-1cbc9660f8fcdfd8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2022-06-21T01:23:32.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:13:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 推送步骤以及原理">
-<meta name="twitter:description" content="iOS推送步骤：1.应用程序向系统APNS注册消息推送。2.iOS系统从APNS Server获取device token,应用程序接收device token.3.应用程序将device token 发送给PUSH服务器，服务器进行缓存处理。4.服务器在触发推送事件以后向APNS服务器发送推送消息，附带的有Device Token、 message等等一些附加值。5.APNS服务将消息下发到ip">
+<meta name="twitter:description" content="iOS推送步骤：1.应用程序向系统APNS注册消息推送。2.iOS系统从APNS Server获取device token,应用程序接收device token.3.应用程序将device token 发送给PUSH服务器，服务器进行缓存处理。4.服务器在触发推送事件以后向APNS服务器发送推送消息，附带的有Device Token、 message等等一些附加值。5.APNS服务将消息下发到i">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7980283-1cbc9660f8fcdfd8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
@@ -187,7 +187,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="iOS推送"><a href="#iOS推送" class="headerlink" title="iOS推送"></a>iOS推送</h1><h2 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h2><p>1.应用程序向系统APNS注册消息推送。<br>2.iOS系统从APNS Server获取device token,应用程序接收device token.<br>3.应用程序将device token 发送给PUSH服务器，服务器进行缓存处理。<br>4.服务器在触发推送事件以后向APNS服务器发送推送消息，附带的有Device Token、 message等等一些附加值。<br>5.APNS服务将消息下发到iphone。<br><a id="more"></a></p>
+        <p><meta name="referrer" content="no-referrer"></p>
+<h1 id="iOS推送"><a href="#iOS推送" class="headerlink" title="iOS推送"></a>iOS推送</h1><h2 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h2><p>1.应用程序向系统APNS注册消息推送。<br>2.iOS系统从APNS Server获取device token,应用程序接收device token.<br>3.应用程序将device token 发送给PUSH服务器，服务器进行缓存处理。<br>4.服务器在触发推送事件以后向APNS服务器发送推送消息，附带的有Device Token、 message等等一些附加值。<br>5.APNS服务将消息下发到iphone。<br><a id="more"></a></p>
 <h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p>Iphone跟APNS，还是provider（自的服务器）和APNS，都需要通过证书进行连接。</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/7980283-1cbc9660f8fcdfd8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Apple推送.png"></p>
 

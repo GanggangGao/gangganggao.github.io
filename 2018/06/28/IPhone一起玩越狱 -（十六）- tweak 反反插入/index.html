@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
   <title>IPhone一起玩越狱 -（十六）- tweak 反反插入 | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="引言通过tweak的原理的研究的出来的结论是：  tweak是根据dyld中的DYLD_INSTER_LIBRARIES这个宏环境变量临时插入自己的动态库 在App的MachO文件中存在segmentname、sectionname 分别为RESTRICT、 restrict就能够使dyld中的DYLD_INSTER_LIBRARIES这个宏插入动态库失败，也就是tweak失败 在IPhone一起">
+  <meta name="description" content="引言通过tweak的原理的研究的出来的结论是：  tweak是根据dyld中的DYLD_INSTER_LIBRARIES这个宏环境变量临时插入自己的动态库 在App的MachO文件中存在segmentname、sectionname 分别为RESTRICT、 restrict就能够使dyld中的DYLD_INSTER_LIBRARIES这个宏插入动态库失败，也就是tweak失败 在IPhone一">
 <meta name="keywords" content="越狱">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IPhone一起玩越狱 -（十六）- tweak 反反插入">
 <meta property="og:url" content="https://www.struggle3g.com/2018/06/28/IPhone一起玩越狱 -（十六）- tweak 反反插入/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="引言通过tweak的原理的研究的出来的结论是：  tweak是根据dyld中的DYLD_INSTER_LIBRARIES这个宏环境变量临时插入自己的动态库 在App的MachO文件中存在segmentname、sectionname 分别为RESTRICT、 restrict就能够使dyld中的DYLD_INSTER_LIBRARIES这个宏插入动态库失败，也就是tweak失败 在IPhone一起">
+<meta property="og:description" content="引言通过tweak的原理的研究的出来的结论是：  tweak是根据dyld中的DYLD_INSTER_LIBRARIES这个宏环境变量临时插入自己的动态库 在App的MachO文件中存在segmentname、sectionname 分别为RESTRICT、 restrict就能够使dyld中的DYLD_INSTER_LIBRARIES这个宏插入动态库失败，也就是tweak失败 在IPhone一">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-96aea8620c4f7a58.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:updated_time" content="2022-06-21T03:36:09.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:16:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IPhone一起玩越狱 -（十六）- tweak 反反插入">
-<meta name="twitter:description" content="引言通过tweak的原理的研究的出来的结论是：  tweak是根据dyld中的DYLD_INSTER_LIBRARIES这个宏环境变量临时插入自己的动态库 在App的MachO文件中存在segmentname、sectionname 分别为RESTRICT、 restrict就能够使dyld中的DYLD_INSTER_LIBRARIES这个宏插入动态库失败，也就是tweak失败 在IPhone一起">
+<meta name="twitter:description" content="引言通过tweak的原理的研究的出来的结论是：  tweak是根据dyld中的DYLD_INSTER_LIBRARIES这个宏环境变量临时插入自己的动态库 在App的MachO文件中存在segmentname、sectionname 分别为RESTRICT、 restrict就能够使dyld中的DYLD_INSTER_LIBRARIES这个宏插入动态库失败，也就是tweak失败 在IPhone一">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7980283-96aea8620c4f7a58.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
@@ -187,7 +187,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>通过<a href="https://www.jianshu.com/p/cefd2f8435ab" target="_blank" rel="noopener">tweak的原理</a>的研究的出来的结论是：</p>
+        <p><meta name="referrer" content="no-referrer"></p>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>通过<a href="https://www.jianshu.com/p/cefd2f8435ab" target="_blank" rel="noopener">tweak的原理</a>的研究的出来的结论是：</p>
 <ul>
 <li>tweak是根据dyld中的<code>DYLD_INSTER_LIBRARIES</code>这个宏环境变量临时插入自己的动态库</li>
 <li>在App的MachO文件中存在segmentname、sectionname 分别为<strong>RESTRICT、 </strong>restrict就能够使dyld中的DYLD_INSTER_LIBRARIES这个宏插入动态库失败，也就是tweak失败</li>

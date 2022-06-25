@@ -8,21 +8,21 @@
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
   <title>玩溜Cocos Creator入门学习（六）UI系统介绍UI组件（ProgressBar） | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="引言在开发中经常会用到各种各样的进度条，比如说某个操作的进度、加载的进度等等，那么在Cocos Creator中是怎么实现进度条的？ ProgressBar 组件ProgressBar（进度条）经常被用于在游戏中显示某个操作的进度，在节点上添加 ProgressBar 组件，然后给该组件关联一个 Bar Sprite 就可以在场景中控制 Bar Sprite 来显示进度了。  点击 属性检查器 下">
+  <meta name="description" content="引言在开发中经常会用到各种各样的进度条，比如说某个操作的进度、加载的进度等等，那么在Cocos Creator中是怎么实现进度条的？ ProgressBar 组件ProgressBar（进度条）经常被用于在游戏中显示某个操作的进度，在节点上添加 ProgressBar 组件，然后给该组件关联一个 Bar Sprite 就可以在场景中控制 Bar Sprite 来显示进度了。  点击 属性检查器">
 <meta name="keywords" content="Cocos Creator,游戏,Cocos Creator游戏UI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="玩溜Cocos Creator入门学习（六）UI系统介绍UI组件（ProgressBar）">
 <meta property="og:url" content="https://www.struggle3g.com/2018/10/15/玩溜Cocos Creator入门学习（六）UI系统介绍UI组件（ProgressBar）/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="引言在开发中经常会用到各种各样的进度条，比如说某个操作的进度、加载的进度等等，那么在Cocos Creator中是怎么实现进度条的？ ProgressBar 组件ProgressBar（进度条）经常被用于在游戏中显示某个操作的进度，在节点上添加 ProgressBar 组件，然后给该组件关联一个 Bar Sprite 就可以在场景中控制 Bar Sprite 来显示进度了。  点击 属性检查器 下">
+<meta property="og:description" content="引言在开发中经常会用到各种各样的进度条，比如说某个操作的进度、加载的进度等等，那么在Cocos Creator中是怎么实现进度条的？ ProgressBar 组件ProgressBar（进度条）经常被用于在游戏中显示某个操作的进度，在节点上添加 ProgressBar 组件，然后给该组件关联一个 Bar Sprite 就可以在场景中控制 Bar Sprite 来显示进度了。  点击 属性检查器">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-a0b5c932e7383223.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-075635dff50c22c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-e26e2f05683a9f35.gif?imageMogr2/auto-orient/strip">
-<meta property="og:updated_time" content="2018-10-15T11:43:03.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:09:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="玩溜Cocos Creator入门学习（六）UI系统介绍UI组件（ProgressBar）">
-<meta name="twitter:description" content="引言在开发中经常会用到各种各样的进度条，比如说某个操作的进度、加载的进度等等，那么在Cocos Creator中是怎么实现进度条的？ ProgressBar 组件ProgressBar（进度条）经常被用于在游戏中显示某个操作的进度，在节点上添加 ProgressBar 组件，然后给该组件关联一个 Bar Sprite 就可以在场景中控制 Bar Sprite 来显示进度了。  点击 属性检查器 下">
+<meta name="twitter:description" content="引言在开发中经常会用到各种各样的进度条，比如说某个操作的进度、加载的进度等等，那么在Cocos Creator中是怎么实现进度条的？ ProgressBar 组件ProgressBar（进度条）经常被用于在游戏中显示某个操作的进度，在节点上添加 ProgressBar 组件，然后给该组件关联一个 Bar Sprite 就可以在场景中控制 Bar Sprite 来显示进度了。  点击 属性检查器">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7980283-a0b5c932e7383223.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
@@ -189,7 +189,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>在开发中经常会用到各种各样的进度条，比如说某个操作的进度、加载的进度等等，那么在Cocos Creator中是怎么实现进度条的？</p>
+        <meta name="referrer" content="no-referrer">
+
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>在开发中经常会用到各种各样的进度条，比如说某个操作的进度、加载的进度等等，那么在Cocos Creator中是怎么实现进度条的？</p>
 <h2 id="ProgressBar-组件"><a href="#ProgressBar-组件" class="headerlink" title="ProgressBar 组件"></a>ProgressBar 组件</h2><p>ProgressBar（进度条）经常被用于在游戏中显示某个操作的进度，在节点上添加 ProgressBar 组件，然后给该组件关联一个 Bar Sprite 就可以在场景中控制 Bar Sprite 来显示进度了。</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/7980283-a0b5c932e7383223.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>
 <p>点击 <strong>属性检查器</strong> 下面的添加组件按钮，然后从添加 UI 组件中选择<code>ProgressBar</code>，即可添加 <code>ProgressBar</code> 组件到节点上。</p>

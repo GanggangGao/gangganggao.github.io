@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
   <title>debugserver error- failed to attach to process named- &#34;&#34; unable to start the exception thread  Exiting. | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="错误场景通过USB访问越狱手机，调试debugserver的时候出现了123456xxx:/Developer/usr/bin root# ./debugserver *:3458 -a xxxdebugserver-@(#)PROGRAM:debugserver  PROJECT:debugserver-360.0.26.3 for arm64.Attaching to process xxxx">
+  <meta name="description" content="错误场景通过USB访问越狱手机，调试debugserver的时候出现了123456xxx:/Developer/usr/bin root# ./debugserver *:3458 -a xxxdebugserver-@(#)PROGRAM:debugserver  PROJECT:debugserver-360.0.26.3 for arm64.Attaching to process xxx">
 <meta name="keywords" content="failed">
 <meta property="og:type" content="article">
 <meta property="og:title" content="debugserver error- failed to attach to process named- &quot;&quot; unable to start the exception thread  Exiting.">
 <meta property="og:url" content="https://www.struggle3g.com/2018/07/05/debugserver error- failed to attach to process named- "" unable to start the exception thread  Exiting./index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="错误场景通过USB访问越狱手机，调试debugserver的时候出现了123456xxx:/Developer/usr/bin root# ./debugserver *:3458 -a xxxdebugserver-@(#)PROGRAM:debugserver  PROJECT:debugserver-360.0.26.3 for arm64.Attaching to process xxxx">
+<meta property="og:description" content="错误场景通过USB访问越狱手机，调试debugserver的时候出现了123456xxx:/Developer/usr/bin root# ./debugserver *:3458 -a xxxdebugserver-@(#)PROGRAM:debugserver  PROJECT:debugserver-360.0.26.3 for arm64.Attaching to process xxx">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-b08b9d934f929b3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:updated_time" content="2022-06-21T03:37:59.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:11:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="debugserver error- failed to attach to process named- &quot;&quot; unable to start the exception thread  Exiting.">
-<meta name="twitter:description" content="错误场景通过USB访问越狱手机，调试debugserver的时候出现了123456xxx:/Developer/usr/bin root# ./debugserver *:3458 -a xxxdebugserver-@(#)PROGRAM:debugserver  PROJECT:debugserver-360.0.26.3 for arm64.Attaching to process xxxx">
+<meta name="twitter:description" content="错误场景通过USB访问越狱手机，调试debugserver的时候出现了123456xxx:/Developer/usr/bin root# ./debugserver *:3458 -a xxxdebugserver-@(#)PROGRAM:debugserver  PROJECT:debugserver-360.0.26.3 for arm64.Attaching to process xxx">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7980283-b08b9d934f929b3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
@@ -187,7 +187,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="错误场景"><a href="#错误场景" class="headerlink" title="错误场景"></a>错误场景</h1><p>通过USB访问越狱手机，调试debugserver的时候出现了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">xxx:/Developer/usr/bin root# ./debugserver *:3458 -a xxx</span><br><span class="line">debugserver-@(#)PROGRAM:debugserver  PROJECT:debugserver-360.0.26.3</span><br><span class="line"> for arm64.</span><br><span class="line">Attaching to process xxxx...</span><br><span class="line">error: failed to attach to process named: &quot;&quot; unable to start the exception thread</span><br><span class="line">Exiting.</span><br></pre></td></tr></table></figure></p>
+        <p><meta name="referrer" content="no-referrer"></p>
+<h1 id="错误场景"><a href="#错误场景" class="headerlink" title="错误场景"></a>错误场景</h1><p>通过USB访问越狱手机，调试debugserver的时候出现了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">xxx:/Developer/usr/bin root# ./debugserver *:3458 -a xxx</span><br><span class="line">debugserver-@(#)PROGRAM:debugserver  PROJECT:debugserver-360.0.26.3</span><br><span class="line"> for arm64.</span><br><span class="line">Attaching to process xxxx...</span><br><span class="line">error: failed to attach to process named: &quot;&quot; unable to start the exception thread</span><br><span class="line">Exiting.</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <p>由于在/Developer/usr/bin中的debugserver只能调试自己xcode安装的app所以你需要将debugserver修改一下。</p>
 <h2 id="具体如下"><a href="#具体如下" class="headerlink" title="具体如下"></a>具体如下</h2><p>应该创建一个<br><img src="https://upload-images.jianshu.io/upload_images/7980283-b08b9d934f929b3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""><br>使用命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">codesign -s - --entitlements youname.plist -f debug-server</span><br><span class="line">debugserver: replacing existing signature</span><br></pre></td></tr></table></figure></p>

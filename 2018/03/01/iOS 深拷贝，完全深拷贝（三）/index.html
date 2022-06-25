@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Struggle3g‘s Blog">
 <meta property="og:description" content="iOS 深、浅拷贝NSArray、NSMutableArray（二）挖坑的内容 上两篇，主要是讲了深、浅拷贝实现，以及理解。单层深拷贝、浅拷贝，最后挖坑没有介绍到完全深拷贝的实现。">
 <meta property="og:locale" content="ch">
-<meta property="og:updated_time" content="2022-06-21T01:21:53.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:12:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 深拷贝，完全深拷贝（三）">
 <meta name="twitter:description" content="iOS 深、浅拷贝NSArray、NSMutableArray（二）挖坑的内容 上两篇，主要是讲了深、浅拷贝实现，以及理解。单层深拷贝、浅拷贝，最后挖坑没有介绍到完全深拷贝的实现。">
@@ -185,7 +185,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://www.jianshu.com/p/46dc4d6c2ae6" target="_blank" rel="noopener">iOS 深、浅拷贝NSArray、NSMutableArray（二）</a>挖坑的内容</p>
+        <p><meta name="referrer" content="no-referrer"><br><a href="https://www.jianshu.com/p/46dc4d6c2ae6" target="_blank" rel="noopener">iOS 深、浅拷贝NSArray、NSMutableArray（二）</a>挖坑的内容</p>
 <p>上两篇，主要是讲了深、浅拷贝实现，以及理解。单层深拷贝、浅拷贝，最后挖坑没有介绍到完全深拷贝的实现。<br><a id="more"></a></p>
 <h1 id="熟悉下概念"><a href="#熟悉下概念" class="headerlink" title="熟悉下概念"></a>熟悉下概念</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">浅拷贝(shallow copy)：在浅复制操作时，对于被复制对象的每一层都是指针复制。 </span><br><span class="line">深拷贝(one-level-deep copy)：在深复制操作时，对于被复制对象，至少有一层是深复制。 </span><br><span class="line">完全拷贝(real-deep copy)：在完全复制操作时，对于被复制对象的每一层都是对象复制。</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">No1：可变对象的copy和mutableCopy方法都是深拷贝（区别完全深拷贝与单层深拷贝） 。</span><br><span class="line">No2：不可变对象的copy方法是浅拷贝，mutableCopy方法是深拷贝。//不安全</span><br><span class="line">No3：copy方法返回的对象都是不可变对象。</span><br></pre></td></tr></table></figure>

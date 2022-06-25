@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
   <title>可变与不可变 | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#可变与不可变在iOS项目当中经常会用到NS开头的类，比如NSString、NSDictionary、NSArray不可变，可变NSMutableString、NSMutableDictionary、NSMutableArray等等。 每次使用的时候都会报点疑问?😇为啥会分这种情况，这样的变化有什么好处，对于Coding来说会有什么样的帮助。 创建一个对象，它占用的内存空间的大小是我们决定的，而">
+  <meta name="description" content="#可变与不可变在iOS项目当中经常会用到NS开头的类，比如NSString、NSDictionary、NSArray不可变，可变NSMutableString、NSMutableDictionary、NSMutableArray等等。 每次使用的时候都会报点疑问?😇为啥会分这种情况，这样的变化有什么好处，对于Coding来说会有什么样的帮助。 创建一个对象，它占用的内存空间的大小是我们决定的，">
 <meta name="keywords" content="可变,不可变">
 <meta property="og:type" content="article">
 <meta property="og:title" content="可变与不可变">
 <meta property="og:url" content="https://www.struggle3g.com/2018/04/24/可变与不可变/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="#可变与不可变在iOS项目当中经常会用到NS开头的类，比如NSString、NSDictionary、NSArray不可变，可变NSMutableString、NSMutableDictionary、NSMutableArray等等。 每次使用的时候都会报点疑问?😇为啥会分这种情况，这样的变化有什么好处，对于Coding来说会有什么样的帮助。 创建一个对象，它占用的内存空间的大小是我们决定的，而">
+<meta property="og:description" content="#可变与不可变在iOS项目当中经常会用到NS开头的类，比如NSString、NSDictionary、NSArray不可变，可变NSMutableString、NSMutableDictionary、NSMutableArray等等。 每次使用的时候都会报点疑问?😇为啥会分这种情况，这样的变化有什么好处，对于Coding来说会有什么样的帮助。 创建一个对象，它占用的内存空间的大小是我们决定的，">
 <meta property="og:locale" content="ch">
-<meta property="og:updated_time" content="2022-06-21T01:34:04.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:07:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="可变与不可变">
-<meta name="twitter:description" content="#可变与不可变在iOS项目当中经常会用到NS开头的类，比如NSString、NSDictionary、NSArray不可变，可变NSMutableString、NSMutableDictionary、NSMutableArray等等。 每次使用的时候都会报点疑问?😇为啥会分这种情况，这样的变化有什么好处，对于Coding来说会有什么样的帮助。 创建一个对象，它占用的内存空间的大小是我们决定的，而">
+<meta name="twitter:description" content="#可变与不可变在iOS项目当中经常会用到NS开头的类，比如NSString、NSDictionary、NSArray不可变，可变NSMutableString、NSMutableDictionary、NSMutableArray等等。 每次使用的时候都会报点疑问?😇为啥会分这种情况，这样的变化有什么好处，对于Coding来说会有什么样的帮助。 创建一个对象，它占用的内存空间的大小是我们决定的，">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
   
@@ -185,7 +185,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#可变与不可变<br>在iOS项目当中经常会用到NS开头的类，比如NSString、NSDictionary、NSArray不可变，可变NSMutableString、NSMutableDictionary、NSMutableArray等等。</p>
+        <p><meta name="referrer" content="no-referrer"></p>
+<p>#可变与不可变<br>在iOS项目当中经常会用到NS开头的类，比如NSString、NSDictionary、NSArray不可变，可变NSMutableString、NSMutableDictionary、NSMutableArray等等。</p>
 <p>每次使用的时候都会报点疑问?😇为啥会分这种情况，这样的变化有什么好处，对于Coding来说会有什么样的帮助。</p>
 <p>创建一个对象，它占用的内存空间的大小是我们决定的，而这块内存空间的大小实际上又是alloc这个方法决定的。但是alloc声明一个新的内存空间，初始化大小；在初始化内存空间以后内存的大小、以及值不能随便改变。</p>
 <p>如果我们需要在其他时候去修改这个对象的内存地址大小的时候怎么办呐</p>

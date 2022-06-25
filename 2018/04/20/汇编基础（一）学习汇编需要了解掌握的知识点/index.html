@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-6c21af4399f94e0c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-79fad65dbdcf7524.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-ce6e8c29f7678ff0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2022-06-21T01:28:27.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:06:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编基础（一）学习汇编需要了解掌握的知识点">
 <meta name="twitter:description" content="引言什么是汇编语言？答：汇编语言是计算机语言，通俗来讲就是人类与计算机(CPU)交流的桥梁，计算机不认识人类的语言，想要让计算机去完成人们的工作，就需要俺们将这些工作翻译成计算机语言，属于低级计算机语言。APP与汇编语言的关系一个APP安装到操作系统上面的可执行的文件本质上来讲就是二进制文件，操作系统本质上执行的指令也是二进制，是由CPU执行的；">
@@ -197,7 +197,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p><strong>什么是汇编语言？</strong><br>答：汇编语言是计算机语言，通俗来讲就是人类与计算机(CPU)交流的桥梁，计算机不认识人类的语言，想要让计算机去完成人们的工作，就需要俺们将这些工作翻译成计算机语言，属于低级计算机语言。<br><strong>APP与汇编语言的关系</strong><br>一个APP安装到操作系统上面的可执行的文件本质上来讲就是二进制文件，操作系统本质上执行的指令也是二进制，是由CPU执行的；<br><a id="more"></a></p>
+        <p><meta name="referrer" content="no-referrer"></p>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p><strong>什么是汇编语言？</strong><br>答：汇编语言是计算机语言，通俗来讲就是人类与计算机(CPU)交流的桥梁，计算机不认识人类的语言，想要让计算机去完成人们的工作，就需要俺们将这些工作翻译成计算机语言，属于低级计算机语言。<br><strong>APP与汇编语言的关系</strong><br>一个APP安装到操作系统上面的可执行的文件本质上来讲就是二进制文件，操作系统本质上执行的指令也是二进制，是由CPU执行的；<br><a id="more"></a></p>
 <h2 id="汇编语言的发展"><a href="#汇编语言的发展" class="headerlink" title="汇编语言的发展"></a>汇编语言的发展</h2><h4 id="机器语言-Machine-language"><a href="#机器语言-Machine-language" class="headerlink" title="机器语言(Machine language)"></a>机器语言(Machine language)</h4><p>由<code>0</code>和<code>1</code>组成的机器指令<br>如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 加：0100 0000</span><br><span class="line">* 减：0100 1000</span><br><span class="line">* 乘：1111 0111 1110 0000 </span><br><span class="line">* 除：1111 0111 1111 0000</span><br></pre></td></tr></table></figure></p>
 <h4 id="汇编语言-assembly-language"><a href="#汇编语言-assembly-language" class="headerlink" title="汇编语言(assembly language)"></a>汇编语言(assembly language)</h4><p>使用助记符代替机器语言<br>如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- 加：INC EAX		通过编译器 0100 0000</span><br><span class="line">- 减：DEC EAX		通过编译器 0100 1000</span><br><span class="line">- 乘：MUL EAX    	通过编译器 1111 0111 1110 0000</span><br><span class="line">- 除：DIV EAX		通过编译器 1111 0111 1111 0000</span><br></pre></td></tr></table></figure></p>
 <h4 id="高级语言-High-level-programming-language"><a href="#高级语言-High-level-programming-language" class="headerlink" title="高级语言(High-level programming language)"></a>高级语言(High-level programming language)</h4><p><strong>注意：<code>上述指令，CPU读的懂</code></strong></p>

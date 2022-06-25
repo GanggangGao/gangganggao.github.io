@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
   <title>野指针 | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Thread 1: EXC_BAD_ACCESS (code=EXC_I386_GPFLT)一、当一个对象被释放，但是指针还存在时，调用该对象的时候就会出现这种问题，俗称野指针，好比是这个对象已经不属于你了你调用肯定有问题。 二、出现这种情况的闪退，断点直接断道main函数中通常是由于调用了一个已经被释放掉的、不存在的僵尸对象， 野指针通常是指我们创建一个指针变量，当然这个指针变量指向的是某一块内">
+  <meta name="description" content="Thread 1: EXC_BAD_ACCESS (code=EXC_I386_GPFLT)一、当一个对象被释放，但是指针还存在时，调用该对象的时候就会出现这种问题，俗称野指针，好比是这个对象已经不属于你了你调用肯定有问题。 二、出现这种情况的闪退，断点直接断道main函数中通常是由于调用了一个已经被释放掉的、不存在的僵尸对象， 野指针通常是指我们创建一个指针变量，当然这个指针变量指向的是某一">
 <meta name="keywords" content="bug">
 <meta property="og:type" content="article">
 <meta property="og:title" content="野指针">
 <meta property="og:url" content="https://www.struggle3g.com/2019/01/25/野指针问题/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="Thread 1: EXC_BAD_ACCESS (code=EXC_I386_GPFLT)一、当一个对象被释放，但是指针还存在时，调用该对象的时候就会出现这种问题，俗称野指针，好比是这个对象已经不属于你了你调用肯定有问题。 二、出现这种情况的闪退，断点直接断道main函数中通常是由于调用了一个已经被释放掉的、不存在的僵尸对象， 野指针通常是指我们创建一个指针变量，当然这个指针变量指向的是某一块内">
+<meta property="og:description" content="Thread 1: EXC_BAD_ACCESS (code=EXC_I386_GPFLT)一、当一个对象被释放，但是指针还存在时，调用该对象的时候就会出现这种问题，俗称野指针，好比是这个对象已经不属于你了你调用肯定有问题。 二、出现这种情况的闪退，断点直接断道main函数中通常是由于调用了一个已经被释放掉的、不存在的僵尸对象， 野指针通常是指我们创建一个指针变量，当然这个指针变量指向的是某一">
 <meta property="og:locale" content="ch">
-<meta property="og:updated_time" content="2022-06-21T04:39:20.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:10:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="野指针">
-<meta name="twitter:description" content="Thread 1: EXC_BAD_ACCESS (code=EXC_I386_GPFLT)一、当一个对象被释放，但是指针还存在时，调用该对象的时候就会出现这种问题，俗称野指针，好比是这个对象已经不属于你了你调用肯定有问题。 二、出现这种情况的闪退，断点直接断道main函数中通常是由于调用了一个已经被释放掉的、不存在的僵尸对象， 野指针通常是指我们创建一个指针变量，当然这个指针变量指向的是某一块内">
+<meta name="twitter:description" content="Thread 1: EXC_BAD_ACCESS (code=EXC_I386_GPFLT)一、当一个对象被释放，但是指针还存在时，调用该对象的时候就会出现这种问题，俗称野指针，好比是这个对象已经不属于你了你调用肯定有问题。 二、出现这种情况的闪退，断点直接断道main函数中通常是由于调用了一个已经被释放掉的、不存在的僵尸对象， 野指针通常是指我们创建一个指针变量，当然这个指针变量指向的是某一">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
   
@@ -185,7 +185,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Thread-1-EXC-BAD-ACCESS-code-EXC-I386-GPFLT"><a href="#Thread-1-EXC-BAD-ACCESS-code-EXC-I386-GPFLT" class="headerlink" title="Thread 1: EXC_BAD_ACCESS (code=EXC_I386_GPFLT)"></a>Thread 1: EXC_BAD_ACCESS (code=EXC_I386_GPFLT)</h2><p>一、当一个对象被释放，但是指针还存在时，调用该对象的时候就会出现这种问题，俗称野指针，好比是这个对象已经不属于你了你调用肯定有问题。</p>
+        <meta name="referrer" content="no-referrer">
+
+<h2 id="Thread-1-EXC-BAD-ACCESS-code-EXC-I386-GPFLT"><a href="#Thread-1-EXC-BAD-ACCESS-code-EXC-I386-GPFLT" class="headerlink" title="Thread 1: EXC_BAD_ACCESS (code=EXC_I386_GPFLT)"></a>Thread 1: EXC_BAD_ACCESS (code=EXC_I386_GPFLT)</h2><p>一、当一个对象被释放，但是指针还存在时，调用该对象的时候就会出现这种问题，俗称野指针，好比是这个对象已经不属于你了你调用肯定有问题。</p>
 <p>二、出现这种情况的闪退，断点直接断道main函数中通常是由于调用了一个已经被释放掉的、不存在的僵尸对象，</p>
 <p><strong>野指针通常是指我们创建一个指针变量，当然这个指针变量指向的是某一块内存空间（对象），当这个内存空间（对象）被释放掉以后，而指针并没有置为nil，那么这个指针变量就是野指针</strong></p>
 <p><strong>僵尸对象，就是已经释放掉了内存空间的那个对象。这个对象就是僵尸对象。这块空间还是存在的在未分配给其他对象之前，这块地址中的值还存在</strong></p>

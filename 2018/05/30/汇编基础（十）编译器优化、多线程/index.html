@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-43a95a3dd3d3ed5d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-94e8303e1940b6b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-28bdc3cc4fe49630.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:updated_time" content="2022-06-21T03:05:55.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:06:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编基础（十）编译器优化、多线程">
 <meta name="twitter:description" content="编译器的优化有的时候你不得不佩服，开发编译器的这堆人，很牛逼，比如说平时写的代码，肯定里面有一堆没有使用过的代码，比方说定义一个局部变量，整个类里面并没有调用它，那么编译器在编译的时候会将没用过的代码也编译到汇编当中吗">
@@ -192,7 +192,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="编译器的优化"><a href="#编译器的优化" class="headerlink" title="编译器的优化"></a>编译器的优化</h1><p>有的时候你不得不佩服，开发编译器的这堆人，很牛逼，比如说平时写的代码，肯定里面有一堆没有使用过的代码，比方说定义一个局部变量，整个类里面并没有调用它，那么编译器在编译的时候会将没用过的代码也编译到汇编当中吗<br><a id="more"></a></p>
+        <p><meta name="referrer" content="no-referrer"></p>
+<h1 id="编译器的优化"><a href="#编译器的优化" class="headerlink" title="编译器的优化"></a>编译器的优化</h1><p>有的时候你不得不佩服，开发编译器的这堆人，很牛逼，比如说平时写的代码，肯定里面有一堆没有使用过的代码，比方说定义一个局部变量，整个类里面并没有调用它，那么编译器在编译的时候会将没用过的代码也编译到汇编当中吗<br><a id="more"></a></p>
 <h2 id="分析、过程、验证"><a href="#分析、过程、验证" class="headerlink" title="分析、过程、验证"></a>分析、过程、验证</h2><ul>
 <li>创建一个项目</li>
 <li>修改编译器的优化等级，这里我们选择跟Appstore中一样的优化等级<br><img src="https://upload-images.jianshu.io/upload_images/7980283-ac2533ca3be5c70f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></li>

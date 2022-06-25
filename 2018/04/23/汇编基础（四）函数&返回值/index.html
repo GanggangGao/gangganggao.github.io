@@ -18,7 +18,7 @@
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-8b3092f0cf29fed7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-83283125c9996b39.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500">
-<meta property="og:updated_time" content="2022-06-21T01:30:46.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:06:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编基础（四）函数&amp;返回值">
 <meta name="twitter:description" content="bl和ret指令bl标号 将下一条指令的地址放入lr(x30)寄存器 转到标号处执行指令 注意：当我们遇到bl指令的时候，是跳转指令，跳转之后我们是怎么回来的？怎么回到bl下面的指令？遇到bl后，CPU会将下一个指令的内存地址存到lr寄存器当中。">
@@ -188,7 +188,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="bl和ret指令"><a href="#bl和ret指令" class="headerlink" title="bl和ret指令"></a>bl和ret指令</h4><h6 id="bl标号"><a href="#bl标号" class="headerlink" title="bl标号"></a>bl标号</h6><ul>
+        <p><meta name="referrer" content="no-referrer"></p>
+<h4 id="bl和ret指令"><a href="#bl和ret指令" class="headerlink" title="bl和ret指令"></a>bl和ret指令</h4><h6 id="bl标号"><a href="#bl标号" class="headerlink" title="bl标号"></a>bl标号</h6><ul>
 <li>将下一条指令的地址放入lr(x30)寄存器</li>
 <li>转到标号处执行指令<blockquote>
 <p>注意：当我们遇到bl指令的时候，是跳转指令，跳转之后我们是怎么回来的？怎么回到bl下面的指令？遇到bl后，CPU会将下一个指令的内存地址存到lr寄存器当中。</p>

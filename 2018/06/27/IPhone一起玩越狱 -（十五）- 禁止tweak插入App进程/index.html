@@ -18,7 +18,7 @@
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-d35469420023fb35.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-db25dfe6e45f7a51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:updated_time" content="2022-06-21T03:35:35.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:16:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IPhone一起玩越狱 -（十五）- 禁止tweak插入App进程">
 <meta name="twitter:description" content="引言知道了Tweak的原理，也大概知道dyld加载动态库的先觉条件，那么开始去搞它tweak 让tweak无法插入App进程">
@@ -188,7 +188,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>知道了<a href="/p/cefd2f8435ab">Tweak的原理</a>，也大概知道dyld加载动态库的先觉条件，那么开始去搞它tweak</p>
+        <meta name="referrer" content="no-referrer">
+
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>知道了<a href="/p/cefd2f8435ab">Tweak的原理</a>，也大概知道dyld加载动态库的先觉条件，那么开始去搞它tweak</p>
 <h2 id="让tweak无法插入App进程"><a href="#让tweak无法插入App进程" class="headerlink" title="让tweak无法插入App进程"></a>让tweak无法插入App进程</h2><a id="more"></a>
 <p>在自己的App中添加<br><img src="https://upload-images.jianshu.io/upload_images/7980283-d35469420023fb35.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""><br>就是创建一个section<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-Wl,-sectcreate,__RESTRICT,__restrict,/dev/null</span><br><span class="line">//最后面的路径是脚本语言的收尾</span><br></pre></td></tr></table></figure></p>
 <p>在你的app项目中的MachO文件中会显示这个section<br><img src="https://upload-images.jianshu.io/upload_images/7980283-db25dfe6e45f7a51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt=""></p>

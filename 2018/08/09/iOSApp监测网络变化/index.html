@@ -17,7 +17,7 @@
 <meta property="og:description" content="引言在App中经常会监听网络的变化，下面是网上经常用到的两种方式">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-6e528640859d005c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2022-06-21T03:39:14.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:15:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOSApp监测网络变化">
 <meta name="twitter:description" content="引言在App中经常会监听网络的变化，下面是网上经常用到的两种方式">
@@ -187,7 +187,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-6e528640859d005c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+        <p><meta name="referrer" content="no-referrer"><br><img src="https://upload-images.jianshu.io/upload_images/7980283-6e528640859d005c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>在App中经常会监听网络的变化，下面是网上经常用到的两种方式</p>
 <a id="more"></a>
 <h2 id="1-Reachability"><a href="#1-Reachability" class="headerlink" title="1.Reachability"></a>1.Reachability</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 监听网络状态改变的通知</span><br><span class="line">[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkStateChange) name:kReachabilityChangedNotification object:nil];</span><br><span class="line"></span><br><span class="line">// 创建Reachability</span><br><span class="line">self.connetion = [Reachability reachabilityForInternetConnection];</span><br><span class="line">// 开始监控网络(一旦网络状态发生改变, 就会发出通知kReachabilityChangedNotification)</span><br><span class="line">[self.connetion startNotifier];</span><br></pre></td></tr></table></figure>

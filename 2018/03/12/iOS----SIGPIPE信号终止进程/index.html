@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Struggle3g‘s Blog">
 <meta property="og:description" content="概念：  SIGPIPE，当一个程序a调用send函数向一个服务A发送信号的数据，服务A在接收数据的时候突然挂掉、无法接收数据、没有接收者，那么内核就会发送一个SIGPIPE信号，从而中断进程，导致程序退出。 调用signal(SIGPIPE, SIG_IGN);">
 <meta property="og:locale" content="ch">
-<meta property="og:updated_time" content="2022-06-21T01:23:10.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:13:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS----SIGPIPE信号终止进程">
 <meta name="twitter:description" content="概念：  SIGPIPE，当一个程序a调用send函数向一个服务A发送信号的数据，服务A在接收数据的时候突然挂掉、无法接收数据、没有接收者，那么内核就会发送一个SIGPIPE信号，从而中断进程，导致程序退出。 调用signal(SIGPIPE, SIG_IGN);">
@@ -185,7 +185,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h1><p>  SIGPIPE，当一个程序a调用send函数向一个服务A发送信号的数据，服务A在接收数据的时候突然挂掉、无法接收数据、没有接收者，那么内核就会发送一个SIGPIPE信号，从而中断进程，导致程序退出。</p>
+        <p><meta name="referrer" content="no-referrer"></p>
+<h1 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h1><p>  SIGPIPE，当一个程序a调用send函数向一个服务A发送信号的数据，服务A在接收数据的时候突然挂掉、无法接收数据、没有接收者，那么内核就会发送一个SIGPIPE信号，从而中断进程，导致程序退出。</p>
 <h1 id="调用signal-SIGPIPE-SIG-IGN"><a href="#调用signal-SIGPIPE-SIG-IGN" class="headerlink" title="调用signal(SIGPIPE, SIG_IGN);"></a>调用signal(SIGPIPE, SIG_IGN);</h1><a id="more"></a>
 <p>对一个已经收到FIN包的socket调用read方法,<br>如果接收缓冲已空, 则返回0, 这就是常说的表示连接关闭. 但第一次对其调用write方法时, 如果发送缓冲没问题, 会返回正确写入(发送).<br>但发送的报文会导致对端发送RST报文, 因为对端的socket已经调用了close, 完全关闭, 既不发送, 也不接收数据. 所以,<br>第二次调用write方法(假设在收到RST之后), 会生成SIGPIPE信号, 导致进程退出.<br>为了避免进程退出, 可以捕获SIGPIPE信号, 或者忽略它, 给它设置SIG_IGN信号处理函数:<br>signal(SIGPIPE, SIG_IGN);<br>这样, 第二次调用write方法时, 会返回-1, 同时errno置为SIGPIPE. 程序便能知道对端已经关闭.</p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>  signal(SIGPIPE, SIG_IGN)的作用就是防止程序收到SIGPIPE后自动退出。</p>

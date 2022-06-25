@@ -17,7 +17,7 @@
 <meta property="og:description" content="NSOperation的作用简介和GCD一样，NSOperation也是并发编程技术，NSOperation是苹果提供给我们的一套多线程解决方案。实际上NSOperation是基于GCD更高一层的封装,比GCD更加简单，更加方便">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-71fcf80e53a8cdeb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2022-06-21T04:01:31.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:08:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入浅出iOS多线程(四)——NSOperation多线程">
 <meta name="twitter:description" content="NSOperation的作用简介和GCD一样，NSOperation也是并发编程技术，NSOperation是苹果提供给我们的一套多线程解决方案。实际上NSOperation是基于GCD更高一层的封装,比GCD更加简单，更加方便">
@@ -187,7 +187,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="NSOperation的作用"><a href="#NSOperation的作用" class="headerlink" title="NSOperation的作用"></a>NSOperation的作用</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>和GCD一样，NSOperation也是并发编程技术，NSOperation是苹果提供给我们的一套多线程解决方案。实际上NSOperation是基于GCD更高一层的封装,比GCD更加简单，更加方便</p>
+        <p><meta name="referrer" content="no-referrer"></p>
+<h1 id="NSOperation的作用"><a href="#NSOperation的作用" class="headerlink" title="NSOperation的作用"></a>NSOperation的作用</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>和GCD一样，NSOperation也是并发编程技术，NSOperation是苹果提供给我们的一套多线程解决方案。实际上NSOperation是基于GCD更高一层的封装,比GCD更加简单，更加方便</p>
 <a id="more"></a>
 <p>NSoperation需要配合NSOperationQueue来实现多线程，NSOperation单独使用时系统同步执行操作，并没有开辟新的线程的能力，只有配合NSoperationQueue才能实现异步执行。</p>
 <p>NSOperation是苹果大力推荐的”并发”技术<br>NSOperation的核心概念是，将”操作”添加进”队列”<br>GCD将”任务”添加到”队列”</p>

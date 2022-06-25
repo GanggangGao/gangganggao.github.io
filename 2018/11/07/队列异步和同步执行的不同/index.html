@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
   <title>队列异步和同步执行的不同 | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="队列异步和同步执行的不同并行队列同步执行，并行队列的特点是：不需要等待前一个任务执行完成就可调度下一个任务；同步执行特点：不会开启新的线程；所以任务是one by one的执行。 串行队列同步执行，串行队列的特点：按顺序执行；同步执行特点：不会开启新的线程； so，one by one 执行 并行队列异步执行，并行队列的特点：不需要等待前一个任务执行完成就可调度下一个任务；异步执行特点：可以开启新">
+  <meta name="description" content="队列异步和同步执行的不同并行队列同步执行，并行队列的特点是：不需要等待前一个任务执行完成就可调度下一个任务；同步执行特点：不会开启新的线程；所以任务是one by one的执行。 串行队列同步执行，串行队列的特点：按顺序执行；同步执行特点：不会开启新的线程； so，one by one 执行 并行队列异步执行，并行队列的特点：不需要等待前一个任务执行完成就可调度下一个任务；异步执行特点：可以">
 <meta name="keywords" content="经验笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="队列异步和同步执行的不同">
 <meta property="og:url" content="https://www.struggle3g.com/2018/11/07/队列异步和同步执行的不同/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="队列异步和同步执行的不同并行队列同步执行，并行队列的特点是：不需要等待前一个任务执行完成就可调度下一个任务；同步执行特点：不会开启新的线程；所以任务是one by one的执行。 串行队列同步执行，串行队列的特点：按顺序执行；同步执行特点：不会开启新的线程； so，one by one 执行 并行队列异步执行，并行队列的特点：不需要等待前一个任务执行完成就可调度下一个任务；异步执行特点：可以开启新">
+<meta property="og:description" content="队列异步和同步执行的不同并行队列同步执行，并行队列的特点是：不需要等待前一个任务执行完成就可调度下一个任务；同步执行特点：不会开启新的线程；所以任务是one by one的执行。 串行队列同步执行，串行队列的特点：按顺序执行；同步执行特点：不会开启新的线程； so，one by one 执行 并行队列异步执行，并行队列的特点：不需要等待前一个任务执行完成就可调度下一个任务；异步执行特点：可以">
 <meta property="og:locale" content="ch">
-<meta property="og:updated_time" content="2018-11-07T02:06:33.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:04:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="队列异步和同步执行的不同">
-<meta name="twitter:description" content="队列异步和同步执行的不同并行队列同步执行，并行队列的特点是：不需要等待前一个任务执行完成就可调度下一个任务；同步执行特点：不会开启新的线程；所以任务是one by one的执行。 串行队列同步执行，串行队列的特点：按顺序执行；同步执行特点：不会开启新的线程； so，one by one 执行 并行队列异步执行，并行队列的特点：不需要等待前一个任务执行完成就可调度下一个任务；异步执行特点：可以开启新">
+<meta name="twitter:description" content="队列异步和同步执行的不同并行队列同步执行，并行队列的特点是：不需要等待前一个任务执行完成就可调度下一个任务；同步执行特点：不会开启新的线程；所以任务是one by one的执行。 串行队列同步执行，串行队列的特点：按顺序执行；同步执行特点：不会开启新的线程； so，one by one 执行 并行队列异步执行，并行队列的特点：不需要等待前一个任务执行完成就可调度下一个任务；异步执行特点：可以">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
   
@@ -185,7 +185,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="队列异步和同步执行的不同"><a href="#队列异步和同步执行的不同" class="headerlink" title="队列异步和同步执行的不同"></a>队列异步和同步执行的不同</h1><p>并行队列同步执行，并行队列的特点是：不需要等待前一个任务执行完成就可调度下一个任务；同步执行特点：不会开启新的线程；所以任务是one by one的执行。</p>
+        <meta name="referrer" content="no-referrer">
+
+
+<h1 id="队列异步和同步执行的不同"><a href="#队列异步和同步执行的不同" class="headerlink" title="队列异步和同步执行的不同"></a>队列异步和同步执行的不同</h1><p>并行队列同步执行，并行队列的特点是：不需要等待前一个任务执行完成就可调度下一个任务；同步执行特点：不会开启新的线程；所以任务是one by one的执行。</p>
 <p>串行队列同步执行，串行队列的特点：按顺序执行；同步执行特点：不会开启新的线程； so，one by one 执行</p>
 <p>并行队列异步执行，并行队列的特点：不需要等待前一个任务执行完成就可调度下一个任务；异步执行特点：可以开启新的线程；so 这个组合是实现任务的并发。</p>
 <p>串行队列异步执行，串行队列的特点：按顺序执行；异步执行：可以开启新的线程；所以串行队列异步执行也是 one by one；</p>

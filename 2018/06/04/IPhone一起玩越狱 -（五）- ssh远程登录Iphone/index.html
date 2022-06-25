@@ -8,22 +8,22 @@
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
   <title>IPhone一起玩越狱 -（五）- ssh远程登录Iphone | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="引言本人手机越狱的坑，算是踩的差不多了，不同手机型号，不同系统的版本的越狱在网上其实都可以找到，花点时间踩坑是有必要的，如果读者看到跟我介绍的iOS系统版本、环境不同的情况下请自行去度娘、谷爹寻找不同之处以改进手机：Iphone6 plusiOS： 10.3.3Mac：10.13.4注文章提到的所有插件源地址：http://apt.so/zacharyspark在cydia中添加这个源里面有相关">
+  <meta name="description" content="引言本人手机越狱的坑，算是踩的差不多了，不同手机型号，不同系统的版本的越狱在网上其实都可以找到，花点时间踩坑是有必要的，如果读者看到跟我介绍的iOS系统版本、环境不同的情况下请自行去度娘、谷爹寻找不同之处以改进手机：Iphone6 plusiOS： 10.3.3Mac：10.13.4注文章提到的所有插件源地址：http://apt.so/zacharyspark在cydia中添加这个源里面有">
 <meta name="keywords" content="越狱">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IPhone一起玩越狱 -（五）- ssh远程登录Iphone">
 <meta property="og:url" content="https://www.struggle3g.com/2018/06/04/IPhone一起玩越狱 -（五）- ssh远程登录Iphone/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="引言本人手机越狱的坑，算是踩的差不多了，不同手机型号，不同系统的版本的越狱在网上其实都可以找到，花点时间踩坑是有必要的，如果读者看到跟我介绍的iOS系统版本、环境不同的情况下请自行去度娘、谷爹寻找不同之处以改进手机：Iphone6 plusiOS： 10.3.3Mac：10.13.4注文章提到的所有插件源地址：http://apt.so/zacharyspark在cydia中添加这个源里面有相关">
+<meta property="og:description" content="引言本人手机越狱的坑，算是踩的差不多了，不同手机型号，不同系统的版本的越狱在网上其实都可以找到，花点时间踩坑是有必要的，如果读者看到跟我介绍的iOS系统版本、环境不同的情况下请自行去度娘、谷爹寻找不同之处以改进手机：Iphone6 plusiOS： 10.3.3Mac：10.13.4注文章提到的所有插件源地址：http://apt.so/zacharyspark在cydia中添加这个源里面有">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-c378798e1dbeb69c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-35f4be8b8547d163.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-4b9d547fa653232d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7980283-307224d32a3b2668.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:updated_time" content="2022-06-21T03:13:24.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:17:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IPhone一起玩越狱 -（五）- ssh远程登录Iphone">
-<meta name="twitter:description" content="引言本人手机越狱的坑，算是踩的差不多了，不同手机型号，不同系统的版本的越狱在网上其实都可以找到，花点时间踩坑是有必要的，如果读者看到跟我介绍的iOS系统版本、环境不同的情况下请自行去度娘、谷爹寻找不同之处以改进手机：Iphone6 plusiOS： 10.3.3Mac：10.13.4注文章提到的所有插件源地址：http://apt.so/zacharyspark在cydia中添加这个源里面有相关">
+<meta name="twitter:description" content="引言本人手机越狱的坑，算是踩的差不多了，不同手机型号，不同系统的版本的越狱在网上其实都可以找到，花点时间踩坑是有必要的，如果读者看到跟我介绍的iOS系统版本、环境不同的情况下请自行去度娘、谷爹寻找不同之处以改进手机：Iphone6 plusiOS： 10.3.3Mac：10.13.4注文章提到的所有插件源地址：http://apt.so/zacharyspark在cydia中添加这个源里面有">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7980283-c378798e1dbeb69c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
@@ -190,7 +190,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://upload-images.jianshu.io/upload_images/7980283-c378798e1dbeb69c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt="阳光️"></p>
+        <meta name="referrer" content="no-referrer">
+
+<p><img src="https://upload-images.jianshu.io/upload_images/7980283-c378798e1dbeb69c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt="阳光️"></p>
 <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>本人手机越狱的坑，算是踩的差不多了，不同手机型号，不同系统的版本的越狱在网上其实都可以找到，花点时间踩坑是有必要的，如果读者看到跟我介绍的iOS系统版本、环境不同的情况下请自行去度娘、谷爹寻找不同之处以改进<br>手机：Iphone6 plus<br>iOS： 10.3.3<br>Mac：10.13.4<br><strong>注</strong><br>文章提到的所有插件源地址：<a href="http://apt.so/zacharyspark" target="_blank" rel="noopener">http://apt.so/zacharyspark</a><br>在cydia中添加这个源里面有相关插件<br><a id="more"></a></p>
 <h3 id="什么是SSH"><a href="#什么是SSH" class="headerlink" title="什么是SSH"></a>什么是SSH</h3><p>SSH是远程登录会话和其他网络服务提供安全性的协议，用于计算机之间的加密登录<br>早期都是明文通信<br>95年 芬兰人发明ssh协议当时最安全的一种协议<br>立刻马上就普及，且迅速蔓延<br>并且现在各大系统之间也都支持这个，比如说unix分之Mac、linux都支持ssh，在终端中都可以敲命令ssh<br><code>OpenSSH</code> 是一个运用ssh的一个软件，提供ssh登录的一个软件</p>
 <h3 id="SSH怎么保证安全、以及它的过程是什么"><a href="#SSH怎么保证安全、以及它的过程是什么" class="headerlink" title="SSH怎么保证安全、以及它的过程是什么"></a>SSH怎么保证安全、以及它的过程是什么</h3><p>准备： client、server</p>

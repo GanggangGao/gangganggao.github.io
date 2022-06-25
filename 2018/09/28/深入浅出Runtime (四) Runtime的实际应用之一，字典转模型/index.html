@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://www.struggle3g.com">
   <title>深入浅出Runtime (四) Runtime的实际应用之一，字典转模型 | Struggle3g‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="引言在我们开发中，经常使用数据模型，模型分为：本地缓存模型、网络下载模型、以及一些临时存储模型，其中网络数据模型需要工程师将服务器的数据序列化，在网络模型赋值的时候，我们所要做的方式有两种：  自己设计数据模型，将网络中的数据，手动一一对应的形式赋值给自己定义的模型  优点:1.设计的模型根据自己的代码架构来实现 2.在迭代过程当中会更顺畅、更清楚业务逻辑、方便修改、更加灵活 缺点:1.开发周期会">
+  <meta name="description" content="引言在我们开发中，经常使用数据模型，模型分为：本地缓存模型、网络下载模型、以及一些临时存储模型，其中网络数据模型需要工程师将服务器的数据序列化，在网络模型赋值的时候，我们所要做的方式有两种：  自己设计数据模型，将网络中的数据，手动一一对应的形式赋值给自己定义的模型  优点:1.设计的模型根据自己的代码架构来实现 2.在迭代过程当中会更顺畅、更清楚业务逻辑、方便修改、更加灵活 缺点:1.开发周">
 <meta name="keywords" content="Runtime,字典转模型,Runtime的应用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深入浅出Runtime (四) Runtime的实际应用之一，字典转模型">
 <meta property="og:url" content="https://www.struggle3g.com/2018/09/28/深入浅出Runtime (四) Runtime的实际应用之一，字典转模型/index.html">
 <meta property="og:site_name" content="Struggle3g‘s Blog">
-<meta property="og:description" content="引言在我们开发中，经常使用数据模型，模型分为：本地缓存模型、网络下载模型、以及一些临时存储模型，其中网络数据模型需要工程师将服务器的数据序列化，在网络模型赋值的时候，我们所要做的方式有两种：  自己设计数据模型，将网络中的数据，手动一一对应的形式赋值给自己定义的模型  优点:1.设计的模型根据自己的代码架构来实现 2.在迭代过程当中会更顺畅、更清楚业务逻辑、方便修改、更加灵活 缺点:1.开发周期会">
+<meta property="og:description" content="引言在我们开发中，经常使用数据模型，模型分为：本地缓存模型、网络下载模型、以及一些临时存储模型，其中网络数据模型需要工程师将服务器的数据序列化，在网络模型赋值的时候，我们所要做的方式有两种：  自己设计数据模型，将网络中的数据，手动一一对应的形式赋值给自己定义的模型  优点:1.设计的模型根据自己的代码架构来实现 2.在迭代过程当中会更顺畅、更清楚业务逻辑、方便修改、更加灵活 缺点:1.开发周">
 <meta property="og:locale" content="ch">
-<meta property="og:updated_time" content="2022-06-21T03:45:16.000Z">
+<meta property="og:updated_time" content="2022-06-25T05:08:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入浅出Runtime (四) Runtime的实际应用之一，字典转模型">
-<meta name="twitter:description" content="引言在我们开发中，经常使用数据模型，模型分为：本地缓存模型、网络下载模型、以及一些临时存储模型，其中网络数据模型需要工程师将服务器的数据序列化，在网络模型赋值的时候，我们所要做的方式有两种：  自己设计数据模型，将网络中的数据，手动一一对应的形式赋值给自己定义的模型  优点:1.设计的模型根据自己的代码架构来实现 2.在迭代过程当中会更顺畅、更清楚业务逻辑、方便修改、更加灵活 缺点:1.开发周期会">
+<meta name="twitter:description" content="引言在我们开发中，经常使用数据模型，模型分为：本地缓存模型、网络下载模型、以及一些临时存储模型，其中网络数据模型需要工程师将服务器的数据序列化，在网络模型赋值的时候，我们所要做的方式有两种：  自己设计数据模型，将网络中的数据，手动一一对应的形式赋值给自己定义的模型  优点:1.设计的模型根据自己的代码架构来实现 2.在迭代过程当中会更顺畅、更清楚业务逻辑、方便修改、更加灵活 缺点:1.开发周">
   
     <link rel="alternative" href="/atom.xml" title="Struggle3g‘s Blog" type="application/atom+xml">
   
@@ -185,7 +185,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>在我们开发中，经常使用数据模型，模型分为：<strong>本地缓存模型</strong>、<strong>网络下载模型</strong>、以及一些<strong>临时存储模型</strong>，其中网络数据模型需要工程师将服务器的数据序列化，在网络模型赋值的时候，我们所要做的方式有两种：</p>
+        <meta name="referrer" content="no-referrer">
+
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>在我们开发中，经常使用数据模型，模型分为：<strong>本地缓存模型</strong>、<strong>网络下载模型</strong>、以及一些<strong>临时存储模型</strong>，其中网络数据模型需要工程师将服务器的数据序列化，在网络模型赋值的时候，我们所要做的方式有两种：</p>
 <ul>
 <li><p><strong>自己设计数据模型</strong>，将网络中的数据，手动一一对应的形式赋值给自己定义的模型</p>
 <ul>
