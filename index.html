@@ -596,7 +596,7 @@
 
   
     
-<article id="post-制作CocoaPods公有库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-修改 CocoaPods 的 trunk 的用户名跟邮箱" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
     
@@ -604,23 +604,29 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/06/制作CocoaPods公有库/">制作CocoaPods库. 公有私有</a>
+      <a class="article-title" href="/2022/03/10/修改 CocoaPods 的 trunk 的用户名跟邮箱/">修改 CocoaPods 的 trunk 的用户名跟邮箱</a>
     </h1>
   
 
         
-        <a href="/2022/03/06/制作CocoaPods公有库/" class="archive-article-date">
-  	<time datetime="2022-03-06T10:16:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-06</time>
+        <a href="/2022/03/10/修改 CocoaPods 的 trunk 的用户名跟邮箱/" class="archive-article-date">
+  	<time datetime="2022-03-10T07:26:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="制作CocoaPods库-公有私有"><a href="#制作CocoaPods库-公有私有" class="headerlink" title="制作CocoaPods库. 公有私有"></a>制作CocoaPods库. 公有私有</h1><p>在发开中，我们经常会自己写一些控件或者封装一些功能，有的要求单独写成一个模块，在其他项目当中都可以添加该模块，这其实就是第三方库的雏形，如何制作完整的第三方库给别人使用呐。</p>
-        
-          <a class="article-more-a" href="/2022/03/06/制作CocoaPods公有库/#more">more >></a>
-        
+        <h1 id="修改-CocoaPods-的-trunk-的用户名跟邮箱"><a href="#修改-CocoaPods-的-trunk-的用户名跟邮箱" class="headerlink" title="修改 CocoaPods 的 trunk 的用户名跟邮箱"></a>修改 CocoaPods 的 trunk 的用户名跟邮箱</h1><p>获取 trunk 的密码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ grep -A2 &apos;trunk.cocoapods.org&apos; ~/.netrc</span><br></pre></td></tr></table></figure>
+<p>得到结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">machine trunk.cocoapods.org</span><br><span class="line">  login brickerdev@163.com</span><br><span class="line">  password 7cbed5da6760e247e9971ecb93acdfa5</span><br></pre></td></tr></table></figure>
+<p>替换下面命令</p>
+<blockquote>
+<p>curl -v -H “Authorization: Token <password>“ -H “Content-Type: application/json” -X POST -d ‘{“email”:”your email”,”name”:”your name”,”description”:”someting”}’ <a href="https://trunk.cocoapods.org/api/v1/sessions" target="_blank" rel="noopener">https://trunk.cocoapods.org/api/v1/sessions</a></password></p>
+</blockquote>
+<p>验证</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod trunk me</span><br></pre></td></tr></table></figure>
       
 
 
@@ -646,7 +652,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/03/06/制作CocoaPods公有库/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/03/10/修改 CocoaPods 的 trunk 的用户名跟邮箱/">展开全文 >></a>
         </p>
       
 
@@ -769,7 +775,7 @@
 
   
     
-<article id="post-修改 CocoaPods 的 trunk 的用户名跟邮箱" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-制作CocoaPods公有库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
 
     
@@ -777,29 +783,23 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/12/修改 CocoaPods 的 trunk 的用户名跟邮箱/">修改 CocoaPods 的 trunk 的用户名跟邮箱</a>
+      <a class="article-title" href="/2022/01/13/制作CocoaPods公有库/">制作CocoaPods库. 公有私有</a>
     </h1>
   
 
         
-        <a href="/2022/01/12/修改 CocoaPods 的 trunk 的用户名跟邮箱/" class="archive-article-date">
-  	<time datetime="2022-01-12T05:16:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-12</time>
+        <a href="/2022/01/13/制作CocoaPods公有库/" class="archive-article-date">
+  	<time datetime="2022-01-13T09:37:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="修改-CocoaPods-的-trunk-的用户名跟邮箱"><a href="#修改-CocoaPods-的-trunk-的用户名跟邮箱" class="headerlink" title="修改 CocoaPods 的 trunk 的用户名跟邮箱"></a>修改 CocoaPods 的 trunk 的用户名跟邮箱</h1><p>获取 trunk 的密码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ grep -A2 &apos;trunk.cocoapods.org&apos; ~/.netrc</span><br></pre></td></tr></table></figure>
-<p>得到结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">machine trunk.cocoapods.org</span><br><span class="line">  login brickerdev@163.com</span><br><span class="line">  password 7cbed5da6760e247e9971ecb93acdfa5</span><br></pre></td></tr></table></figure>
-<p>替换下面命令</p>
-<blockquote>
-<p>curl -v -H “Authorization: Token <password>“ -H “Content-Type: application/json” -X POST -d ‘{“email”:”your email”,”name”:”your name”,”description”:”someting”}’ <a href="https://trunk.cocoapods.org/api/v1/sessions" target="_blank" rel="noopener">https://trunk.cocoapods.org/api/v1/sessions</a></password></p>
-</blockquote>
-<p>验证</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod trunk me</span><br></pre></td></tr></table></figure>
+        <h1 id="制作CocoaPods库-公有私有"><a href="#制作CocoaPods库-公有私有" class="headerlink" title="制作CocoaPods库. 公有私有"></a>制作CocoaPods库. 公有私有</h1><p>在发开中，我们经常会自己写一些控件或者封装一些功能，有的要求单独写成一个模块，在其他项目当中都可以添加该模块，这其实就是第三方库的雏形，如何制作完整的第三方库给别人使用呐。</p>
+        
+          <a class="article-more-a" href="/2022/01/13/制作CocoaPods公有库/#more">more >></a>
+        
       
 
 
@@ -825,7 +825,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/01/12/修改 CocoaPods 的 trunk 的用户名跟邮箱/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/01/13/制作CocoaPods公有库/">展开全文 >></a>
         </p>
       
 
