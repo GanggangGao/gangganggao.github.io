@@ -427,7 +427,7 @@
 <h4 id="bl和ret指令"><a href="#bl和ret指令" class="headerlink" title="bl和ret指令"></a>bl和ret指令</h4><h6 id="bl标号"><a href="#bl标号" class="headerlink" title="bl标号"></a>bl标号</h6><ul>
 <li>将下一条指令的地址放入lr(x30)寄存器</li>
 <li>转到标号处执行指令<blockquote>
-<p>注意：当我们遇到bl指令的时候，是跳转指令，跳转之后我们是怎么回来的？怎么回到bl下面的指令？遇到bl后，CPU会将下一个指令的内存地址存到lr寄存器当中。</p></blockquote></li></ul>
+<p>注意：当我们遇到bl指令的时候，是跳转指令，跳转之后我们是怎么回来的？怎么回到bl下面的指令？遇到bl后，CPU会将下一个指令的内存地址存到lr寄存器当中。</p>
         
           <a class="article-more-a" href="/2018/04/23/汇编基础（四）函数&返回值/#more">more >></a>
         
@@ -514,7 +514,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><meta name="referrer" content="no-referrer"></p>
-<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>当大家写程序的时候要压栈，比方说iOS里面push，pop界面的时候也就是说压栈出栈，还有当大家创建变量的时候，在栈分配空间，或者在堆分配空间，怎么分配的？带着疑问哥么开始学习了。<br></p>
+<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>当大家写程序的时候要压栈，比方说iOS里面push，pop界面的时候也就是说压栈出栈，还有当大家创建变量的时候，在栈分配空间，或者在堆分配空间，怎么分配的？带着疑问哥么开始学习了。<br>
         
           <a class="article-more-a" href="/2018/04/22/汇编基础（三）堆栈操作/#more">more >></a>
         
@@ -602,7 +602,7 @@
       
         <p><meta name="referrer" content="no-referrer"></p>
 <p>##引言</p>
-<p>####概念<br><strong>CPU是什么？</strong><br>CPU是中央处理器，中央处理器（CPU，Central Processing Unit）是一块超大规模的<a href="https://baike.baidu.com/item/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF" target="_blank" rel="noopener">集成电路</a>，是一台计算机的运算核心（Core）和控制核心（ Control Unit）。它的功能主要是解释计算机<a href="https://baike.baidu.com/item/%E6%8C%87%E4%BB%A4" target="_blank" rel="noopener">指令</a>以及处理计算机软件中的数据。<br><strong>寄存器是什么？</strong><br><a href="https://baike.baidu.com/item/%E5%AF%84%E5%AD%98%E5%99%A8" target="_blank" rel="noopener">寄存器</a>是<a href="https://baike.baidu.com/item/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8" target="_blank" rel="noopener">中央处理器</a>内的组成部分。寄存器是有限存贮容量的高速存贮部件，它们可用来暂存<a href="https://baike.baidu.com/item/%E6%8C%87%E4%BB%A4" target="_blank" rel="noopener">指令</a>、<a href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE/33305" target="_blank" rel="noopener">数据</a>和<a href="https://baike.baidu.com/item/%E5%9C%B0%E5%9D%80/80420" target="_blank" rel="noopener">地址</a>。<br></p>
+<p>####概念<br><strong>CPU是什么？</strong><br>CPU是中央处理器，中央处理器（CPU，Central Processing Unit）是一块超大规模的<a href="https://baike.baidu.com/item/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF" target="_blank" rel="noopener">集成电路</a>，是一台计算机的运算核心（Core）和控制核心（ Control Unit）。它的功能主要是解释计算机<a href="https://baike.baidu.com/item/%E6%8C%87%E4%BB%A4" target="_blank" rel="noopener">指令</a>以及处理计算机软件中的数据。<br><strong>寄存器是什么？</strong><br><a href="https://baike.baidu.com/item/%E5%AF%84%E5%AD%98%E5%99%A8" target="_blank" rel="noopener">寄存器</a>是<a href="https://baike.baidu.com/item/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8" target="_blank" rel="noopener">中央处理器</a>内的组成部分。寄存器是有限存贮容量的高速存贮部件，它们可用来暂存<a href="https://baike.baidu.com/item/%E6%8C%87%E4%BB%A4" target="_blank" rel="noopener">指令</a>、<a href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE/33305" target="_blank" rel="noopener">数据</a>和<a href="https://baike.baidu.com/item/%E5%9C%B0%E5%9D%80/80420" target="_blank" rel="noopener">地址</a>。<br>
         
           <a class="article-more-a" href="/2018/04/22/汇编基础（二）CPU寄存器/#more">more >></a>
         
@@ -694,7 +694,7 @@
 <li>砸壳后的ipa包</li>
 <li>MonkeyDev</li>
 <li>Cycript环境</li>
-<li>真机（俺是iPhoneX）</li></ul>
+<li>真机（俺是iPhoneX）
         
           <a class="article-more-a" href="/2018/04/21/Cycript（二）非越狱调试、修改App中UI的数据/#more">more >></a>
         
@@ -781,7 +781,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><meta name="referrer" content="no-referrer"></p>
-<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p><strong>什么是汇编语言？</strong><br>答：汇编语言是计算机语言，通俗来讲就是人类与计算机(CPU)交流的桥梁，计算机不认识人类的语言，想要让计算机去完成人们的工作，就需要俺们将这些工作翻译成计算机语言，属于低级计算机语言。<br><strong>APP与汇编语言的关系</strong><br>一个APP安装到操作系统上面的可执行的文件本质上来讲就是二进制文件，操作系统本质上执行的指令也是二进制，是由CPU执行的；<br></p>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p><strong>什么是汇编语言？</strong><br>答：汇编语言是计算机语言，通俗来讲就是人类与计算机(CPU)交流的桥梁，计算机不认识人类的语言，想要让计算机去完成人们的工作，就需要俺们将这些工作翻译成计算机语言，属于低级计算机语言。<br><strong>APP与汇编语言的关系</strong><br>一个APP安装到操作系统上面的可执行的文件本质上来讲就是二进制文件，操作系统本质上执行的指令也是二进制，是由CPU执行的；<br>
         
           <a class="article-more-a" href="/2018/04/20/汇编基础（一）学习汇编需要了解掌握的知识点/#more">more >></a>
         
@@ -976,7 +976,7 @@
       
         <p><meta name="referrer" content="no-referrer"></p>
 <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>Cycript是一个可以调试App的一个工具，目前只是了解到实时的去调试App、以及修改App内存数据； 待补充。。。<br><img src="https://upload-images.jianshu.io/upload_images/7980283-81f0fdd544cc7058.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="支持的语言"></p>
-<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><h3 id="一-下载SDK-解压到本地"><a href="#一-下载SDK-解压到本地" class="headerlink" title="一 下载SDK 解压到本地"></a>一 下载SDK 解压到本地</h3><p>首先需要安装Cycript, 点击<a href="http://www.cycript.org/" target="_blank" rel="noopener">Cycript官网</a>下载最新的SDK包。<br><img src="https://upload-images.jianshu.io/upload_images/7980283-02d1e52bcb6d5bd8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Cycript SDK 下载到本地"><br>直接解压到本地，放到自己指定的目录，我在这里放到了 /opt 下面<br></p>
+<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><h3 id="一-下载SDK-解压到本地"><a href="#一-下载SDK-解压到本地" class="headerlink" title="一 下载SDK 解压到本地"></a>一 下载SDK 解压到本地</h3><p>首先需要安装Cycript, 点击<a href="http://www.cycript.org/" target="_blank" rel="noopener">Cycript官网</a>下载最新的SDK包。<br><img src="https://upload-images.jianshu.io/upload_images/7980283-02d1e52bcb6d5bd8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Cycript SDK 下载到本地"><br>直接解压到本地，放到自己指定的目录，我在这里放到了 /opt 下面<br>
         
           <a class="article-more-a" href="/2018/04/19/Cycript （一）配置环境/#more">more >></a>
         
@@ -1068,7 +1068,7 @@
       
         <p><meta name="referrer" content="no-referrer"></p>
 <h1 id="RGB"><a href="#RGB" class="headerlink" title="RGB"></a>RGB</h1><p>255.0.0  红<br>255.255.0  黄<br>0.255.0  绿<br>0.255.255  青<br>0.0.255  蓝<br>255.0.255 紫色<br>255.255.255 白色<br>0.0.0 黑色</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/7980283-8db5d9842f3f409e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="RGB"><br></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7980283-8db5d9842f3f409e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="RGB"><br>
         
           <a class="article-more-a" href="/2018/03/22/HSB:HSL、RGB他们的纯色/#more">more >></a>
         
@@ -1233,10 +1233,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CLAuthorizationStatus</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Cocos Creator</a>
               </li>
              
@@ -1246,6 +1242,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Cocos Creator游戏UI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">CLAuthorizationStatus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1297,10 +1297,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">XIB</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">SmartConfig</a>
               </li>
              
@@ -1309,11 +1305,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">android</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SDK</a>
+                <a href="javascript:void(0)" class="js-tag color4">XIB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1322,6 +1314,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">copy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SDK</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1349,19 +1349,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">KVO</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">KVC</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">iOS动画</a>
+                <a href="javascript:void(0)" class="js-tag color4">KVO</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Runloop</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">iOS动画</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1445,6 +1445,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ARC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MRC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">内存管理方案</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">框架</a>
               </li>
              
@@ -1458,18 +1470,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">MVC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ARC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MRC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">内存管理方案</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1553,6 +1553,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">区块链</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">可变</a>
               </li>
              
@@ -1561,15 +1565,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">区块链</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ipa</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SwiftLint</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1582,6 +1578,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">个人主页</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SwiftLint</a>
               </li>
              
               <li class="article-tag-list-item">
