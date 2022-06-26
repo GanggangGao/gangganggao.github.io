@@ -315,7 +315,7 @@
             for (var i = 0, max = lazyAttrs.length; i < max; i++) {
               realSrc = original.call(this, lazyAttrs[i]);
               if (realSrc) {
-                original.src = realSrc;
+                window.alert(realSrc)
                 break;
               }
             }
