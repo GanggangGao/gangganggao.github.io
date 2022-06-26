@@ -195,6 +195,10 @@
 <p>服务器根据这个源链接进行校验，是否是规定的域名，来防止盗链, 当然不提倡这么做，因为之前并没有考虑到这些以前的博客都是在别的网站上传图片得到网络链接，在个人博客中直接使用这个链接，之后打算使用个人博客仓库地址中的图片。<br>比如： hexo+git 那么就使用 <code>hexo-asset-image</code> 来对你的博客图片进行处理。</p>
 <p><code>referrer</code>的值如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1、no-referrer：所有请求不发送 referrer。</span><br><span class="line"></span><br><span class="line">2、no-referrer-when-downgrade（默认值）：当请求安全级别下降时不发送 referrer。目前，只有一种情况会发生安全级别下降，即从 HTTPS 到 HTTP。HTTPS 到 HTTP 的资源引用和链接跳转都不会发送 referrer。</span><br><span class="line"></span><br><span class="line">3、same-origin：对于同源的链接和引用，会发送referrer，其他的不会。</span><br><span class="line"></span><br><span class="line">4、origin：在任何情况下仅发送源信息作为引用地址。源信息包括访问协议和域名。</span><br><span class="line"></span><br><span class="line">5、strict-origin：在安全级别下降时不发送 referrer；而在同等安全级别的情况下仅发送源信息。注意：这个是新加的标准，有些浏览器可能还不支持。</span><br><span class="line"></span><br><span class="line">6、origin-when-cross-origin：同源的链接和引用，会发送完全的 referrer 信息；但非同源链接和引用时，只发送源信息。</span><br><span class="line"></span><br><span class="line">7、strict-origin-when-cross-origin：同源的链接和引用，会发送 referrer。安全级别下降时不发送 referrer。其它情况下发送源信息。注意：这个是新加的标准，有些浏览器可能还不支持。</span><br><span class="line"></span><br><span class="line">8、unsafe-url：无论是否发生协议降级，无论是本站链接还是站外链接，统统都发送 Referrer 信息。正如其名，这是最宽松而最不安全的策略。</span><br></pre></td></tr></table></figure>
+<h2 id="如何使用hexo-asset-image"><a href="#如何使用hexo-asset-image" class="headerlink" title="如何使用hexo-asset-image"></a>如何使用<code>hexo-asset-image</code></h2><h3 id="更新你的npm"><a href="#更新你的npm" class="headerlink" title="更新你的npm"></a>更新你的<code>npm</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g npm</span><br></pre></td></tr></table></figure>
+<h3 id="首先修改根目录-config-yml文件"><a href="#首先修改根目录-config-yml文件" class="headerlink" title="首先修改根目录_config.yml文件"></a>首先修改根目录<code>_config.yml</code>文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
+<p>然后在hexo站点终端下执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure>
 
       
 
@@ -533,7 +537,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><meta name="referrer" content="no-referrer"></p>
-<h2 id="第一次进入该页面的时候"><a href="#第一次进入该页面的时候" class="headerlink" title="第一次进入该页面的时候"></a>第一次进入该页面的时候</h2><p>I/flutter ( 4053): initState<br>I/flutter ( 4053): didChangeDependencies<br>I/flutter ( 4053): build<br>
+<h2 id="第一次进入该页面的时候"><a href="#第一次进入该页面的时候" class="headerlink" title="第一次进入该页面的时候"></a>第一次进入该页面的时候</h2><p>I/flutter ( 4053): initState<br>I/flutter ( 4053): didChangeDependencies<br>I/flutter ( 4053): build<br></p>
         
           <a class="article-more-a" href="/2022/03/24/FluttrState的生命周期/#more">more >></a>
         
@@ -620,7 +624,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><meta name="referrer" content="no-referrer"></p>
-<h1 id="如何清理Mac中顽固的图标"><a href="#如何清理Mac中顽固的图标" class="headerlink" title="如何清理Mac中顽固的图标"></a>如何清理Mac中顽固的图标</h1><h2 id="一、在终端输入以下命令"><a href="#一、在终端输入以下命令" class="headerlink" title="一、在终端输入以下命令"></a>一、在终端输入以下命令</h2><p>defaults write com.apple.dock ResetLaunchPad -bool true<br>killall Dock<br>有网友表示该方法有效，但本人测试后发现并不能删除图标。好处在于该方法可以整理一下launchpad的排列布局，把一些空余的位置删除了（之前launchpad第二页只用了两行，就直接开启了第三页，抓狂）。系统自带app放在了第一页，自己下载的app在第二页。<br>
+<h1 id="如何清理Mac中顽固的图标"><a href="#如何清理Mac中顽固的图标" class="headerlink" title="如何清理Mac中顽固的图标"></a>如何清理Mac中顽固的图标</h1><h2 id="一、在终端输入以下命令"><a href="#一、在终端输入以下命令" class="headerlink" title="一、在终端输入以下命令"></a>一、在终端输入以下命令</h2><p>defaults write com.apple.dock ResetLaunchPad -bool true<br>killall Dock<br>有网友表示该方法有效，但本人测试后发现并不能删除图标。好处在于该方法可以整理一下launchpad的排列布局，把一些空余的位置删除了（之前launchpad第二页只用了两行，就直接开启了第三页，抓狂）。系统自带app放在了第一页，自己下载的app在第二页。<br></p>
         
           <a class="article-more-a" href="/2022/03/12/如何清理Mac中顽固的图标 /#more">more >></a>
         
@@ -976,7 +980,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p> <meta name="referrer" content="no-referrer"></p>
-<h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>在开发中，有时候需要去跑一些老旧的项目，比如说2022年了我还需要去跑swift3.0版本的项目，那么就需要去使用Xcode9.3版本，而Xcode9.3需要MacOS 10.13版本 那就必须安装MacOS High Sierra这个系统，经过很多的尝试发现最方便的是通过虚拟机进行安装。<br>
+<h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>在开发中，有时候需要去跑一些老旧的项目，比如说2022年了我还需要去跑swift3.0版本的项目，那么就需要去使用Xcode9.3版本，而Xcode9.3需要MacOS 10.13版本 那就必须安装MacOS High Sierra这个系统，经过很多的尝试发现最方便的是通过虚拟机进行安装。<br></p>
         
           <a class="article-more-a" href="/2021/12/17/MacOS上Parallels Desktop安装MacOSHighSierra/#more">more >></a>
         
@@ -1129,19 +1133,143 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AFNetworking</a>
+                <a href="javascript:void(0)" class="js-tag color3">OC</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Reactive Cocoa</a>
+                <a href="javascript:void(0)" class="js-tag color4">nil</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SDWebImageView</a>
+                <a href="javascript:void(0)" class="js-tag color2">CLAuthorizationStatus</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">AsyncDisPlayKit</a>
+                <a href="javascript:void(0)" class="js-tag color4">Cocos Creator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Cocos Creator游戏UI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Cycript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">越狱</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Flutter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">汇编</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HUE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Color</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MacOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">NSLocale</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Swift</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">XIB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">SmartConfig</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">快连</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SDK</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">failed</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">copy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">setter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">getter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">推送</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">SIGPIPE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">网络监听</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">KVO</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">KVC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">iOS动画</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Runloop</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1161,6 +1289,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AFNetworking</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Reactive Cocoa</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SDWebImageView</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">AsyncDisPlayKit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">分类</a>
               </li>
              
@@ -1170,10 +1314,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Extension</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">KVC</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1265,14 +1405,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网络</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
               </li>
              
@@ -1297,39 +1429,55 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">点击事件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">自定义控件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">定位</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">tabindex</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">volatitle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CocoaPods</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小知识</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Runtime</a>
+                <a href="javascript:void(0)" class="js-tag color3">可变</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">字典转模型</a>
+                <a href="javascript:void(0)" class="js-tag color4">不可变</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Runtime的应用</a>
+                <a href="javascript:void(0)" class="js-tag color4">区块链</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Cocos Creator</a>
+                <a href="javascript:void(0)" class="js-tag color4">ipa</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Cocos Creator游戏UI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">生活杂记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">经验笔记</a>
+                <a href="javascript:void(0)" class="js-tag color5">SwiftLint</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1357,127 +1505,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Swift</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SwiftLint</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">XIB</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">SmartConfig</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">快连</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">自定义控件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">验证合法性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">可变</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">不可变</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">汇编</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">计算机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">存储单位</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">断点显示汇编</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">OC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">nil</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CLAuthorizationStatus</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Cycript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">越狱</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HUE</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Color</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">NSLocale</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">failed</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">setter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">getter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">copy</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">推送</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">网络监听</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">SIGPIPE</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">点击事件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">volatitle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">定位</a>
+                <a href="javascript:void(0)" class="js-tag color1">Mac使用</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1493,47 +1521,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">验证合法性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">push</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Runtime</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">字典转模型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Runtime的应用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">bug</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">区块链</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Flutter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MacOS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">tabindex</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">KVO</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">iOS动画</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Runloop</a>
+                <a href="javascript:void(0)" class="js-tag color5">生活杂记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1541,27 +1553,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CocoaPods</a>
+                <a href="javascript:void(0)" class="js-tag color4">计算机</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mac使用</a>
+                <a href="javascript:void(0)" class="js-tag color5">存储单位</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ipa</a>
+                <a href="javascript:void(0)" class="js-tag color2">断点显示汇编</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">android</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SDK</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">push</a>
+                <a href="javascript:void(0)" class="js-tag color5">经验笔记</a>
               </li>
             
             <div class="clearfix"></div>
